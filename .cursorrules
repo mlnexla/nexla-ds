@@ -19,6 +19,28 @@ alwaysApply: true
 - When adding icons to IconsDemo, update both component import and SVG content string
 - Export new icons from `src/components/icons/index.ts`
 
+## SVG Data Processing Rules
+- **ALWAYS clarify source format first**: "I see a composite SVG with dimensions X×Y. Should I extract individual icons or use specific coordinate ranges?"
+- **Default assumption**: Unless specified otherwise, all icons should render at 24×24 pixels by default
+- **ViewBox strategy**: Use `viewBox="0 0 24 24"` when possible; adjust viewBox (not scale coordinates) if paths use different coordinate systems
+- **Coordinate validation**: If path coordinates exceed 24 or seem unusually large (>100), confirm coordinate system before implementing
+- **Visual verification**: Always mention testing icons at 24×24 size after implementation
+- **No coordinate scaling**: Prefer adjusting viewBox over mathematically scaling path coordinates to avoid precision loss
+
+## Required Clarifications for Icon Tasks
+When receiving SVG data for icons, MUST ask these questions if not clear:
+1. "What's the source format?" (individual exports vs composite SVG vs design file)
+2. "What's the target render size?" (confirm 24×24 default assumption)
+3. "Do coordinates need transformation?" (if paths show large numbers like 900+)
+4. "Which specific icons?" (if dealing with composite/multi-icon source)
+
+## Implementation Validation Steps
+Before completing icon work:
+1. Confirm all icons render properly at 24×24
+2. Verify paths don't extend far beyond viewBox bounds  
+3. Test copy-to-clipboard functionality in demo
+4. Check that visual appearance matches intended design
+
 # Component Structure
 - Each component has its own folder: `src/components/ComponentName/`
 - Include: ComponentName.tsx, ComponentName.css, index.ts

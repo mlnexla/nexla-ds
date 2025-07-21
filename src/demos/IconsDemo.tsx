@@ -20,6 +20,16 @@ import {
   AngleSmallRightIcon,
   AngleSmallUpIcon,
   AngleUpIcon,
+  AppleIcon,
+  AppsAddIcon,
+  AppsDeleteIcon,
+  AppsSortIcon,
+  AppsIcon,
+  ArchiveIcon,
+  ArrowDownIcon,
+  ArrowFromBottomIcon,
+  ArrowLeftIcon as ArrowLeftIconNew,
+  ArrowRightIcon as ArrowRightIconNew,
   ContentCopyFilledIcon,
   CheckFilledIcon
 } from '../components/icons';
@@ -30,7 +40,7 @@ import './IconsDemo.css';
 export const IconsDemo: React.FC = () => {
   const [copiedIcon, setCopiedIcon] = useState<string | null>(null);
 
-  const icons = [
+  const figmaIcons = [
     { 
       name: 'Add', 
       Icon: AddIcon, 
@@ -125,23 +135,7 @@ export const IconsDemo: React.FC = () => {
       label: 'fi-rr-angle-double-right',
       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M11.83 24.0002C11.698 24.0009 11.568 23.9757 11.446 23.926C11.324 23.8762 11.213 23.8029 11.12 23.7102C11.026 23.6172 10.952 23.5066 10.901 23.3848C10.85 23.2629 10.824 23.1322 10.824 23.0002C10.824 22.8682 10.85 22.7375 10.901 22.6156C10.952 22.4937 11.026 22.3831 11.12 22.2902L19.29 14.1202C19.852 13.5577 20.167 12.7952 20.167 12.0002C20.167 11.2052 19.852 10.4427 19.29 9.88019L11.12 1.71019C11.027 1.61695 10.953 1.50626 10.902 1.38443C10.852 1.26261 10.826 1.13204 10.826 1.00019C10.826 0.733884 10.931 0.478489 11.12 0.290185C11.308 0.101882 11.563 -0.00390625 11.83 -0.00390625C12.096 -0.00390625 12.351 0.101882 12.54 0.290185L20.71 8.46019C21.175 8.92464 21.545 9.4764 21.797 10.0838C22.049 10.6913 22.179 11.3425 22.179 12.0002C22.179 12.6579 22.049 13.3091 21.797 13.9165C21.545 14.524 21.175 15.0757 20.71 15.5402L12.54 23.7102C12.446 23.8029 12.336 23.8762 12.214 23.926C12.092 23.9757 11.961 24.0009 11.83 24.0002Z" fill="currentColor"/>
-  <path d="M1.83 24.0002C1.698 24.0009 1.568 23.9757 1.446 23.926C1.324 23.8762 1.213 23.8029 1.12 23.7102C1.026 23.6172 0.952 23.5066 0.901 23.3848C0.85 23.2629 0.824 23.1322 0.824 23.0002C0.824 22.8682 0.85 22.7375 0.901 22.6156C0.952 22.4937 1.026 22.3831 1.12 22.2902L10.71 12.7102C10.804 12.6172 10.878 12.5066 10.929 12.3848C10.98 12.2629 11.006 12.1322 11.006 12.0002C11.006 11.8682 10.98 11.7375 10.929 11.6156C10.878 11.4937 10.804 11.3831 10.71 11.2902L1.12 1.71019C0.932 1.52188 0.826 1.26649 0.826 1.00019C0.826 0.733884 0.932 0.478489 1.12 0.290185C1.308 0.101882 1.564 -0.00390625 1.83 -0.00390625C2.096 -0.00390625 2.352 0.101882 2.54 0.290185L12.12 9.88019C12.682 10.4427 12.997 11.2052 12.997 12.0002C12.997 12.7952 12.682 13.5577 12.12 14.1202L2.54 23.7102C2.447 23.8029 2.336 23.8762 2.214 23.926C2.092 23.9757 1.962 24.0009 1.83 24.0002Z" fill="currentColor"/>
-</svg>`
-    },
-    { 
-      name: 'Content Copy Filled', 
-      Icon: ContentCopyFilledIcon, 
-      label: 'content-copy-filled',
-      svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M16.5 1H4.5C3.4 1 2.5 1.9 2.5 3V17H4.5V3H16.5V1ZM19.5 5H8.5C7.4 5 6.5 5.9 6.5 7V21C6.5 22.1 7.4 23 8.5 23H19.5C20.6 23 21.5 22.1 21.5 21V7C21.5 5.9 20.6 5 19.5 5ZM19.5 21H8.5V7H19.5V21Z" fill="currentColor"/>
-</svg>`
-    },
-    { 
-      name: 'Check Filled', 
-      Icon: CheckFilledIcon, 
-      label: 'check-filled',
-      svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+  <path d="M1.83 24.0002C1.698 24.0009 1.568 23.9757 1.446 23.926C1.324 23.8762 1.213 23.8029 1.12 23.7102C1.026 23.6172 0.952 23.5066 0.901 23.3848C0.85 23.2629 0.824 23.1322 0.824 23.0002C0.824 22.8682 0.85 22.7375 0.901 22.6156C0.952 22.4937 1.026 22.3831 1.12 22.2902L10.71 12.7102C10.804 12.6172 10.878 12.5066 10.929 12.3848C10.98 12.2629 11.006 12.1322 11.006 12.0002C11.006 11.8682 10.98 11.7375 10.929 11.6156C10.878 11.4937 10.804 11.3828 10.71 11.2902L1.12 1.71019C0.932 1.52188 0.826 1.26649 0.826 1.00019C0.826 0.733884 0.932 0.478489 1.12 0.290185C1.308 0.101882 1.564 -0.00390625 1.83 -0.00390625C2.096 -0.00390625 2.352 0.101882 2.54 0.290185L12.12 9.88019C12.682 10.4427 12.997 11.2052 12.997 12.0002C12.997 12.7952 12.682 13.5577 12.12 14.1202L2.54 23.7102C2.447 23.8029 2.336 23.8762 2.214 23.926C2.092 23.9757 1.962 24.0009 1.83 24.0002Z" fill="currentColor"/>
 </svg>`
     },
     { 
@@ -225,6 +219,124 @@ export const IconsDemo: React.FC = () => {
       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M12 6.83018C12.657 6.82908 13.3078 6.95738 13.9152 7.20788C14.5227 7.45838 15.0748 7.82618 15.54 8.29018L23.71 16.4602C23.8983 16.6485 24.0041 16.9039 24.0041 17.1702C24.0041 17.4365 23.8983 17.6919 23.71 17.8802C23.5216 18.0685 23.2662 18.1743 23 18.1743C22.7337 18.1743 22.4782 18.0685 22.29 17.8802L14.12 9.71018C13.5574 9.14838 12.7949 8.83288 12 8.83288C11.2049 8.83288 10.4424 9.14838 9.88 9.71018L1.71 17.8802C1.5217 18.0685 1.2663 18.1743 1 18.1743C0.7337 18.1743 0.4783 18.0685 0.29 17.8802C0.1017 17.6919 -0.0041 17.4365 -0.0041 17.1702C-0.0041 16.9039 0.1017 16.6485 0.29 16.4602L8.46 8.29018C8.9252 7.82618 9.4773 7.45838 10.0847 7.20788C10.6922 6.95738 11.3429 6.82908 12 6.83018Z" fill="currentColor"/>
 </svg>`
+    },
+         { 
+       name: 'Apple', 
+       Icon: AppleIcon, 
+       label: 'fi-rr-apple',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.85 1.76C24.03 1.49 24.13 1.15 24.14 0.79C24.15 0.72 24.14 0.65 24.13 0.58C24.12 0.50 24.09 0.44 24.05 0.39C24.01 0.34 23.96 0.30 23.91 0.27C23.86 0.25 23.81 0.24 23.76 0.25C23.48 0.26 23.21 0.33 22.97 0.44C22.73 0.55 22.51 0.70 22.32 0.88C22.24 0.67 22.12 0.48 21.96 0.31C21.92 0.27 21.86 0.24 21.80 0.24C21.74 0.24 21.68 0.26 21.64 0.31C21.59 0.35 21.57 0.42 21.56 0.48C21.56 0.54 21.57 0.61 21.60 0.65C21.81 0.96 21.93 1.33 21.94 1.71H21.56C21.21 1.72 20.88 1.84 20.62 2.06C20.36 2.28 20.19 2.58 20.13 2.91C20.12 3.53 20.50 4.11 21.08 4.35C21.14 4.34 21.21 4.33 21.27 4.33C21.33 4.33 21.40 4.34 21.45 4.36C21.51 4.37 21.57 4.39 21.62 4.39C22.39 4.36 22.91 2.78 23.85 1.76ZM22.97 1.02C23.12 0.85 23.33 0.74 23.56 0.73C23.56 0.98 23.46 1.22 23.29 1.41C23.12 1.58 22.88 1.67 22.64 1.68C22.64 1.43 22.74 1.19 22.97 1.02ZM21.62 4.27C21.57 4.27 21.52 4.26 21.45 4.25C21.38 4.24 21.30 4.22 21.23 4.22C21.16 4.22 21.10 4.23 21.04 4.25C20.74 4.33 20.36 4.06 20.37 2.91C20.37 2.68 20.44 2.46 20.58 2.29C20.72 2.13 20.91 2.03 21.12 2.02H21.62C22.01 2.02 22.01 4.27 21.62 4.27Z" fill="currentColor"/>
+</svg>`
+     },
+         { 
+       name: 'Apps Add', 
+       Icon: AppsAddIcon, 
+       label: 'fi-rr-apps-add',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="2" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="16" y="2" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <path d="M19 5V8M17.5 6.5H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+</svg>`
+     },
+         { 
+       name: 'Apps Delete', 
+       Icon: AppsDeleteIcon, 
+       label: 'fi-rr-apps-delete',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="2" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="16" y="2" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <path d="M17.5 6.5H20.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+</svg>`
+     },
+         { 
+       name: 'Apps Sort', 
+       Icon: AppsSortIcon, 
+       label: 'fi-rr-apps-sort',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="2" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="16" y="2" width="6" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" />
+  <path d="M18 4L19 5L20 4M18 7L19 6L20 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>`
+     },
+         { 
+       name: 'Apps', 
+       Icon: AppsIcon, 
+       label: 'fi-rr-apps',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="10" y="2" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="2" y="10" width="4" height="4" rx="1" fill="currentColor" />
+  <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" />
+</svg>`
+     },
+         { 
+       name: 'Archive', 
+       Icon: ArchiveIcon, 
+       label: 'fi-rr-archive',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2" />
+  <rect x="3" y="4" width="18" height="5" rx="2" fill="currentColor" />
+  <rect x="8" y="6" width="8" height="1" rx="0.5" fill="white" />
+  <rect x="8" y="13" width="8" height="1" rx="0.5" fill="currentColor" />
+</svg>`
+     },
+         { 
+       name: 'Arrow Down', 
+       Icon: ArrowDownIcon, 
+       label: 'fi-rr-arrow-down',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 3V21M12 21L6 15M12 21L18 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
+     },
+         { 
+       name: 'Arrow From Bottom', 
+       Icon: ArrowFromBottomIcon, 
+       label: 'fi-rr-arrow-from-bottom',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 15V3M12 3L6 9M12 3L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3 21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg>`
+     },
+         { 
+       name: 'Arrow Left', 
+       Icon: ArrowLeftIconNew, 
+       label: 'fi-rr-arrow-left',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 12H3M3 12L9 6M3 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
+     },
+         { 
+       name: 'Arrow Right', 
+       Icon: ArrowRightIconNew, 
+       label: 'fi-rr-arrow-right',
+       svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 12H21M21 12L15 6M21 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`
+     }
+  ];
+
+  const materialIcons = [
+    { 
+      name: 'Content Copy Filled', 
+      Icon: ContentCopyFilledIcon, 
+      label: 'content-copy-filled',
+      svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 1H4.5C3.4 1 2.5 1.9 2.5 3V17H4.5V3H16.5V1ZM19.5 5H8.5C7.4 5 6.5 5.9 6.5 7V21C6.5 22.1 7.4 23 8.5 23H19.5C20.6 23 21.5 22.1 21.5 21V7C21.5 5.9 20.6 5 19.5 5ZM19.5 21H8.5V7H19.5V21Z" fill="currentColor"/>
+</svg>`
+    },
+    { 
+      name: 'Check Filled', 
+      Icon: CheckFilledIcon, 
+      label: 'check-filled',
+      svgContent: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
+</svg>`
     }
   ];
 
@@ -255,45 +367,67 @@ export const IconsDemo: React.FC = () => {
     <div className="icons-demo">
       <h2 className="demo-title">Icon Components</h2>
       <p className="demo-description">
-        SVG icon components created from Figma's IconsRegular set. 
-        Each icon supports size, color, and className props.
+        SVG icon components with a default size of 24x24 pixels. 
+        Each icon supports size, color, and className props for customization.
       </p>
       
-      <div className="icons-grid">
-        {icons.map(({ name, Icon, label, svgContent }) => (
-          <div key={name} className="icon-item">
-            <div className="icon-preview">
-              <Icon size={32} />
+      <div className="icons-section">
+        <h3 className="section-title">Figma Icons (fi-*)</h3>
+        <div className="icons-grid">
+          {figmaIcons.map(({ name, Icon, label, svgContent }) => (
+            <div key={name} className="icon-item">
+              <div className="icon-preview">
+                <Icon />
+              </div>
+              <h3 className="icon-name">{name}</h3>
+              <code className="icon-label">{label}</code>
+              <CopyToClipboardButton
+                state={copiedIcon === name ? 'copied' : 'default'}
+                onClick={() => copyToClipboard(svgContent, name)}
+              />
             </div>
-            <h3 className="icon-name">{name}</h3>
-            <code className="icon-label">{label}</code>
-            <CopyToClipboardButton
-              state={copiedIcon === name ? 'copied' : 'default'}
-              onClick={() => copyToClipboard(svgContent, name)}
-            />
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      <div className="icons-section">
+        <h3 className="section-title">Material Icons</h3>
+        <div className="icons-grid">
+          {materialIcons.map(({ name, Icon, label, svgContent }) => (
+            <div key={name} className="icon-item">
+              <div className="icon-preview">
+                <Icon />
+              </div>
+              <h3 className="icon-name">{name}</h3>
+              <code className="icon-label">{label}</code>
+              <CopyToClipboardButton
+                state={copiedIcon === name ? 'copied' : 'default'}
+                onClick={() => copyToClipboard(svgContent, name)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="demo-code">
         <h3>Usage Example</h3>
         <SyntaxHighlighter
-          code={`import { AddIcon } from '../components/icons';
+          code={`import { AppleIcon, ArrowDownIcon, AppsIcon } from '../components/icons';
 
-// Basic usage
-<AddIcon />
+// Basic usage (default 24x24 size)
+<AppleIcon />
 
 // With custom size and color
-<AddIcon size={32} color="#3B82F6" />
+<AppleIcon size={32} color="#3B82F6" />
 
 // With custom className
-<AddIcon className="my-icon-class" />
+<AppleIcon className="my-icon-class" />
 
-// Multiple icons example
+// Multiple icons example (all default to 24x24)
 <div>
-  <AddIcon size={24} />
-  <AlarmClockIcon size={24} color="#10B981" />
-  <AmbulanceIcon size={24} color="#EF4444" />
+  <AppleIcon />
+  <ArrowDownIcon color="#10B981" />
+  <AppsIcon size={48} color="#EF4444" />
 </div>`}
           language="typescript"
         />
