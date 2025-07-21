@@ -1,7 +1,7 @@
 # Icon ViewBox Validation Report
 
 **Total Icons Analyzed:** 52
-**Icons with Issues:** 35
+**Icons with Issues:** 36
 
 ## ⚠️ Icons Requiring Attention
 
@@ -31,8 +31,8 @@
 
 ### Angle Right
 - **Current ViewBox:** `0 0 24 24`
-- **Suggested ViewBox:** `-1 -3 17 29`
-- **Path Bounds:** X: 1.7 to 13.0, Y: -0.0 to 24.0
+- **Suggested ViewBox:** `8 -3 17 29`
+- **Path Bounds:** X: 11.0 to 22.3, Y: -0.0 to 24.0
 - **Issue:** Current viewBox clips content. Use suggested viewBox.
 
 ### Angle Small Down
@@ -213,5 +213,11 @@
 - **Current ViewBox:** `335 46 26 27`
 - **Suggested ViewBox:** `16 23 375 363`
 - **Path Bounds:** X: 48.0 to 360.0, Y: 54.9 to 354.6
+- **Issue:** Current viewBox clips content. Use suggested viewBox.
+
+### Bell
+- **Current ViewBox:** `0 0 25 25`
+- **Suggested ViewBox:** `-2 -3 28 27`
+- **Path Bounds:** X: 0.9 to 24.0, Y: -0.0 to 22.0
 - **Issue:** Current viewBox clips content. Use suggested viewBox.
 
