@@ -69,4 +69,26 @@ export { default as BugIcon } from './Bug';
 export { default as BuildingIcon } from './Building';
 export { default as BulbIcon } from './Bulb';
 export { default as ButterflyIcon } from './Butterfly';
-export { ClockIcon } from './Clock'; 
+export { ClockIcon } from './Clock';
+
+// New cake and call icons
+export { default as CakeBirthdayIcon } from './CakeBirthday';
+export { default as CakeWeddingIcon } from './CakeWedding';
+export { default as CalculatorIcon } from './Calculator';
+export { default as CalendarIcon } from './Calendar';
+export { default as CallHistoryIcon } from './CallHistory';
+export { default as CallIncomingIcon } from './CallIncoming';
+export { default as CallMissedIcon } from './CallMissed';
+export { default as CallOutgoingIcon } from './CallOutgoing';
+export { default as CameraIcon } from './Camera';
+export { default as CampingIcon } from './Camping';
+export { default as CanParticipateIcon } from './CanParticipate';
+export { default as CanPlayIcon } from './CanPlay';
+export { default as CarIcon } from './Car';
+export { default as CaravanIcon } from './Caravan';
+export { default as CarrotIcon } from './Carrot';
+export { default as CarSideIcon } from './CarSide';
+export { default as CarwashIcon } from './Carwash';
+export { default as CashIcon } from './Cash';
+export { default as CatIcon } from './Cat';
+export { default as CctvIcon } from './Cctv'; 
