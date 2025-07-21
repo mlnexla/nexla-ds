@@ -15,7 +15,7 @@ export const BoldIcon: React.FC<BoldIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="146 0 20 25"
+      viewBox="147 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
