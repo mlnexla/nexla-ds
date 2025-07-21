@@ -9,3 +9,20 @@ alwaysApply: true
 - Do NOT hardcode colors or spacing; use tokens like `bg-primary`, `p-4`, etc.
 - Use PascalCase for all components.
 - DO NOT import new icon packages; all icons come from Figma assets.
+
+# Icon Component Guidelines
+- Icon components use naming convention: `Icon[Name][Style]` (e.g., `AngleDownIcon`)
+- All icons use 24x24 viewBox with `fill="none"` and `xmlns="http://www.w3.org/2000/svg"`
+- When creating directional icons, verify visual direction matches the name (e.g., AngleDown should point down)
+- SVG paths from large viewBoxes (456x24) need coordinate transformation to fit 24x24
+- Always test visual output - SVG paths may need rewriting if they display incorrectly
+- When adding icons to IconsDemo, update both component import and SVG content string
+- Export new icons from `src/components/icons/index.ts`
+
+# Component Structure
+- Each component has its own folder: `src/components/ComponentName/`
+- Include: ComponentName.tsx, ComponentName.css, index.ts
+- Export from `src/components/index.ts`
+- Create demo in `src/demos/ComponentNameDemo.tsx`
+- Use TypeScript interfaces for all props
+- Follow established prop patterns: className, size, color for icons
