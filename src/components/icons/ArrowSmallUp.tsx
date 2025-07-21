@@ -15,7 +15,7 @@ export const ArrowSmallUpIcon: React.FC<ArrowSmallUpIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="149 6 13 15"
+      viewBox="148 6 14 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

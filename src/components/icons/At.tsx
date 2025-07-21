@@ -15,7 +15,7 @@ export const AtIcon: React.FC<AtIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="288 1 24 24"
+      viewBox="287 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

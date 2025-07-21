@@ -15,7 +15,7 @@ export const BadgeIcon: React.FC<BadgeIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="387 1 17 24"
+      viewBox="386 0 19 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

@@ -7,7 +7,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "validate-icons": "node scripts/validateIcons.js",
+    "process-flaticons": "node scripts/processFlaticonsFromSVG.js",
+    "sync-demo-content": "node scripts/syncDemoContent.js",
     "start": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -15,7 +15,7 @@ export const ArrowSmallLeftIcon: React.FC<ArrowSmallLeftIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="54 6 14 14"
+      viewBox="53 6 16 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

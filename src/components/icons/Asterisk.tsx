@@ -15,7 +15,7 @@ export const AsteriskIcon: React.FC<AsteriskIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="241 4 22 17"
+      viewBox="240 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}

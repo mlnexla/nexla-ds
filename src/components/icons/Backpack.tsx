@@ -15,7 +15,7 @@ export const BackpackIcon: React.FC<BackpackIconProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="336 1 24 24"
+      viewBox="335 0 25 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
