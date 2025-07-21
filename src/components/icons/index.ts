@@ -1,0 +1,12 @@
+export { AddIcon } from './Add';
+export { AddressBookIcon } from './AddressBook';
+export { AlarmClockIcon } from './AlarmClock';
+export { AlignCenterIcon } from './AlignCenter';
+export { AlignJustifyIcon } from './AlignJustify';
+export { AlignLeftIcon } from './AlignLeft';
+export { AlignRightIcon } from './AlignRight';
+export { AmbulanceIcon } from './Ambulance';
+export { AngleDoubleLeftIcon } from './AngleDoubleLeft';
+export { AngleDoubleRightIcon } from './AngleDoubleRight';
+export { ContentCopyFilledIcon } from './ContentCopyFilled';
+export { CheckFilledIcon } from './CheckFilled'; 

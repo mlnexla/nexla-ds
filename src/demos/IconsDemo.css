@@ -1,0 +1,115 @@
+.icons-demo {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.demo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a202c;
+}
+
+.demo-description {
+  font-size: 1.125rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.icon-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--color-greyscale-00);
+  border: 1px solid var(--color-greyscale-100);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.icon-item:hover {
+  background: var(--color-greyscale-25);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--color-greyscale-200);
+}
+
+.icon-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 1rem;
+  color: var(--color-greyscale-800);
+}
+
+.icon-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.25rem;
+  color: var(--color-greyscale-800);
+}
+
+.icon-label {
+  font-size: var(--font-size-base-sm);
+  color: var(--color-greyscale-600);
+  font-family: var(--font-family-mono);
+  display: block;
+  margin-bottom: 1rem;
+  background: var(--color-greyscale-50);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-greyscale-100);
+}
+
+.icon-variations {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.demo-code {
+  background: #2d3748;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.demo-code h3 {
+  color: #f7fafc;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.demo-code pre {
+  color: #e2e8f0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .icons-demo {
+    padding: 1rem;
+  }
+  
+  .icons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  
+  .icon-item {
+    padding: 1rem;
+  }
+} 

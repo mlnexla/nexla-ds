@@ -1,0 +1,11 @@
+---
+description: Figma Dev Mode MCP + Design Style Rules
+globs:
+  - "**/*.tsx"
+alwaysApply: true
+---
+- Use Tailwind classes defined in the design system tokens.
+- Use semantic classnames: prefer `.button-primary` over `.blue-btn`.
+- Do NOT hardcode colors or spacing; use tokens like `bg-primary`, `p-4`, etc.
+- Use PascalCase for all components.
+- DO NOT import new icon packages; all icons come from Figma assets.

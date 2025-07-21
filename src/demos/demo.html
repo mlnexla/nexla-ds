@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextInput Component Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="TextInput.css">
+  <link rel="stylesheet" href="TextInputDemo.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-container">
+    <h1>TextInput Component Demo</h1>
+    <p>A React component based on the Figma design. This is a simplified preview of the component's visual states.</p>
+
+    <div class="demo-grid">
+      <!-- Default State -->
+      <div class="demo-item">
+        <h3>Default State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-default">
+              <div class="text-input-content">
+                <input type="text" placeholder="Placeholder text">
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hover State -->
+      <div class="demo-item">
+        <h3>Hover State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-hover">
+              <div class="text-input-content">
+                <input type="text" placeholder="Placeholder text">
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active State -->
+      <div class="demo-item">
+        <h3>Active State (Focused)</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-active">
+              <div class="text-input-content">
+                <input type="text" placeholder="Placeholder text">
+                <div class="text-input-cursor show"></div>
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing State -->
+      <div class="demo-item">
+        <h3>Typing State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-typing">
+              <div class="text-input-content">
+                <input type="text" value="Typing">
+                <div class="text-input-cursor show"></div>
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typed State -->
+      <div class="demo-item">
+        <h3>Typed State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-typed">
+              <div class="text-input-content">
+                <input type="text" value="Typed">
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error State -->
+      <div class="demo-item">
+        <h3>Error State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-error">
+              <div class="text-input-content">
+                <input type="text" value="Typed">
+              </div>
+            </div>
+            <div class="text-input-help error">Error message is displayed here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disabled State -->
+      <div class="demo-item">
+        <h3>Disabled State</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field text-input-disabled">
+              <div class="text-input-content">
+                <input type="text" value="Typed" disabled>
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Variant -->
+      <div class="demo-item">
+        <h3>Code Variant (with Copy)</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-code-container">
+              <div class="text-input-field">
+                <div class="text-input-content">
+                  <input type="text" class="text-input-code" value='const example = "code";'>
+                </div>
+              </div>
+              <button class="text-input-copy-button">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <rect x="3" y="3" width="6" height="6" stroke="#5F606D" stroke-width="1"/>
+                  <path d="M1 1H7V2H2V7H1V1Z" fill="#5F606D"/>
+                </svg>
+                <span>Copy</span>
+              </button>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chip Selected -->
+      <div class="demo-item">
+        <h3>Chip Input (With Chips)</h3>
+        <div class="text-input-container">
+          <div class="text-input-label-container">
+            <label class="text-input-label">Input Field Label</label>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+              <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+              <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+            </svg>
+          </div>
+          <div class="text-input-field-container">
+            <div class="text-input-field">
+              <div class="text-input-chips">
+                <div class="text-input-chip">
+                  <span class="chip-label">Chip 1</span>
+                  <span class="chip-count">3</span>
+                  <button class="chip-remove">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <circle cx="8" cy="8" r="8" fill="#5F606D" fill-opacity="0.2"/>
+                      <path d="M10.5 5.5L5.5 10.5M5.5 5.5L10.5 10.5" stroke="#5F606D" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="text-input-chip">
+                  <span class="chip-label">Chip 2</span>
+                  <button class="chip-remove">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <circle cx="8" cy="8" r="8" fill="#5F606D" fill-opacity="0.2"/>
+                      <path d="M10.5 5.5L5.5 10.5M5.5 5.5L10.5 10.5" stroke="#5F606D" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="text-input-help">Help text should be written here</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

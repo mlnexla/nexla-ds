@@ -1,0 +1,121 @@
+.copy-to-clipboard-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0;
+  background: var(--color-greyscale-00);
+  border: 1px solid var(--color-greyscale-200);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.copy-to-clipboard-button.default:hover {
+  background: var(--color-greyscale-25);
+  border-color: var(--color-greyscale-400);
+}
+
+.copy-to-clipboard-button.default:focus {
+  box-shadow: 0 0 0 2px rgba(95, 96, 109, 0.2);
+}
+
+.copy-to-clipboard-button.default:active {
+  background: var(--color-greyscale-50);
+  transform: translateY(1px);
+}
+
+.copy-to-clipboard-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.copy-to-clipboard-button.copied {
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
+  cursor: default;
+}
+
+.copy-button-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+}
+
+.copy-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  color: var(--color-greyscale-600);
+  flex-shrink: 0;
+}
+
+.copy-button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-sm);
+}
+
+.copy-button-text span {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-sm);
+  color: var(--color-greyscale-600);
+  white-space: nowrap;
+}
+
+/* Copied state styling */
+.copy-to-clipboard-button.copied .copy-button-icon {
+  color: var(--color-greyscale-600);
+}
+
+.copy-to-clipboard-button.copied .copy-button-text span {
+  color: var(--color-greyscale-600);
+}
+
+/* Animation for state change */
+.copy-to-clipboard-button {
+  transition: all 0.2s ease;
+}
+
+.copy-to-clipboard-button.copied {
+  animation: copySuccess 0.3s ease-out;
+}
+
+@keyframes copySuccess {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .copy-button-text span {
+    font-size: var(--font-size-xs);
+  }
+  
+  .copy-button-icon {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .copy-button-inner {
+    gap: 2px;
+    padding: 0 6px;
+  }
+} 

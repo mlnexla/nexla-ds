@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextInput Style Test</title>
+  <link rel="stylesheet" href="src/components/TextInput/TextInput.css">
+</head>
+<body style="padding: 40px; background: #f8f9fa;">
+  <h1>TextInput Style Test</h1>
+  <p>Testing if the CSS variables and styles are loading correctly.</p>
+
+  <!-- Default Input -->
+  <div class="text-input-container" style="max-width: 400px; margin-bottom: 20px;">
+    <div class="text-input-label-container">
+      <label class="text-input-label">Default Input</label>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="7.5" stroke="#9293A0" stroke-width="1"/>
+        <circle cx="8" cy="4" r="1" fill="#9293A0"/>
+        <rect x="7" y="6" width="2" height="6" fill="#9293A0"/>
+      </svg>
+    </div>
+    <div class="text-input-field-container">
+      <div class="text-input-field">
+        <div class="text-input-content">
+          <input type="text" placeholder="Placeholder text">
+        </div>
+      </div>
+      <div class="text-input-help">Help text should be written here</div>
+    </div>
+  </div>
+
+  <!-- Active Input -->
+  <div class="text-input-container" style="max-width: 400px; margin-bottom: 20px;">
+    <div class="text-input-label-container">
+      <label class="text-input-label">Active Input</label>
+    </div>
+    <div class="text-input-field-container">
+      <div class="text-input-field text-input-active">
+        <div class="text-input-content">
+          <input type="text" placeholder="This has active state">
+          <div class="text-input-cursor show"></div>
+        </div>
+      </div>
+      <div class="text-input-help">This input has the active state applied</div>
+    </div>
+  </div>
+
+  <!-- Error Input -->
+  <div class="text-input-container" style="max-width: 400px; margin-bottom: 20px;">
+    <div class="text-input-label-container">
+      <label class="text-input-label">Error Input</label>
+    </div>
+    <div class="text-input-field-container">
+      <div class="text-input-field text-input-error">
+        <div class="text-input-content">
+          <input type="text" value="Invalid input">
+        </div>
+      </div>
+      <div class="text-input-help error">Error message is displayed here</div>
+    </div>
+  </div>
+
+  <!-- Code Input -->
+  <div class="text-input-container" style="max-width: 400px; margin-bottom: 20px;">
+    <div class="text-input-label-container">
+      <label class="text-input-label">Code Input</label>
+    </div>
+    <div class="text-input-field-container">
+      <div class="text-input-code-container">
+        <div class="text-input-field">
+          <div class="text-input-content">
+            <input type="text" class="text-input-code" value='const test = "hello";'>
+          </div>
+        </div>
+        <button class="text-input-copy-button">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect x="3" y="3" width="6" height="6" stroke="#5F606D" stroke-width="1"/>
+            <path d="M1 1H7V2H2V7H1V1Z" fill="#5F606D"/>
+          </svg>
+          <span>Copy</span>
+        </button>
+      </div>
+      <div class="text-input-help">Code variant with copy functionality</div>
+    </div>
+  </div>
+</body>
+</html> 
