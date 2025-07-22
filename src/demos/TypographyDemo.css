@@ -1,0 +1,184 @@
+/* Typography Demo Styles */
+.typography-demo {
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.demo-header {
+  margin-bottom: var(--spacing-2xl);
+  text-align: center;
+}
+
+.demo-header h1 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-greyscale-900);
+}
+
+.demo-description {
+  color: var(--color-greyscale-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.demo-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.demo-section h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-greyscale-900);
+}
+
+.demo-section p {
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-greyscale-700);
+}
+
+/* Variants Grid */
+.variants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.variant-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-greyscale-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.variant-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.variant-header h3 {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-greyscale-900);
+}
+
+.variant-description {
+  color: var(--color-greyscale-600);
+}
+
+.variant-example {
+  background: var(--color-greyscale-25);
+  border: 1px solid var(--color-greyscale-100);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.variant-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-greyscale-50);
+  border-radius: var(--radius-md);
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.spec-label {
+  color: var(--color-greyscale-600);
+  margin-bottom: var(--spacing-xs);
+}
+
+.spec-value {
+  color: var(--color-greyscale-900);
+  font-weight: var(--font-weight-semibold);
+}
+
+.variant-code {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.code-section {
+  border: 1px solid var(--color-greyscale-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.code-label {
+  padding: var(--spacing-md);
+  background: var(--color-greyscale-50);
+  border-bottom: 1px solid var(--color-greyscale-200);
+  color: var(--color-greyscale-700);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Guidelines Grid */
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.guideline-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-greyscale-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.guideline-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-greyscale-900);
+}
+
+.guideline-card p {
+  color: var(--color-greyscale-700);
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .typography-demo {
+    padding: var(--spacing-lg);
+  }
+  
+  .variants-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .variant-specs {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .typography-demo {
+    padding: var(--spacing-md);
+  }
+  
+  .variant-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .variant-example {
+    padding: var(--spacing-md);
+    min-height: 60px;
+  }
+} 

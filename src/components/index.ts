@@ -5,4 +5,5 @@ export { SyntaxHighlighter } from './SyntaxHighlighter';
 export { JumpMenu } from './JumpMenu';
 export { Sidebar } from './Sidebar';
 export { CopyToClipboardButton } from './CopyToClipboardButton';
+export { Typography } from './Typography';
 export * from './icons'; 

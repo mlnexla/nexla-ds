@@ -5,6 +5,7 @@ import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import { ColorsDemo } from './demos/ColorsDemo';
+import TypographyDemo from './demos/TypographyDemo';
 import './styles/global.css';
 
 function AppContent() {
@@ -14,6 +15,11 @@ function AppContent() {
       value: '/main', 
       label: 'Nexla Design System',
       path: '/main'
+    },
+    { 
+      value: '/typography', 
+      label: 'Typography',
+      path: '/typography'
     },
     { 
       value: '/buttons', 
@@ -48,6 +54,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Navigate to="/main" replace />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path="/typography" element={<TypographyDemo />} />
           <Route path="/buttons" element={<ButtonsDemo />} />
           <Route path="/inputs" element={<TextInputDemo />} />
           <Route path="/colors" element={<ColorsDemo />} />

@@ -1,0 +1,56 @@
+/* Typography Component Styles */
+.typography {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-primary);
+}
+
+/* Typography Variants */
+.typography-body-default-400 {
+  font: var(--typography-body-default-400);
+}
+
+.typography-body-default-500 {
+  font: var(--typography-body-default-500);
+}
+
+.typography-body-small-400 {
+  font: var(--typography-body-small-400);
+}
+
+.typography-body-small-500 {
+  font: var(--typography-body-small-500);
+}
+
+.typography-body-large-400 {
+  font: var(--typography-body-large-400);
+}
+
+.typography-body-large-500 {
+  font: var(--typography-body-large-500);
+}
+
+/* Typography Utility Classes */
+.text-body-default-400 {
+  font: var(--typography-body-default-400);
+}
+
+.text-body-default-500 {
+  font: var(--typography-body-default-500);
+}
+
+.text-body-small-400 {
+  font: var(--typography-body-small-400);
+}
+
+.text-body-small-500 {
+  font: var(--typography-body-small-500);
+}
+
+.text-body-large-400 {
+  font: var(--typography-body-large-400);
+}
+
+.text-body-large-500 {
+  font: var(--typography-body-large-500);
+} 
