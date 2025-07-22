@@ -24,7 +24,7 @@ const CodeExample: React.FC<CodeExampleProps> = ({ title, reactCode, cssCode, de
         </div>
         <Button
           label={isExpanded ? 'Hide Code' : 'Show Code'}
-          variant="primary"
+          variant="default"
           size="small"
           onClick={() => setIsExpanded(!isExpanded)}
           className="code-toggle-button"
