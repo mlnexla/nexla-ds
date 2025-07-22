@@ -120,27 +120,27 @@ export const ButtonsDemo: React.FC = () => {
         
         <div className="button-grid">
           <div className="button-example">
-            <Button label="Default" variant="primary" state="default" />
+            <Button label="Default" variant="default" state="default" />
             <span className="button-label">Default</span>
           </div>
           
           <div className="button-example">
-            <Button label="Hover" variant="primary" state="hover" />
+            <Button label="Hover" variant="default" state="hover" />
             <span className="button-label">Hover</span>
           </div>
           
           <div className="button-example">
-            <Button label="Pressing" variant="primary" state="pressing" />
+            <Button label="Pressing" variant="default" state="pressing" />
             <span className="button-label">Pressing</span>
           </div>
           
           <div className="button-example">
-            <Button label="Disabled" variant="primary" disabled />
+            <Button label="Disabled" variant="default" disabled />
             <span className="button-label">Disabled</span>
           </div>
           
           <div className="button-example">
-            <Button label="Loading..." variant="primary" loading />
+            <Button label="Loading..." variant="default" loading />
             <span className="button-label">Loading</span>
           </div>
         </div>
