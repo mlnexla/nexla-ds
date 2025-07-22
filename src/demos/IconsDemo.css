@@ -24,10 +24,14 @@
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #1a202c;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-greyscale-200);
+  margin-bottom: 0.5rem;
+  color: var(--color-greyscale-800);
+}
+
+.section-description {
+  font-size: 1rem;
+  color: var(--color-greyscale-600);
+  margin-bottom: 2rem;
 }
 
 .icons-grid {

@@ -100,36 +100,40 @@ export const IconsDemo: React.FC = () => {
 
   return (
     <div className="icons-demo">
-      <div className="demo-header">
-        <h1>Icon Gallery</h1>
-                    <p>Browse all {totalIcons} icons in the design system</p>
-        
-        {/* Filter Input */}
-        <div className="filter-container" style={{ 
-          margin: '20px 0',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          width: '100%'
-        }}>
-          <div style={{ width: '100%', maxWidth: '400px' }}>
-            <TextInput
-              label=""
-              placeholder="Search icons... (e.g., 'arrow', 'user', 'fi-rr-home')"
-              value={filterText}
-              onChange={setFilterText}
-              helpText={filterText ? `Showing ${filteredTotal} of ${totalIcons} icons` : `${totalIcons} icons available`}
-              showHelpIcon={false}
-              className="icon-search-input"
-            />
-          </div>
+      <h2 className="demo-title">Icon Gallery</h2>
+      <p className="demo-description">
+        Browse all {totalIcons} icons in the design system. Search by name or icon code to quickly find the perfect icon for your project.
+        All icons are consistently sized and optimized for web use.
+      </p>
+
+      {/* Filter Input */}
+      <div className="filter-container" style={{ 
+        margin: '20px 0',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: '100%'
+      }}>
+        <div style={{ width: '100%', maxWidth: '400px' }}>
+          <TextInput
+            label=""
+            placeholder="Search icons... (e.g., 'arrow', 'user', 'fi-rr-home')"
+            value={filterText}
+            onChange={setFilterText}
+            helpText={filterText ? `Showing ${filteredTotal} of ${totalIcons} icons` : `${totalIcons} icons available`}
+            showHelpIcon={false}
+            className="icon-search-input"
+          />
         </div>
       </div>
 
       {/* Flaticon Icons Section */}
       {filteredIconList.length > 0 && (
-        <div className="icons-section">
-          <h2>Flaticon Regular Icons ({filteredIconList.length})</h2>
+        <section className="icons-section">
+          <h3 className="section-title">Flaticon Regular Icons ({filteredIconList.length})</h3>
+          <p className="section-description">
+            Comprehensive collection of Flaticon Regular icons with consistent 24x24 sizing and optimized SVG paths.
+          </p>
           <div className="icons-grid">
             {filteredIconList.map((icon) => {
               const IconComponent = icon.component;
@@ -155,13 +159,16 @@ export const IconsDemo: React.FC = () => {
               );
             })}
           </div>
-        </div>
+        </section>
       )}
 
       {/* Material UI Icons Section */}
       {filteredMuiIcons.length > 0 && (
-        <div className="icons-section">
-          <h2>Material UI (MUI) Icons ({filteredMuiIcons.length})</h2>
+        <section className="icons-section">
+          <h3 className="section-title">Material UI (MUI) Icons ({filteredMuiIcons.length})</h3>
+          <p className="section-description">
+            Specialized Material UI icons for specific functionality and consistent design system integration.
+          </p>
           <div className="icons-grid">
             {filteredMuiIcons.map((icon) => {
               const IconComponent = icon.component;
@@ -187,7 +194,7 @@ export const IconsDemo: React.FC = () => {
               );
             })}
           </div>
-        </div>
+        </section>
       )}
 
       {/* No Results Message */}
