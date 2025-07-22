@@ -88,7 +88,7 @@ const TypographyDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-400" as="h2">
+        <Typography variant="body-large-500" as="h2">
           Typography Variants
         </Typography>
         <Typography variant="body-default-400">
@@ -167,7 +167,7 @@ const TypographyDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-400" as="h2">
+        <Typography variant="body-large-500" as="h2">
           Usage Guidelines
         </Typography>
         
@@ -229,7 +229,7 @@ const TypographyDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-400" as="h2">
+        <Typography variant="body-large-500" as="h2">
           CSS Variables
         </Typography>
         <Typography variant="body-default-400">
