@@ -238,17 +238,17 @@ export const ButtonsDemo: React.FC = () => {
             title="Secondary Variant"
             description="Subtle styling for supporting actions and alternative pathways."
             reactCode={`<Button 
-  label="Add Item" 
+  label="Cancel" 
   variant="secondary" 
-  onClick={handleAdd}
+  onClick={handleCancel}
 />
 
 // With disabled state
 <Button 
-  label="Export"
+  label="Skip"
   variant="secondary"
-  disabled={!canExport}
-  onClick={handleExport}
+  disabled={!canSkip}
+  onClick={handleSkip}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--pressing {
   background: var(--color-greyscale-50);
@@ -358,7 +358,7 @@ const handleAsyncAction = async () => {
           </div>
           
           <div className="button-example">
-            <Button label="Add Item" variant="secondary" />
+            <Button label="Cancel" variant="secondary" />
             <span className="button-label">Secondary Action</span>
           </div>
           
@@ -387,9 +387,9 @@ const handleAsyncAction = async () => {
 
 // Secondary - Supporting actions
 <Button 
-  label="Add Item" 
+  label="Cancel" 
   variant="secondary" 
-  onClick={handleAdd}
+  onClick={handleCancel}
 />
 
 // Danger - Destructive actions
@@ -434,11 +434,11 @@ const [isSubmitting, setIsSubmitting] = useState(false);
   transform: translateY(-1px) on hover;
 }
 
-/* Secondary - Medium emphasis, supporting actions */
+/* Secondary - Supporting actions with greyscale text */
 .basic-action-button--secondary {
-  background: var(--color-greyscale-25);
-  border-color: var(--color-greyscale-300);
-  color: var(--color-greyscale-700);
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
+  color: var(--color-greyscale-600);
 }
 
 /* Danger - High emphasis, destructive actions */
@@ -590,7 +590,7 @@ const handleCopyFallback = (text: string) => {
             </div>
             <div className="usage-item">
               <strong>Secondary:</strong> Supporting actions that are important but not primary. 
-              Perfect for "Add Item", "Export", or alternative pathways.
+              Perfect for "Cancel", "Skip", or alternative pathways.
             </div>
             <div className="usage-item">
               <strong>Danger:</strong> Destructive or irreversible actions that require caution. 

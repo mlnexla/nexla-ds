@@ -315,47 +315,47 @@
   justify-content: center;
 }
 
-/* Secondary Variant (orange secondary palette) */
+/* Secondary Variant (neutral styling with greyscale text) */
 .basic-action-button--secondary {
-  background: var(--color-secondary-50);
-  border-color: var(--color-secondary-200);
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
 }
 
 .basic-action-button--secondary .basic-action-button__label {
-  color: var(--color-secondary-600);
+  color: var(--color-greyscale-600);
   font-weight: var(--font-weight-medium);
 }
 
 .basic-action-button--secondary .basic-action-button__icon {
-  color: var(--color-secondary-600);
+  color: var(--color-greyscale-600);
 }
 
 .basic-action-button--secondary.basic-action-button--hover {
-  background: var(--color-secondary-100);
-  border-color: var(--color-secondary-300);
+  background: var(--color-greyscale-50);
+  border-color: var(--color-greyscale-200);
   box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7;
 }
 
 .basic-action-button--secondary.basic-action-button--hover .basic-action-button__label {
-  color: var(--color-secondary-700);
+  color: var(--color-greyscale-700);
 }
 
 .basic-action-button--secondary.basic-action-button--hover .basic-action-button__icon {
-  color: var(--color-secondary-700);
+  color: var(--color-greyscale-700);
 }
 
 .basic-action-button--secondary.basic-action-button--pressing {
-  background: var(--color-secondary-100);
-  border-color: var(--color-secondary-300);
+  background: var(--color-greyscale-50);
+  border-color: var(--color-greyscale-200);
   box-shadow: none;
 }
 
 .basic-action-button--secondary.basic-action-button--pressing .basic-action-button__label {
-  color: var(--color-secondary-700);
+  color: var(--color-greyscale-700);
 }
 
 .basic-action-button--secondary.basic-action-button--pressing .basic-action-button__icon {
-  color: var(--color-secondary-700);
+  color: var(--color-greyscale-700);
 }
 
 .basic-action-button--secondary.basic-action-button--disabled {
@@ -374,8 +374,8 @@
 }
 
 .basic-action-button--secondary.basic-action-button--processing {
-  background: var(--color-secondary-50);
-  border-color: var(--color-secondary-200);
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
   cursor: default;
   min-width: 100px;
 }
