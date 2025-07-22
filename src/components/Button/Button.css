@@ -101,7 +101,7 @@
 /* Default Variant (neutral styling) */
 .basic-action-button--default {
   background: var(--color-greyscale-00);
-  border-color: var(--color-greyscale-100);
+  border-color: var(--color-outline);
 }
 
 .basic-action-button--default .basic-action-button__label {
@@ -142,7 +142,7 @@
 
 .basic-action-button--default.basic-action-button--disabled {
   background: var(--color-greyscale-100);
-  border-color: var(--color-greyscale-100);
+  border-color: var(--color-outline);
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -213,7 +213,7 @@
 
 .basic-action-button--primary.basic-action-button--disabled {
   background: var(--color-greyscale-100);
-  border-color: var(--color-greyscale-100);
+  border-color: var(--color-outline);
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
@@ -354,7 +354,7 @@
 
 .basic-action-button--danger.basic-action-button--disabled {
   background: var(--color-greyscale-100);
-  border-color: var(--color-greyscale-100);
+  border-color: var(--color-outline);
   cursor: not-allowed;
   box-shadow: none;
 }

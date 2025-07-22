@@ -86,7 +86,7 @@
   background: var(--color-greyscale-50);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
-  border: 1px solid var(--color-greyscale-100);
+  border: 1px solid var(--color-outline);
 }
 
 .loading {

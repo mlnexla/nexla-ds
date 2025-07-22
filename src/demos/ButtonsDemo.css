@@ -80,7 +80,7 @@
   padding: 2rem;
   background: var(--color-greyscale-25);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-greyscale-100);
+  border: 1px solid var(--color-outline);
 }
 
 .code-example {
@@ -108,11 +108,12 @@
 }
 
 .code-example-section {
-  border: 1px solid var(--color-greyscale-200);
+  background: var(--color-white);
   border-radius: var(--radius-lg);
-  background: var(--color-greyscale-00);
   overflow: hidden;
-  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-outline);
 }
 
 .code-example-section:hover {
@@ -122,12 +123,11 @@
 
 .code-example-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding: 1.25rem 1.5rem;
   background: var(--color-greyscale-25);
-  border-bottom: 1px solid var(--color-greyscale-100);
-  gap: 1.5rem;
+  border-bottom: 1px solid var(--color-outline);
 }
 
 .code-example-header-content {
@@ -157,7 +157,7 @@
 }
 
 .code-example-content {
-  border-top: 1px solid var(--color-greyscale-100);
+  border-top: 1px solid var(--color-outline);
 }
 
 .code-tabs {
@@ -278,7 +278,7 @@
   padding: 1.5rem;
   background: var(--color-greyscale-25);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-greyscale-100);
+  border: 1px solid var(--color-outline);
 }
 
 .usage-item {
@@ -288,7 +288,7 @@
   padding: 1rem;
   background: var(--color-greyscale-00);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-greyscale-100);
+  border: 1px solid var(--color-outline);
 }
 
 .usage-item strong {
@@ -301,6 +301,7 @@
   font-size: 0.875rem;
   color: var(--color-greyscale-700);
   line-height: 1.5;
+  border: 1px solid var(--color-outline);
 }
 
 /* Responsive design */
