@@ -240,6 +240,81 @@
   justify-content: center;
 }
 
+/* Primary Bold Variant (enhanced primary with bold styling) */
+.basic-action-button--primary-bold {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.basic-action-button--primary-bold .basic-action-button__label {
+  color: var(--color-primary-50);
+  font-family: 'Rubik', var(--font-family-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.basic-action-button--primary-bold .basic-action-button__icon {
+  color: var(--color-primary-50);
+}
+
+.basic-action-button--primary-bold.basic-action-button--hover {
+  background: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+  box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7;
+}
+
+.basic-action-button--primary-bold.basic-action-button--hover .basic-action-button__label {
+  color: var(--color-primary-50);
+}
+
+.basic-action-button--primary-bold.basic-action-button--hover .basic-action-button__icon {
+  color: var(--color-primary-50);
+}
+
+.basic-action-button--primary-bold.basic-action-button--pressing {
+  background: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+  box-shadow: none;
+}
+
+.basic-action-button--primary-bold.basic-action-button--pressing .basic-action-button__label {
+  color: var(--color-primary-50);
+}
+
+.basic-action-button--primary-bold.basic-action-button--pressing .basic-action-button__icon {
+  color: var(--color-primary-50);
+}
+
+.basic-action-button--primary-bold.basic-action-button--disabled {
+  background: var(--color-greyscale-200);
+  border-color: var(--color-greyscale-200);
+  cursor: not-allowed;
+}
+
+.basic-action-button--primary-bold.basic-action-button--disabled .basic-action-button__label {
+  color: var(--color-greyscale-400);
+  font-family: 'Rubik', var(--font-family-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.basic-action-button--primary-bold.basic-action-button--disabled .basic-action-button__icon {
+  color: var(--color-greyscale-400);
+}
+
+.basic-action-button--primary-bold.basic-action-button--loading {
+  background: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+  cursor: default;
+  min-width: 100px;
+}
+
+.basic-action-button--primary-bold.basic-action-button--loading .basic-action-button__content {
+  justify-content: center;
+}
+
 /* Secondary Variant (orange secondary palette) */
 .basic-action-button--secondary {
   background: var(--color-secondary-50);

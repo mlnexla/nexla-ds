@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Button.css';
 
-export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'danger';
+export type ButtonVariant = 'default' | 'primary' | 'primary-bold' | 'secondary' | 'danger';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonState = 'default' | 'hover' | 'pressing' | 'disabled' | 'loading';
 

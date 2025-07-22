@@ -102,6 +102,11 @@ export const ButtonsDemo: React.FC = () => {
           </div>
           
           <div className="button-example">
+            <Button label="Primary Bold" variant="primary-bold" />
+            <span className="button-label">Primary Bold</span>
+          </div>
+          
+          <div className="button-example">
             <Button label="Secondary" variant="secondary" />
             <span className="button-label">Secondary</span>
           </div>
@@ -192,6 +197,42 @@ export const ButtonsDemo: React.FC = () => {
 
 .basic-action-button--primary.basic-action-button--hover .basic-action-button__label {
   color: var(--color-primary-700);
+}`}
+          />
+
+          <CodeExample
+            title="Primary Bold Variant"
+            description="Bold primary styling with enhanced visual weight and Rubik font for high-emphasis actions."
+            reactCode={`<Button 
+  label="Create Project" 
+  variant="primary-bold" 
+  onClick={handleCreate}
+/>
+
+// With loading state
+<Button 
+  label="Processing..." 
+  variant="primary-bold" 
+  loading={isProcessing}
+/>`}
+            cssCode={`.basic-action-button--primary-bold {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.basic-action-button--primary-bold .basic-action-button__label {
+  color: var(--color-primary-50);
+  font-family: 'Rubik', var(--font-family-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.basic-action-button--primary-bold.basic-action-button--hover {
+  background: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+  box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 
+              0px 2px 4px 0px #e4e4e7;
 }`}
           />
 
