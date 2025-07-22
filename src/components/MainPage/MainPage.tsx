@@ -64,57 +64,7 @@ const MainPage: React.FC = () => {
               <li><strong>Design Tokens:</strong> Centralized CSS variables for colors, spacing, and typography</li>
             </ul>
 
-            <h3>Button Component Usage</h3>
-            <pre className="code-block">
-{`import { Button } from './components';
-import { FiRrAdd } from './components/icons';
 
-// Primary button (main CTAs)
-<Button variant="primary" onClick={handleSave}>
-  Save Changes
-</Button>
-
-// Secondary button (orange theme)
-<Button variant="secondary" icon={<FiRrAdd />} onClick={handleAdd}>
-  Add Item
-</Button>
-
-// Default button (neutral actions)
-<Button onClick={handleCancel}>
-  Cancel
-</Button>
-
-// Danger button (destructive actions)
-<Button variant="danger" onClick={handleDelete}>
-  Delete
-</Button>
-
-// With processing state
-<Button variant="primary" loading={isSubmitting}>
-  Submit
-</Button>`}
-            </pre>
-
-            <h3>Design Specifications</h3>
-            
-            <h4>Button Design System</h4>
-            <p>Professional design with precise color specifications:</p>
-            <p><strong>Typography:</strong> Rubik Medium (500), 14px, 24px line height</p>
-            
-            <h5>Button Variants:</h5>
-            <ul>
-              <li><strong>Primary:</strong> Blue theme (<code>#357BFF</code>) - highest emphasis for main CTAs</li>
-              <li><strong>Secondary:</strong> Orange theme (<code>#DB5327</code>) - high emphasis alternatives</li>
-              <li><strong>Default:</strong> Neutral theme (<code>#485BFF</code>) - standard actions</li>
-              <li><strong>Danger:</strong> Red theme (<code>#B52020</code>) - destructive actions</li>
-            </ul>
-
-            <h5>Interactive States:</h5>
-            <ul>
-              <li>Default → Hover → Pressing → Processing/Disabled</li>
-              <li>Enhanced shadows and color transitions</li>
-              <li>Processing state with branded spinner</li>
-            </ul>
 
             <h3>Getting Started</h3>
             <ol>

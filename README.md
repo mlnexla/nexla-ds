@@ -44,51 +44,7 @@ src/
 - **Accessibility**: Proper labeling and keyboard navigation support
 - **Design Tokens**: Centralized CSS variables for colors, spacing, and typography
 
-## Button Component
 
-### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `children` | ReactNode | - | Button content |
-| `variant` | 'primary' \| 'secondary' \| 'default' \| 'danger' | 'default' | Button style variant |
-| `onClick` | () => void | - | Click handler |
-| `disabled` | boolean | false | Disable button |
-| `loading` | boolean | false | Show processing state |
-| `className` | string | - | Additional CSS classes |
-| `icon` | ReactNode | - | Optional leading icon |
-
-### Usage
-
-```tsx
-import { Button } from './components';
-import { FiRrAdd } from './components/icons';
-
-// Primary button (main CTAs)
-<Button variant="primary" onClick={handleSave}>
-  Save Changes
-</Button>
-
-// Secondary button (orange theme)
-<Button variant="secondary" icon={<FiRrAdd />} onClick={handleAdd}>
-  Add Item
-</Button>
-
-// Default button (neutral actions)
-<Button onClick={handleCancel}>
-  Cancel
-</Button>
-
-// Danger button (destructive actions)
-<Button variant="danger" onClick={handleDelete}>
-  Delete
-</Button>
-
-// With processing state
-<Button variant="primary" loading={isSubmitting}>
-  Submit
-</Button>
-```
 
 ## TextInput Component
 
@@ -137,36 +93,7 @@ import { TextInput } from './components';
 />
 ```
 
-## Design Specifications
 
-### Button Design System
-
-Professional design with precise color specifications:
-
-**Typography**: Rubik Medium (500), 14px, 24px line height
-
-**Button Variants**:
-- **Primary**: Blue theme (`#357BFF`) - highest emphasis for main CTAs
-- **Secondary**: Orange theme (`#DB5327`) - high emphasis alternatives
-- **Default**: Neutral theme (`#485BFF`) - standard actions
-- **Danger**: Red theme (`#B52020`) - destructive actions
-
-**Interactive States**:
-- Default → Hover → Pressing → Processing/Disabled
-- Enhanced shadows and color transitions
-- Processing state with branded spinner
-
-### TextInput Design System
-
-- **Font**: Rubik (400, 500) for text, Roboto Mono for code
-- **Colors**: 
-  - Primary: #357BFF
-  - Text: #2F3037
-  - Placeholder: #9293A0
-  - Error: #B52020
-  - Disabled: #F1F2F3
-- **Border Radius**: 8px
-- **Height**: 36px (standard input)
 
 ## Running the Demo
 
