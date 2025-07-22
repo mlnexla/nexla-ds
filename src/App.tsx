@@ -4,6 +4,7 @@ import { MainPage } from './components/MainPage';
 import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
+import { ColorsDemo } from './demos/ColorsDemo';
 import './styles/global.css';
 
 function AppContent() {
@@ -24,6 +25,11 @@ function AppContent() {
       value: '/inputs', 
       label: 'Text Input',
       path: '/inputs'
+    },
+    { 
+      value: '/colors', 
+      label: 'Colors',
+      path: '/colors'
     },
     { 
       value: '/icons', 
@@ -50,6 +56,7 @@ function AppContent() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/buttons" element={<ButtonsDemo />} />
           <Route path="/inputs" element={<TextInputDemo />} />
+          <Route path="/colors" element={<ColorsDemo />} />
           <Route path="/icons" element={<IconsDemo />} />
         </Routes>
       </main>

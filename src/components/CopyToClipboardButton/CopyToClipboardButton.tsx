@@ -19,14 +19,11 @@ export const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = ({
   className = "",
   tooltip
 }) => {
-  const getTooltipText = () => {
-    if (tooltip) return tooltip;
-    if (state === 'copied') return 'Copied!';
-    return label && label.length > 0 ? `Copy ${label}` : 'Copy to clipboard';
-  };
-    if (state === 'copied') {
+  const tooltipProps = tooltip ? { title: tooltip } : {};
+
+  if (state === 'copied') {
     return (
-      <div className={`copy-to-clipboard-button copied ${className}`} title={getTooltipText()}>
+      <div className={`copy-to-clipboard-button copied ${className}`} {...tooltipProps}>
         <div className="copy-button-inner">
           <div className="copy-button-icon">
             <CheckFilledIcon size={12} color="currentColor" />
@@ -47,7 +44,7 @@ export const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       type="button"
-      title={getTooltipText()}
+      {...tooltipProps}
     >
       <div className="copy-button-inner">
         <div className="copy-button-icon">

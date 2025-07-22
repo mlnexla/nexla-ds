@@ -60,12 +60,12 @@
   gap: 0;
 }
 
-/* Enhanced tooltip styling */
+/* Enhanced tooltip styling - only when title attribute exists */
 .copy-to-clipboard-button {
   position: relative;
 }
 
-.copy-to-clipboard-button::before {
+.copy-to-clipboard-button[title]:not([title=""])::before {
   content: attr(title);
   position: absolute;
   top: 100%;
@@ -86,7 +86,7 @@
   margin-top: 0.5rem;
 }
 
-.copy-to-clipboard-button::after {
+.copy-to-clipboard-button[title]:not([title=""])::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -102,19 +102,10 @@
   margin-top: 0.125rem;
 }
 
-.copy-to-clipboard-button:hover::before,
-.copy-to-clipboard-button:hover::after {
+.copy-to-clipboard-button[title]:not([title=""]):hover::before,
+.copy-to-clipboard-button[title]:not([title=""]):hover::after {
   opacity: 1;
   visibility: visible;
-}
-
-/* Hide default browser tooltip */
-.copy-to-clipboard-button[title]:hover::before {
-  content: attr(title);
-}
-
-.copy-to-clipboard-button[title] {
-  position: relative;
 }
 
 .copy-button-icon {

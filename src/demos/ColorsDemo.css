@@ -1,0 +1,203 @@
+.colors-demo {
+  width: 100%;
+  padding: var(--spacing-2xl);
+  background: var(--color-special-galactic-sand);
+  font-family: var(--font-family-primary);
+}
+
+.demo-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-greyscale-800);
+}
+
+.demo-description {
+  font-size: 1.125rem;
+  color: var(--color-greyscale-600);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.color-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-greyscale-800);
+}
+
+.section-description {
+  font-size: 1rem;
+  color: var(--color-greyscale-600);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.color-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.color-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.color-swatch {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-greyscale-100);
+}
+
+.color-info {
+  padding: 1rem;
+}
+
+.color-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-greyscale-800);
+}
+
+.color-values {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.color-hex {
+  font-family: var(--font-family-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-greyscale-700);
+  text-transform: uppercase;
+}
+
+.color-variable {
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  color: var(--color-greyscale-600);
+  background: var(--color-greyscale-50);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.color-description {
+  font-size: 0.875rem;
+  color: var(--color-greyscale-600);
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.color-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.color-actions .copy-to-clipboard-button {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* Usage Guidelines Section */
+.usage-guidelines {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.guideline-card {
+  padding: 1.5rem;
+  background: var(--color-greyscale-25);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary-500);
+}
+
+.guideline-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--color-greyscale-800);
+}
+
+.guideline-card p {
+  font-size: 0.875rem;
+  color: var(--color-greyscale-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.guideline-card code {
+  font-family: var(--font-family-mono);
+  font-size: 0.8rem;
+  background: var(--color-greyscale-100);
+  padding: 0.125rem 0.375rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-greyscale-700);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .colors-demo {
+    padding: var(--spacing-lg);
+  }
+  
+  .demo-title {
+    font-size: 1.75rem;
+  }
+  
+  .demo-description {
+    font-size: 1rem;
+  }
+  
+  .color-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .usage-guidelines {
+    padding: 1.5rem;
+  }
+}
+
+/* Special styling for different color families */
+.color-card[data-color-family="greyscale"] .color-swatch {
+  border: 1px solid var(--color-greyscale-200);
+}
+
+.color-card[data-color-family="white"] .color-swatch {
+  border: 2px solid var(--color-greyscale-200);
+} 

@@ -151,8 +151,7 @@ export const IconsDemo: React.FC = () => {
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
-                      label="Copy"
-                      tooltip={copiedIcon === icon.label ? 'Copied!' : 'Copy SVG'}
+                      label="Copy SVG"
                     />
                   </div>
                 </div>
@@ -186,8 +185,7 @@ export const IconsDemo: React.FC = () => {
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
-                      label="Copy"
-                      tooltip={copiedIcon === icon.label ? 'Copied!' : 'Copy SVG'}
+                      label="Copy SVG"
                     />
                   </div>
                 </div>
