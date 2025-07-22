@@ -56,21 +56,96 @@ export const IconsDemo: React.FC = () => {
       }), []
   );
 
-  // Material UI icons
-  const allMuiIcons = useMemo(() => [
-    {
-      name: 'Content Copy Filled',
-      component: ContentCopyFilledIcon,
-      label: 'content-copy-filled',
-      key: 'ContentCopyFilled'
-    },
-    {
-      name: 'Check Filled',
-      component: CheckFilledIcon,
-      label: 'check-filled',
-      key: 'CheckFilled'
-    }
-  ], []);
+  // Material UI icons (including both ContentCopy/CheckFilled and Material UI style icons)
+  const allMuiIcons = useMemo(() => {
+    const baseMuiIcons = [
+      {
+        name: 'Content Copy Filled',
+        component: ContentCopyFilledIcon,
+        label: 'content-copy-filled',
+        key: 'ContentCopyFilled'
+      },
+      {
+        name: 'Check Filled',
+        component: CheckFilledIcon,
+        label: 'check-filled',
+        key: 'CheckFilled'
+      }
+    ];
+
+    const muiStyleIcons = Object.keys(Icons)
+      .filter(key => 
+        (key === 'ArrowDropdownFilledIcon' || key === 'ChevronLeftFilledIcon' || 
+         key === 'ChevronRightFilledIcon' || key === 'CodeRoundedIcon' ||
+         key === 'ExpandLessFilledIcon' || key === 'ExpandMoreFilledIcon' || 
+         key === 'FilterListFilledIcon' || key === 'LinkOffFilledIcon' ||
+         key === 'PeopleAltRoundedIcon' || key === 'UnfoldLessFilledIcon' ||
+         key === 'UnfoldMoreFilledIcon' || key === 'VerticalSplitOutlinedIcon')
+      )
+      .sort()
+      .map(iconKey => {
+        const IconComponent = (Icons as any)[iconKey];
+        
+        // Convert component name to proper spaced format
+        let displayName = iconKey
+          .replace('Icon', '')
+          .replace(/([A-Z])/g, ' $1')
+          .trim();
+        
+        // Generate clean kebab-case label (no prefix/suffix)
+        const label = iconKey
+          .replace('Icon', '')
+          .replace(/([A-Z])/g, '-$1')
+          .toLowerCase()
+          .replace(/^-/, ''); // Remove leading hyphen
+        
+        return {
+          name: displayName,
+          component: IconComponent,
+          label: label,
+          key: iconKey
+        };
+      });
+
+    return [...baseMuiIcons, ...muiStyleIcons];
+  }, []);
+
+  // Custom Icon icons (Insights, Compass, Resize, FolderSelectedIconSolid, etc.)
+  const allCustomIcons = useMemo(() => 
+    Object.keys(Icons)
+      .filter(key => 
+        key === 'InsightsOutlinedIcon' || key === 'CodeBranchBoldIcon' ||
+        key === 'CompassIcon' || key === 'GenaiIcon' || key === 'GroundingIcon' ||
+        key === 'IncognitoOffIcon' || key === 'LookupsIcon' || key === 'MarketplaceAltIcon' ||
+        key === 'MarketplaceIcon' || key === 'MergeIcon' || key === 'RestApiIcon' ||
+        key === 'SplitIcon' || key === 'WorkgroupIcon' || key === 'IconResizeIcon' ||
+        key === 'FolderSelectedIconSolidIcon'
+      )
+      .sort()
+      .map(iconKey => {
+        const IconComponent = (Icons as any)[iconKey];
+        
+        // Convert component name to proper spaced format, removing redundant "Icon" prefix
+        let displayName = iconKey
+          .replace('Icon', '')
+          .replace(/([A-Z])/g, ' $1')
+          .trim();
+        
+        // Generate clean kebab-case label (no prefix/suffix)
+        const label = iconKey
+          .replace('Icon', '')
+          .replace(/([A-Z])/g, '-$1')
+          .toLowerCase()
+          .replace(/^-/, ''); // Remove leading hyphen
+        
+        return {
+          name: displayName,
+          component: IconComponent,
+          label: label,
+          key: iconKey
+        };
+      }), []
+  );
 
   // Filter icons based on search text
   const filteredIconList = useMemo(() => {
@@ -95,8 +170,19 @@ export const IconsDemo: React.FC = () => {
     );
   }, [allMuiIcons, filterText]);
 
-  const totalIcons = allIconList.length + allMuiIcons.length;
-  const filteredTotal = filteredIconList.length + filteredMuiIcons.length;
+  const filteredCustomIcons = useMemo(() => {
+    if (!filterText.trim()) return allCustomIcons;
+    
+    const searchTerm = filterText.toLowerCase();
+    return allCustomIcons.filter(icon => 
+      icon.name.toLowerCase().includes(searchTerm) ||
+      icon.label.toLowerCase().includes(searchTerm) ||
+      icon.key.toLowerCase().includes(searchTerm)
+    );
+  }, [allCustomIcons, filterText]);
+
+  const totalIcons = allIconList.length + allMuiIcons.length + allCustomIcons.length;
+  const filteredTotal = filteredIconList.length + filteredMuiIcons.length + filteredCustomIcons.length;
 
   return (
     <div className="icons-demo">
@@ -164,12 +250,46 @@ export const IconsDemo: React.FC = () => {
       {/* Material UI Icons Section */}
       {filteredMuiIcons.length > 0 && (
         <section className="icons-section">
-          <h3 className="section-title">Material UI (MUI) Icons ({filteredMuiIcons.length})</h3>
+          <h3 className="section-title">Material UI Icons ({filteredMuiIcons.length})</h3>
           <p className="section-description">
-            Specialized Material UI icons for specific functionality and consistent design system integration.
+            Material UI icons including filled variants, arrows, chevrons, and other UI elements for consistent design system integration.
           </p>
           <div className="icons-grid">
             {filteredMuiIcons.map((icon) => {
+              const IconComponent = icon.component;
+              
+              return (
+                <div key={icon.key} className="icon-item">
+                  <div className="icon-preview">
+                    <IconComponent size={24} />
+                  </div>
+                  <div className="icon-info">
+                    <h3 className="icon-name">{icon.name}</h3>
+                    <span className="icon-label">{icon.label}</span>
+                  </div>
+                  <div className="icon-actions">
+                    <CopyToClipboardButton
+                      state={copiedIcon === icon.label ? 'copied' : 'default'}
+                      onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
+                      label="Copy SVG"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Custom Icon Icons Section */}
+      {filteredCustomIcons.length > 0 && (
+        <section className="icons-section">
+          <h3 className="section-title">Custom Icon Icons ({filteredCustomIcons.length})</h3>
+          <p className="section-description">
+            Custom icons for specific functionality including insights, compass, marketplace, and workflow icons.
+          </p>
+          <div className="icons-grid">
+            {filteredCustomIcons.map((icon) => {
               const IconComponent = icon.component;
               
               return (
@@ -211,7 +331,7 @@ export const IconsDemo: React.FC = () => {
 
       <div className="demo-footer">
         <p>
-          <strong>{filteredTotal} of {totalIcons} icons</strong> - {filteredIconList.length} Flaticon Regular + {filteredMuiIcons.length} Material UI
+          <strong>{filteredTotal} of {totalIcons} icons</strong> - {filteredIconList.length} Flaticon Regular + {filteredMuiIcons.length} Material UI + {filteredCustomIcons.length} Custom
         </p>
         <p style={{ fontSize: '14px', color: '#6B7280', marginTop: '8px' }}>
           All icons are available for import from <code>@/components/icons</code>
@@ -219,4 +339,4 @@ export const IconsDemo: React.FC = () => {
       </div>
     </div>
   );
-}; 
+};
