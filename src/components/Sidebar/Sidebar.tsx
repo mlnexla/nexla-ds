@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 
 interface SidebarOption {
   value: string;
   label: string;
+  path: string;
   icon?: React.ReactNode;
 }
 
@@ -31,9 +33,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onChange
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const handleMenuItemClick = (optionValue: string) => {
-    onChange(optionValue);
+  const handleMenuItemClick = () => {
     setIsMobileMenuOpen(false); // Close mobile menu after selection
   };
 
@@ -58,17 +60,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <ul className="sidebar-menu">
           {options.map((option) => (
             <li key={option.value} className="sidebar-menu-item">
-              <button
+              <Link
+                to={option.path}
                 className={`sidebar-menu-button ${
-                  value === option.value ? 'active' : ''
+                  location.pathname === option.path ? 'active' : ''
                 }`}
-                onClick={() => handleMenuItemClick(option.value)}
+                onClick={handleMenuItemClick}
               >
                 {option.icon && (
                   <span className="sidebar-menu-icon">{option.icon}</span>
                 )}
                 <span className="sidebar-menu-label">{option.label}</span>
-              </button>
+              </Link>
             </li>
           ))}
         </ul>

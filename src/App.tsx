@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
 import { MainPage } from './components/MainPage';
 import { ButtonsDemo } from './demos/ButtonsDemo';
@@ -6,56 +6,62 @@ import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import './styles/global.css';
 
-type DemoType = 'home' | 'buttons' | 'textInput' | 'icons';
-
-function App() {
-  const [currentDemo, setCurrentDemo] = useState<DemoType>('home');
-
+function AppContent() {
+  const location = useLocation();
+  
   const menuOptions = [
     { 
-      value: 'home', 
-      label: 'Nexla Design System'
+      value: '/main', 
+      label: 'Nexla Design System',
+      path: '/main'
     },
     { 
-      value: 'buttons', 
-      label: 'Buttons'
+      value: '/buttons', 
+      label: 'Buttons',
+      path: '/buttons'
     },
     { 
-      value: 'textInput', 
-      label: 'Text Input'
+      value: '/inputs', 
+      label: 'Text Input',
+      path: '/inputs'
     },
     { 
-      value: 'icons', 
-      label: 'Icon Gallery'
+      value: '/icons', 
+      label: 'Icon Gallery',
+      path: '/icons'
     },
   ];
 
-  const renderDemo = () => {
-    switch (currentDemo) {
-      case 'home':
-        return <MainPage />;
-      case 'buttons':
-        return <ButtonsDemo />;
-      case 'textInput':
-        return <TextInputDemo />;
-      case 'icons':
-        return <IconsDemo />;
-      default:
-        return <MainPage />;
-    }
-  };
+  // Get the current active route
+  const currentPath = location.pathname;
 
   return (
     <div className="app">
       <Sidebar
         options={menuOptions}
-        value={currentDemo}
-        onChange={(value) => setCurrentDemo(value as DemoType)}
+        value={currentPath}
+        onChange={(path) => {
+          // Navigation will be handled by React Router Link components in Sidebar
+        }}
       />
       <main className="app-main">
-        {renderDemo()}
+        <Routes>
+          <Route path="/" element={<Navigate to="/main" replace />} />
+          <Route path="/main" element={<MainPage />} />
+          <Route path="/buttons" element={<ButtonsDemo />} />
+          <Route path="/inputs" element={<TextInputDemo />} />
+          <Route path="/icons" element={<IconsDemo />} />
+        </Routes>
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 
