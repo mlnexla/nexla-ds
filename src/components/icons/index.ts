@@ -1,7 +1,6 @@
 // Non-Flaticon icons (keep 'Icon' suffix)
 export { ContentCopyFilledIcon } from './ContentCopyFilled';
 export { CheckFilledIcon } from './CheckFilled';
-export { ClockIcon } from './Clock';
 
 // Flaticon exports (without 'Icon' suffix to match component names)
 export { default as FiRrAdd } from './FiRrAdd';
