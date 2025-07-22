@@ -193,12 +193,12 @@ const TypographyDemo: React.FC = () => {
         
         <SyntaxHighlighter 
           code={`/* Typography CSS Variables */
---typography-body-default-400: 400 14px/20px var(--font-family-primary);
---typography-body-default-500: 500 14px/20px var(--font-family-primary);
---typography-body-small-400: 400 12px/16px var(--font-family-primary);
---typography-body-small-500: 500 12px/16px var(--font-family-primary);
---typography-body-large-400: 400 16px/24px var(--font-family-primary);
---typography-body-large-500: 500 16px/24px var(--font-family-primary);
+--typography-body-default-400: 400 14px/20px var(--font-family-default);
+--typography-body-default-500: 500 14px/20px var(--font-family-default);
+--typography-body-small-400: 400 12px/16px var(--font-family-default);
+--typography-body-small-500: 500 12px/16px var(--font-family-default);
+--typography-body-large-400: 400 16px/24px var(--font-family-default);
+--typography-body-large-500: 500 16px/24px var(--font-family-default);
 
 /* Usage in CSS */
 .my-text {

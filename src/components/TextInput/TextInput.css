@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: var(--spacing-sm);
   width: 100%;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
 }
 
 /* Label container */
@@ -56,7 +56,7 @@
   border: none;
   outline: none;
   background: transparent;
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
@@ -155,7 +155,7 @@
 }
 
 .text-input-copy-button span {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-base-sm);
   line-height: var(--line-height-tight);

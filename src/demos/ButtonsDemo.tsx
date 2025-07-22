@@ -220,7 +220,7 @@ export const ButtonsDemo: React.FC = () => {
 
 .basic-action-button--primary-bold .basic-action-button__label {
   color: var(--color-primary-50);
-  font-family: 'Rubik', var(--font-family-primary);
+  font-family: 'Rubik', var(--font-family-default);
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -451,7 +451,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
   background: var(--color-primary-600);
   border-color: var(--color-primary-600);
   color: var(--color-primary-50);
-  font-family: 'Rubik', var(--font-family-primary);
+  font-family: 'Rubik', var(--font-family-default);
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;

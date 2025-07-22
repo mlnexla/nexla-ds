@@ -8,7 +8,7 @@
   background: var(--color-greyscale-00);
   border: 1px solid var(--color-greyscale-200);
   border-radius: var(--radius-full);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   cursor: pointer;
   transition: all var(--transition-base);
   outline: none;

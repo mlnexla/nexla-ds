@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   background: var(--color-special-galactic-sand);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
 }
 
 .main-page__container {

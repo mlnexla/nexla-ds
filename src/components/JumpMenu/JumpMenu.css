@@ -13,7 +13,7 @@
   background: var(--color-greyscale-00);
   border: 1px solid var(--color-greyscale-200);
   border-radius: var(--radius-md);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   color: var(--color-greyscale-800);

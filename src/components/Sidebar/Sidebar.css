@@ -25,7 +25,7 @@
 }
 
 .sidebar-title {
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   font-weight: var(--font-weight-medium);
   font-size: 20px;
   line-height: 1.2;
@@ -77,7 +77,7 @@
   background: transparent;
   border: none;
   color: var(--color-greyscale-600);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-default);
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
