@@ -11,8 +11,6 @@ interface SidebarOption {
 
 interface SidebarProps {
   options: SidebarOption[];
-  value: string;
-  onChange: (value: string) => void;
 }
 
 const HamburgerIcon = () => (
@@ -28,9 +26,7 @@ const CloseIcon = () => (
 );
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  options,
-  value,
-  onChange
+  options
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();

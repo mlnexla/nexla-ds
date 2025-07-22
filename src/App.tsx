@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
 import { MainPage } from './components/MainPage';
 import { ButtonsDemo } from './demos/ButtonsDemo';
@@ -8,7 +8,6 @@ import { ColorsDemo } from './demos/ColorsDemo';
 import './styles/global.css';
 
 function AppContent() {
-  const location = useLocation();
   
   const menuOptions = [
     { 
@@ -38,17 +37,12 @@ function AppContent() {
     },
   ];
 
-  // Get the current active route
-  const currentPath = location.pathname;
+
 
   return (
     <div className="app">
       <Sidebar
         options={menuOptions}
-        value={currentPath}
-        onChange={(path) => {
-          // Navigation will be handled by React Router Link components in Sidebar
-        }}
       />
       <main className="app-main">
         <Routes>
