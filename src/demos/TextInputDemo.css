@@ -10,10 +10,7 @@
 }
 
 .demo-container h1 {
-  font-size: 2rem;
-  font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--color-greyscale-800);
 }
 
 .demo-container > p {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from '../components/Button';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
-import SyntaxHighlighter from '../components/SyntaxHighlighter';
+import { SyntaxHighlighter } from '../components/SyntaxHighlighter';
+import { Typography } from '../components/Typography';
 import './ButtonsDemo.css';
 
 interface CodeExampleProps {
@@ -77,7 +78,7 @@ export const ButtonsDemo: React.FC = () => {
 
   return (
     <div className="buttons-demo">
-      <h2 className="demo-title">Button Components</h2>
+      <Typography variant="body-large-500" as="h1" className="demo-title">Button Components</Typography>
       <p className="demo-description">
         A collection of button components with different styles and behaviors for various use cases.
         Each button state includes both React implementation and CSS styling examples.

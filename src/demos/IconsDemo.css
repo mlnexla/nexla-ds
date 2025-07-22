@@ -6,10 +6,7 @@
 }
 
 .demo-title {
-  font-size: 2rem;
-  font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--color-greyscale-800);
 }
 
 .demo-description {
@@ -25,10 +22,7 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--color-greyscale-800);
 }
 
 .section-description {

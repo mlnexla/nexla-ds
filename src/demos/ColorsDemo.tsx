@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
+import { Typography } from '../components/Typography';
 import './ColorsDemo.css';
 
 interface ColorToken {
@@ -147,7 +148,7 @@ export const ColorsDemo: React.FC = () => {
 
   return (
     <div className="colors-demo">
-      <h2 className="demo-title">Color System</h2>
+      <Typography variant="body-large-500" as="h1" className="demo-title">Color System</Typography>
       <p className="demo-description">
         A comprehensive color palette designed for accessibility and consistency. All colors are defined as CSS custom properties
         and follow a systematic scale from light to dark across multiple semantic categories.

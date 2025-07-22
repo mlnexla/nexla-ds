@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { renderToString } from 'react-dom/server';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { TextInput } from '../components/TextInput';
+import { Typography } from '../components/Typography';
 import './IconsDemo.css';
 
 // Import all Flaticon icons
@@ -225,7 +226,7 @@ export const IconsDemo: React.FC = () => {
 
   return (
     <div className="icons-demo">
-      <h2 className="demo-title">Icon Gallery</h2>
+      <Typography variant="body-large-500" as="h1" className="demo-title">Icon Gallery</Typography>
       <p className="demo-description">
         Browse all {totalIcons} icons in the design system. Search by name or icon code to quickly find the perfect icon for your project.
         All icons are consistently sized and optimized for web use.
@@ -255,7 +256,7 @@ export const IconsDemo: React.FC = () => {
       {/* Flaticon Icons Section */}
       {filteredIconList.length > 0 && (
         <section className="icons-section">
-          <h3 className="section-title">Flaticon Regular Icons ({filteredIconList.length})</h3>
+          <Typography variant="body-default-500" as="h3" className="section-title">Flaticon Regular Icons ({filteredIconList.length})</Typography>
           <p className="section-description">
             Comprehensive collection of Flaticon Regular icons with consistent 24x24 sizing and optimized SVG paths.
           </p>
@@ -289,7 +290,7 @@ export const IconsDemo: React.FC = () => {
       {/* Material UI Icons Section */}
       {filteredMuiIcons.length > 0 && (
         <section className="icons-section">
-          <h3 className="section-title">Material UI Icons ({filteredMuiIcons.length})</h3>
+          <Typography variant="body-default-500" as="h3" className="section-title">Material UI Icons ({filteredMuiIcons.length})</Typography>
           <p className="section-description">
             Material UI icons including filled variants, arrows, chevrons, and other UI elements for consistent design system integration.
           </p>
@@ -323,7 +324,7 @@ export const IconsDemo: React.FC = () => {
       {/* Custom Icon Icons Section */}
       {filteredCustomIcons.length > 0 && (
         <section className="icons-section">
-          <h3 className="section-title">Custom Icon Icons ({filteredCustomIcons.length})</h3>
+          <Typography variant="body-default-500" as="h3" className="section-title">Custom Icon Icons ({filteredCustomIcons.length})</Typography>
           <p className="section-description">
             Custom icons for specific functionality including insights, compass, marketplace, and workflow icons.
           </p>

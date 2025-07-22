@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import TextInput from '../components/TextInput/TextInput';
+import { TextInput } from '../components/TextInput';
+import { Typography } from '../components/Typography';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import './TextInputDemo.css';
 
@@ -29,7 +30,7 @@ const TextInputDemo: React.FC = () => {
 
   return (
     <div className="demo-container">
-      <h1>TextInput Component Demo</h1>
+      <Typography variant="body-large-500" as="h1">TextInput Component Demo</Typography>
       <p>A React component based on the Figma design with multiple states and variants.</p>
 
       <div className="demo-grid">
