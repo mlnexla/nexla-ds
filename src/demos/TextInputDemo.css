@@ -9,6 +9,10 @@
   font-family: var(--font-family-default);
 }
 
+.demo-header {
+  margin-bottom: var(--spacing-3xl);
+}
+
 .demo-container h1 {
   margin-bottom: var(--spacing-lg);
 }

@@ -148,11 +148,13 @@ export const ColorsDemo: React.FC = () => {
 
   return (
     <div className="colors-demo">
-      <Typography variant="body-large-500" as="h1" className="demo-title">Color System</Typography>
-      <p className="demo-description">
-        A comprehensive color palette designed for accessibility and consistency. All colors are defined as CSS custom properties
-        and follow a systematic scale from light to dark across multiple semantic categories.
-      </p>
+      <div className="demo-header">
+        <Typography variant="body-large-500" as="h1" className="demo-title">Color System</Typography>
+        <p className="demo-description">
+          A comprehensive color palette designed for accessibility and consistency. All colors are defined as CSS custom properties
+          and follow a systematic scale from light to dark across multiple semantic categories.
+        </p>
+      </div>
 
       {renderColorPalette(
         'Greyscale',

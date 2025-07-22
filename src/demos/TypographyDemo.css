@@ -1,18 +1,17 @@
 /* Typography Demo Styles */
 .typography-demo {
-  padding: var(--spacing-xl);
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-2xl);
+  background: var(--color-special-galactic-sand);
+  font-family: var(--font-family-default);
 }
 
 .demo-header {
-  margin-bottom: var(--spacing-2xl);
-  text-align: center;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .demo-header h1 {
-  margin-bottom: var(--spacing-md);
-  color: var(--color-greyscale-900);
+  margin-bottom: var(--spacing-lg);
 }
 
 .demo-description {

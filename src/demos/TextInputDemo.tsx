@@ -30,8 +30,10 @@ const TextInputDemo: React.FC = () => {
 
   return (
     <div className="demo-container">
-      <Typography variant="body-large-500" as="h1">TextInput Component Demo</Typography>
-      <p>A React component based on the Figma design with multiple states and variants.</p>
+      <div className="demo-header">
+        <Typography variant="body-large-500" as="h1">TextInput Component Demo</Typography>
+        <p>A React component based on the Figma design with multiple states and variants.</p>
+      </div>
 
       <div className="demo-grid">
         {/* Default State */}

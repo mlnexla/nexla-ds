@@ -82,9 +82,9 @@ const TypographyDemo: React.FC = () => {
         <Typography variant="body-large-500" as="h1">
           Typography System
         </Typography>
-        <Typography variant="body-default-400" className="demo-description">
+        <p className="demo-description">
           A comprehensive typography system with consistent variants based on the Nexla Design System.
-        </Typography>
+        </p>
       </div>
 
       <div className="demo-section">

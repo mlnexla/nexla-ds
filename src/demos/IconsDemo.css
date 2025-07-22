@@ -5,6 +5,10 @@
   font-family: var(--font-family-default);
 }
 
+.demo-header {
+  margin-bottom: var(--spacing-3xl);
+}
+
 .demo-title {
   margin-bottom: var(--spacing-lg);
 }

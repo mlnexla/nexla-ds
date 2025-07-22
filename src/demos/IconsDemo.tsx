@@ -226,11 +226,13 @@ export const IconsDemo: React.FC = () => {
 
   return (
     <div className="icons-demo">
-      <Typography variant="body-large-500" as="h1" className="demo-title">Icon Gallery</Typography>
-      <p className="demo-description">
-        Browse all {totalIcons} icons in the design system. Search by name or icon code to quickly find the perfect icon for your project.
-        All icons are consistently sized and optimized for web use.
-      </p>
+      <div className="demo-header">
+        <Typography variant="body-large-500" as="h1" className="demo-title">Icon Gallery</Typography>
+        <p className="demo-description">
+          Browse all {totalIcons} icons in the design system. Search by name or icon code to quickly find the perfect icon for your project.
+          All icons are consistently sized and optimized for web use.
+        </p>
+      </div>
 
       {/* Filter Input */}
       <div className="filter-container" style={{ 

@@ -78,11 +78,13 @@ export const ButtonsDemo: React.FC = () => {
 
   return (
     <div className="buttons-demo">
-      <Typography variant="body-large-500" as="h1" className="demo-title">Button Components</Typography>
-      <p className="demo-description">
-        A collection of button components with different styles and behaviors for various use cases.
-        Each button state includes both React implementation and CSS styling examples.
-      </p>
+      <div className="demo-header">
+        <Typography variant="body-large-500" as="h1" className="demo-title">Button Components</Typography>
+        <p className="demo-description">
+          A collection of button components with different styles and behaviors for various use cases.
+          Each button state includes both React implementation and CSS styling examples.
+        </p>
+      </div>
 
       {/* Button Variants Section */}
       <section className="button-section">
