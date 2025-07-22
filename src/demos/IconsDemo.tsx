@@ -157,7 +157,7 @@ export const IconsDemo: React.FC = () => {
         key === 'CompassIcon' || key === 'GenaiIcon' || key === 'GroundingIcon' ||
         key === 'IncognitoOffIcon' || key === 'LookupsIcon' || key === 'MarketplaceAltIcon' ||
         key === 'MarketplaceIcon' || key === 'MergeIcon' || key === 'RestApiIcon' ||
-        key === 'SplitIcon' || key === 'WorkgroupIcon' || key === 'IconResizeIcon' ||
+        key === 'SplitIcon' || key === 'WorkgroupIcon' || key === 'ResizeIcon' ||
         key === 'FolderSelectedIconSolidIcon'
       )
       .sort()

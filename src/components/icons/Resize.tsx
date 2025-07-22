@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface IconresizeProps {
+interface ResizeProps {
   className?: string;
   size?: number;
   color?: string;
 }
 
-const Iconresize: React.FC<IconresizeProps> = ({ 
+const Resize: React.FC<ResizeProps> = ({ 
   className = '', 
   size = 24, 
   color = 'currentColor' 
@@ -30,4 +30,4 @@ const Iconresize: React.FC<IconresizeProps> = ({
   );
 };
 
-export default Iconresize;
+export default Resize;
