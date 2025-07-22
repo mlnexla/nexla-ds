@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { createRoot } from 'react-dom/client';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { TextInput } from '../components/TextInput';
 import './IconsDemo.css';
@@ -11,6 +12,52 @@ import { ContentCopyFilledIcon, CheckFilledIcon } from '../components/icons';
 export const IconsDemo: React.FC = () => {
   const [copiedIcon, setCopiedIcon] = useState<string | null>(null);
   const [filterText, setFilterText] = useState('');
+
+  // Function to extract SVG content from an icon component
+  const extractSvgContent = (IconComponent: any, size: number = 24, color: string = 'currentColor'): string => {
+    try {
+      // Create a temporary div to render the component
+      const tempDiv = document.createElement('div');
+      document.body.appendChild(tempDiv);
+      
+      // Render the component synchronously
+      const root = createRoot(tempDiv);
+      root.render(React.createElement(IconComponent, { size, color }));
+      
+      // Force a synchronous render by accessing the DOM
+      const svgElement = tempDiv.querySelector('svg');
+      
+      if (svgElement) {
+        // Clone the SVG to avoid modifying the original
+        const clonedSvg = svgElement.cloneNode(true) as SVGElement;
+        
+        // Ensure the SVG has the correct attributes
+        clonedSvg.setAttribute('width', size.toString());
+        clonedSvg.setAttribute('height', size.toString());
+        clonedSvg.setAttribute('fill', color);
+        
+        // Convert to string
+        const serializer = new XMLSerializer();
+        const svgString = serializer.serializeToString(clonedSvg);
+        
+        // Clean up
+        root.unmount();
+        document.body.removeChild(tempDiv);
+        
+        return svgString;
+      }
+      
+      // Clean up
+      root.unmount();
+      document.body.removeChild(tempDiv);
+      
+      // Fallback if no SVG found
+      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- Icon not found --></svg>`;
+    } catch (error) {
+      console.error('Error extracting SVG content:', error);
+      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- Error extracting icon --></svg>`;
+    }
+  };
 
   const copyToClipboard = async (svgContent: string, iconName: string) => {
     try {
@@ -236,7 +283,7 @@ export const IconsDemo: React.FC = () => {
                   <div className="icon-actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
-                      onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
+                      onClick={() => copyToClipboard(extractSvgContent(IconComponent), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
@@ -270,7 +317,7 @@ export const IconsDemo: React.FC = () => {
                   <div className="icon-actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
-                      onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
+                      onClick={() => copyToClipboard(extractSvgContent(IconComponent), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
@@ -304,7 +351,7 @@ export const IconsDemo: React.FC = () => {
                   <div className="icon-actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
-                      onClick={() => copyToClipboard('<svg><!-- SVG content --></svg>', icon.label)}
+                      onClick={() => copyToClipboard(extractSvgContent(IconComponent), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
