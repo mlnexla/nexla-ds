@@ -40,7 +40,7 @@
 
 .icons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
 }
@@ -140,7 +140,7 @@
   
   .icons-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    gap: 1rem;
   }
   
   .icon-item {
