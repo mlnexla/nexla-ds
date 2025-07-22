@@ -35,7 +35,7 @@ const MainPage: React.FC = () => {
             <h4>Button Component</h4>
             <ul>
               <li><strong>4 Variants:</strong> Primary, Secondary, Default, and Danger</li>
-              <li><strong>Interactive States:</strong> Default, Hover, Pressing, Disabled, and Loading</li>
+              <li><strong>Interactive States:</strong> Default, Hover, Pressing, Disabled, and Processing</li>
               <li><strong>Icon Support:</strong> Optional leading icons with consistent sizing</li>
               <li><strong>Accessibility:</strong> Full keyboard navigation and screen reader support</li>
             </ul>
@@ -89,7 +89,7 @@ import { FiRrAdd } from './components/icons';
   Delete
 </Button>
 
-// With loading state
+// With processing state
 <Button variant="primary" loading={isSubmitting}>
   Submit
 </Button>`}
@@ -111,9 +111,9 @@ import { FiRrAdd } from './components/icons';
 
             <h5>Interactive States:</h5>
             <ul>
-              <li>Default → Hover → Pressing → Loading/Disabled</li>
+              <li>Default → Hover → Pressing → Processing/Disabled</li>
               <li>Enhanced shadows and color transitions</li>
-              <li>Loading state with branded spinner</li>
+              <li>Processing state with branded spinner</li>
             </ul>
 
             <h3>Getting Started</h3>
