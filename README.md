@@ -1,39 +1,98 @@
-# Figma Component Library
+# Nexla Design System
 
-A React component library based on Figma designs. This library provides a collection of reusable UI components with consistent styling and behavior.
+A collection of reusable UI components with consistent styling and behavior.
 
 ## Project Structure
 
 ```
 src/
 ├── components/           # All React components
+│   ├── Button/          # Unified Button component with multiple variants
 │   ├── TextInput/       # TextInput component
+│   ├── icons/           # Icon library (600+ Flaticons)
 │   └── index.ts         # Component exports
 ├── demos/               # Component demos
 ├── styles/              # Global styles and design tokens
-│   └── global.css       # CSS variables and global styles
+│   └── global.css       # CSS variables and design tokens
 ├── assets/              # Images, icons, and other assets
 └── index.ts            # Main library exports
 ```
 
 ## Features
 
+### Button Component
+- **4 Variants**: Primary, Secondary, Default, and Danger
+- **Interactive States**: Default, Hover, Pressing, Disabled, and Loading
+- **Icon Support**: Optional leading icons with consistent sizing
+- **Accessibility**: Full keyboard navigation and screen reader support
+
+### TextInput Component
 - **Multiple States**: Default, Hover, Active, Typing, Typed, Error, and Disabled
 - **Interactive Behavior**: Automatically switches between states based on user interaction
 - **Code Variant**: Special variant for code input with copy functionality
 - **Chip Input**: Support for tag/chip inputs with removable items
 - **Customizable**: Flexible props for labels, placeholders, help text, and error messages
-- **Accessibility**: Proper labeling and keyboard navigation support
+
+### Icon Library
+- **600+ Icons**: Complete Flaticons Regular collection
+- **Consistent Sizing**: All icons use 24x24 viewBox with proper scaling
+- **TypeScript Support**: Full type definitions for all icons
+- **Copy-to-Clipboard**: Easy code copying from icon gallery
+
+### Design System
 - **TypeScript**: Full TypeScript support with proper type definitions
+- **Accessibility**: Proper labeling and keyboard navigation support
+- **Design Tokens**: Centralized CSS variables for colors, spacing, and typography
 
-## Component Files
+## Button Component
 
-- `TextInput.tsx` - Main component implementation
-- `TextInput.css` - Component styles
-- `TextInputDemo.tsx` - Demo page showing all variants
-- `TextInputDemo.css` - Demo page styles
+### Props
 
-## Props
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | ReactNode | - | Button content |
+| `variant` | 'primary' \| 'secondary' \| 'default' \| 'danger' | 'default' | Button style variant |
+| `onClick` | () => void | - | Click handler |
+| `disabled` | boolean | false | Disable button |
+| `loading` | boolean | false | Show loading state |
+| `className` | string | - | Additional CSS classes |
+| `icon` | ReactNode | - | Optional leading icon |
+
+### Usage
+
+```tsx
+import { Button } from './components';
+import { FiRrAdd } from './components/icons';
+
+// Primary button (main CTAs)
+<Button variant="primary" onClick={handleSave}>
+  Save Changes
+</Button>
+
+// Secondary button (orange theme)
+<Button variant="secondary" icon={<FiRrAdd />} onClick={handleAdd}>
+  Add Item
+</Button>
+
+// Default button (neutral actions)
+<Button onClick={handleCancel}>
+  Cancel
+</Button>
+
+// Danger button (destructive actions)
+<Button variant="danger" onClick={handleDelete}>
+  Delete
+</Button>
+
+// With loading state
+<Button variant="primary" loading={isSubmitting}>
+  Submit
+</Button>
+```
+
+## TextInput Component
+
+### Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
@@ -50,10 +109,10 @@ src/
 | `onChipRemove` | (id: string) => void | - | Chip removal handler |
 | `onCopy` | () => void | - | Copy button handler |
 
-## Usage
+### Usage
 
 ```tsx
-import TextInput from './TextInput';
+import { TextInput } from './components';
 
 // Basic usage
 <TextInput
@@ -80,7 +139,25 @@ import TextInput from './TextInput';
 
 ## Design Specifications
 
-Based on the Figma design, the component uses:
+### Button Design System
+
+Professional design with precise color specifications:
+
+**Typography**: Rubik Medium (500), 14px, 24px line height
+
+**Button Variants**:
+- **Primary**: Blue theme (`#357BFF`) - highest emphasis for main CTAs
+- **Secondary**: Orange theme (`#DB5327`) - high emphasis alternatives
+- **Default**: Neutral theme (`#485BFF`) - standard actions
+- **Danger**: Red theme (`#B52020`) - destructive actions
+
+**Interactive States**:
+- Default → Hover → Pressing → Loading/Disabled
+- Enhanced shadows and color transitions
+- Loading state with branded spinner
+
+### TextInput Design System
+
 - **Font**: Rubik (400, 500) for text, Roboto Mono for code
 - **Colors**: 
   - Primary: #357BFF

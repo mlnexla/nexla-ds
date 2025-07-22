@@ -96,114 +96,287 @@
   line-height: 24px;
 }
 
-/* Primary Variant States */
-.basic-action-button--primary {
+/* Variant Styles */
+
+/* Default Variant (neutral styling) */
+.basic-action-button--default {
   background: var(--color-greyscale-00);
-  border-color: var(--color-greyscale-200);
+  border-color: var(--color-greyscale-100);
 }
 
-.basic-action-button--primary .basic-action-button__label {
+.basic-action-button--default .basic-action-button__label {
   color: var(--color-primary-600);
 }
 
-.basic-action-button--primary .basic-action-button__icon {
+.basic-action-button--default .basic-action-button__icon {
   color: var(--color-primary-600);
 }
 
-/* Primary Hover State */
-.basic-action-button--primary.basic-action-button--hover {
+.basic-action-button--default.basic-action-button--hover {
   background: var(--color-greyscale-50);
   border-color: var(--color-greyscale-200);
-  box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.basic-action-button--primary.basic-action-button--hover .basic-action-button__label {
+.basic-action-button--default.basic-action-button--hover .basic-action-button__label {
   color: var(--color-primary-700);
 }
 
-.basic-action-button--primary.basic-action-button--hover .basic-action-button__icon {
+.basic-action-button--default.basic-action-button--hover .basic-action-button__icon {
   color: var(--color-primary-700);
 }
 
-/* Primary Pressing State */
-.basic-action-button--primary.basic-action-button--pressing {
-  background: var(--color-greyscale-50);
+.basic-action-button--default.basic-action-button--pressing {
+  background: var(--color-greyscale-75);
   border-color: var(--color-greyscale-200);
   box-shadow: none;
 }
 
-.basic-action-button--primary.basic-action-button--pressing .basic-action-button__label {
+.basic-action-button--default.basic-action-button--pressing .basic-action-button__label {
   color: var(--color-primary-700);
 }
 
-.basic-action-button--primary.basic-action-button--pressing .basic-action-button__icon {
+.basic-action-button--default.basic-action-button--pressing .basic-action-button__icon {
   color: var(--color-primary-700);
 }
 
-/* Primary Disabled State */
-.basic-action-button--primary.basic-action-button--disabled {
+.basic-action-button--default.basic-action-button--disabled {
   background: var(--color-greyscale-100);
   border-color: var(--color-greyscale-100);
   cursor: not-allowed;
   box-shadow: none;
 }
 
+.basic-action-button--default.basic-action-button--disabled .basic-action-button__label {
+  color: var(--color-greyscale-400);
+}
+
+.basic-action-button--default.basic-action-button--disabled .basic-action-button__icon {
+  color: var(--color-greyscale-400);
+}
+
+.basic-action-button--default.basic-action-button--loading {
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
+  cursor: default;
+  min-width: 100px;
+}
+
+.basic-action-button--default.basic-action-button--loading .basic-action-button__content {
+  justify-content: center;
+}
+
+/* Primary Variant (enhanced with primary branding) */
+.basic-action-button--primary {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-200);
+}
+
+.basic-action-button--primary .basic-action-button__label {
+  color: var(--color-primary-700);
+  font-weight: var(--font-weight-semibold);
+}
+
+.basic-action-button--primary .basic-action-button__icon {
+  color: var(--color-primary-700);
+}
+
+.basic-action-button--primary.basic-action-button--hover {
+  background: var(--color-primary-100);
+  border-color: var(--color-primary-300);
+  box-shadow: 0px 5px 25px 0px rgba(38, 94, 219, 0.15), 0px 2px 4px 0px rgba(38, 94, 219, 0.1);
+  transform: translateY(-1px);
+}
+
+.basic-action-button--primary.basic-action-button--hover .basic-action-button__label {
+  color: var(--color-primary-800);
+}
+
+.basic-action-button--primary.basic-action-button--hover .basic-action-button__icon {
+  color: var(--color-primary-800);
+}
+
+.basic-action-button--primary.basic-action-button--pressing {
+  background: var(--color-primary-100);
+  border-color: var(--color-primary-300);
+  box-shadow: none;
+  transform: translateY(0px);
+}
+
+.basic-action-button--primary.basic-action-button--pressing .basic-action-button__label {
+  color: var(--color-primary-800);
+}
+
+.basic-action-button--primary.basic-action-button--pressing .basic-action-button__icon {
+  color: var(--color-primary-800);
+}
+
+.basic-action-button--primary.basic-action-button--disabled {
+  background: var(--color-greyscale-100);
+  border-color: var(--color-greyscale-100);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
 .basic-action-button--primary.basic-action-button--disabled .basic-action-button__label {
   color: var(--color-greyscale-400);
+  font-weight: var(--font-weight-medium);
 }
 
 .basic-action-button--primary.basic-action-button--disabled .basic-action-button__icon {
   color: var(--color-greyscale-400);
 }
 
-/* Primary Loading State */
 .basic-action-button--primary.basic-action-button--loading {
-  background: var(--color-greyscale-00);
-  border-color: var(--color-greyscale-200);
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-200);
   cursor: default;
-  min-width: 100px; /* Ensure consistent width with other states */
+  transform: none;
+  min-width: 100px;
 }
 
 .basic-action-button--primary.basic-action-button--loading .basic-action-button__content {
   justify-content: center;
 }
 
-/* Secondary Variant (Alternative styling) */
+/* Secondary Variant (orange secondary palette) */
 .basic-action-button--secondary {
-  background: var(--color-greyscale-25);
-  border-color: var(--color-greyscale-300);
+  background: var(--color-secondary-50);
+  border-color: var(--color-secondary-200);
 }
 
 .basic-action-button--secondary .basic-action-button__label {
-  color: var(--color-greyscale-700);
+  color: var(--color-secondary-600);
+  font-weight: var(--font-weight-medium);
 }
 
 .basic-action-button--secondary .basic-action-button__icon {
-  color: var(--color-greyscale-700);
+  color: var(--color-secondary-600);
 }
 
 .basic-action-button--secondary.basic-action-button--hover {
-  background: var(--color-greyscale-50);
-  border-color: var(--color-greyscale-400);
+  background: var(--color-secondary-100);
+  border-color: var(--color-secondary-300);
+  box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7;
+}
+
+.basic-action-button--secondary.basic-action-button--hover .basic-action-button__label {
+  color: var(--color-secondary-700);
+}
+
+.basic-action-button--secondary.basic-action-button--hover .basic-action-button__icon {
+  color: var(--color-secondary-700);
 }
 
 .basic-action-button--secondary.basic-action-button--pressing {
-  background: var(--color-greyscale-75);
-  border-color: var(--color-greyscale-400);
+  background: var(--color-secondary-100);
+  border-color: var(--color-secondary-300);
+  box-shadow: none;
+}
+
+.basic-action-button--secondary.basic-action-button--pressing .basic-action-button__label {
+  color: var(--color-secondary-700);
+}
+
+.basic-action-button--secondary.basic-action-button--pressing .basic-action-button__icon {
+  color: var(--color-secondary-700);
 }
 
 .basic-action-button--secondary.basic-action-button--disabled {
-  background: var(--color-greyscale-100);
+  background: var(--color-greyscale-200);
   border-color: var(--color-greyscale-200);
   cursor: not-allowed;
 }
 
 .basic-action-button--secondary.basic-action-button--disabled .basic-action-button__label {
   color: var(--color-greyscale-400);
+  font-weight: var(--font-weight-medium);
 }
 
 .basic-action-button--secondary.basic-action-button--disabled .basic-action-button__icon {
   color: var(--color-greyscale-400);
+}
+
+.basic-action-button--secondary.basic-action-button--loading {
+  background: var(--color-secondary-50);
+  border-color: var(--color-secondary-200);
+  cursor: default;
+  min-width: 100px;
+}
+
+.basic-action-button--secondary.basic-action-button--loading .basic-action-button__content {
+  justify-content: center;
+}
+
+/* Danger Variant (destructive actions) */
+.basic-action-button--danger {
+  background: var(--color-danger-50);
+  border-color: var(--color-danger-200);
+}
+
+.basic-action-button--danger .basic-action-button__label {
+  color: var(--color-danger-700);
+  font-weight: var(--font-weight-medium);
+}
+
+.basic-action-button--danger .basic-action-button__icon {
+  color: var(--color-danger-700);
+}
+
+.basic-action-button--danger.basic-action-button--hover {
+  background: var(--color-danger-100);
+  border-color: var(--color-danger-300);
+  box-shadow: 0px 5px 25px 0px rgba(185, 28, 28, 0.15), 0px 2px 4px 0px rgba(185, 28, 28, 0.1);
+}
+
+.basic-action-button--danger.basic-action-button--hover .basic-action-button__label {
+  color: var(--color-danger-800);
+}
+
+.basic-action-button--danger.basic-action-button--hover .basic-action-button__icon {
+  color: var(--color-danger-800);
+}
+
+.basic-action-button--danger.basic-action-button--pressing {
+  background: var(--color-danger-100);
+  border-color: var(--color-danger-300);
+  box-shadow: none;
+}
+
+.basic-action-button--danger.basic-action-button--pressing .basic-action-button__label {
+  color: var(--color-danger-800);
+}
+
+.basic-action-button--danger.basic-action-button--pressing .basic-action-button__icon {
+  color: var(--color-danger-800);
+}
+
+.basic-action-button--danger.basic-action-button--disabled {
+  background: var(--color-greyscale-100);
+  border-color: var(--color-greyscale-100);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.basic-action-button--danger.basic-action-button--disabled .basic-action-button__label {
+  color: var(--color-greyscale-400);
+  font-weight: var(--font-weight-medium);
+}
+
+.basic-action-button--danger.basic-action-button--disabled .basic-action-button__icon {
+  color: var(--color-greyscale-400);
+}
+
+.basic-action-button--danger.basic-action-button--loading {
+  background: var(--color-danger-50);
+  border-color: var(--color-danger-200);
+  cursor: default;
+  min-width: 100px;
+}
+
+.basic-action-button--danger.basic-action-button--loading .basic-action-button__content {
+  justify-content: center;
 }
 
 /* Full Width */

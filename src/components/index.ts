@@ -1,7 +1,8 @@
 export { Button } from './Button';
-export { PrimaryActionButton } from './PrimaryActionButton';
 export { TextInput } from './TextInput';
+export { MainPage } from './MainPage';
 export { SyntaxHighlighter } from './SyntaxHighlighter';
 export { JumpMenu } from './JumpMenu';
+export { Sidebar } from './Sidebar';
 export { CopyToClipboardButton } from './CopyToClipboardButton';
 export * from './icons'; 

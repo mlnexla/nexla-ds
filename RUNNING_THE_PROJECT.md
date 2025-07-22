@@ -1,4 +1,4 @@
-# Running the Figma Component Library
+# Running the Nexla Design System
 
 ## Quick Start
 

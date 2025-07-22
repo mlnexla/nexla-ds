@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './Button.css';
 
-export type ButtonVariant = 'primary' | 'secondary';
+export type ButtonVariant = 'default' | 'primary' | 'secondary' | 'danger';
 export type ButtonSize = 'small' | 'medium' | 'large';
 export type ButtonState = 'default' | 'hover' | 'pressing' | 'disabled' | 'loading';
 
@@ -40,7 +40,7 @@ const Spinner = () => {
 
 export const Button: React.FC<ButtonProps> = ({
   label = "Basic Action",
-  variant = 'primary',
+  variant = 'default',
   size = 'medium',
   state,
   disabled = false,

@@ -10,6 +10,11 @@ alwaysApply: true
 - Use PascalCase for all components.
 - DO NOT import new icon packages; all icons come from Figma assets.
 
+# Documentation Sync Rule
+- When updating README.md content, ALWAYS update src/components/MainPage/MainPage.tsx to match
+- The MainPage component renders README content in the UI, so changes must be synchronized
+- Keep messaging consistent between documentation file and interactive documentation page
+
 # Icon Component Guidelines
 - Icon components use naming convention: `Icon[Name][Style]` (e.g., `AngleDownIcon`)
 - All icons use 24x24 viewBox with `fill="none"` and `xmlns="http://www.w3.org/2000/svg"`

@@ -7,25 +7,83 @@
 /* Design System - Global Variables */
 :root {
   /* Colors - Greyscale */
+  --color-white: #FFFFFF;
   --color-greyscale-00: #FFFFFF;
   --color-greyscale-25: #F8F8F9;
   --color-greyscale-50: #F1F2F3;
+  --color-greyscale-75: #EAEAED;
   --color-greyscale-100: #E4E4E7;
   --color-greyscale-200: #C8C9D0;
+  --color-greyscale-300: #B0B1BA;
   --color-greyscale-400: #9293A0;
   --color-greyscale-600: #5F606D;
+  --color-greyscale-700: #42434A;
   --color-greyscale-800: #2F3037;
+  --color-greyscale-900: #1C1C1E;
+  --color-greyscale-1000: #0C0C0E;
   
   /* Colors - Primary */
   --color-primary-50: #F2F8FF;
   --color-primary-100: #D6EAFF;
   --color-primary-200: #AED2FF;
+  --color-primary-300: #85B8FF;
+  --color-primary-400: #67A1FF;
   --color-primary-500: #357BFF;
   --color-primary-600: #265EDB;
   --color-primary-700: #1A45B7;
+  --color-primary-800: #103093;
+  --color-primary-900: #0A217A;
+  
+  /* Colors - Secondary (Orange) */
+  --color-secondary-50: #FFF5E8;
+  --color-secondary-100: #FFEDD6;
+  --color-secondary-200: #FFD7AE;
+  --color-secondary-300: #FFBB86;
+  --color-secondary-400: #FFA068;
+  --color-secondary-500: #FF7436;
+  --color-secondary-600: #DB5327;
+  --color-secondary-700: #B7361B;
+  --color-secondary-800: #931F11;
+  --color-secondary-900: #7A0F0A;
+  
+  /* Colors - Success */
+  --color-success-50: #F7FFE8;
+  --color-success-100: #EFFCD5;
+  --color-success-200: #DCFAAD;
+  --color-success-300: #C0F181;
+  --color-success-400: #A3E460;
+  --color-success-500: #7AD330;
+  --color-success-600: #5DB523;
+  --color-success-700: #449718;
+  --color-success-800: #2E7A0F;
+  --color-success-900: #1F6509;
+  
+  /* Colors - Warning */
+  --color-warning-50: #FFFCEA;
+  --color-warning-100: #FFF8CE;
+  --color-warning-200: #FFF09C;
+  --color-warning-300: #FFE56C;
+  --color-warning-400: #FFDA47;
+  --color-warning-500: #FFC90A;
+  --color-warning-600: #DBA707;
+  --color-warning-700: #B78805;
+  --color-warning-800: #936A03;
+  --color-warning-900: #7A5401;
   
   /* Colors - Danger */
+  --color-danger-50: #FFF0F0;
+  --color-danger-100: #FED9D9;
+  --color-danger-200: #FEB3B3;
+  --color-danger-300: #FE8C8C;
+  --color-danger-400: #FD7070;
+  --color-danger-500: #FC4141;
+  --color-danger-600: #D82F2F;
   --color-danger-700: #B52020;
+  --color-danger-800: #921414;
+  --color-danger-900: #780C0C;
+  
+  /* Colors - Special */
+  --color-special-galactic-sand: #F8F6F2;
   
   /* Font Families */
   --font-family-primary: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -34,6 +92,8 @@
   /* Font Weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   
   /* Font Sizes */
   --font-size-xs: 8px;
@@ -87,7 +147,7 @@ body {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
   color: var(--color-greyscale-800);
-  background-color: var(--color-greyscale-00);
+  background-color: var(--color-special-galactic-sand);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -96,64 +156,26 @@ body {
 .app {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-}
-
-.app-header {
-  background: var(--color-greyscale-00);
-  border-bottom: 1px solid var(--color-greyscale-100);
-  padding: var(--spacing-xl) 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.app-header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-xl);
-}
-
-.app-header h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-greyscale-800);
-  margin: 0;
-  line-height: 1.2;
+  flex-direction: row;
 }
 
 .app-main {
   flex: 1;
-  background: var(--color-greyscale-25);
-  min-height: calc(100vh - 120px); /* Adjust based on header height */
+  margin-left: 280px; /* Width of sidebar */
+  background: var(--color-special-galactic-sand);
+  min-height: 100vh;
+  overflow-x: auto;
 }
 
 /* Responsive App Layout */
 @media (max-width: 768px) {
-  .app-header {
-    padding: var(--spacing-lg) 0;
-    position: relative; /* Remove sticky on mobile for better UX */
-  }
-  
-  .app-header-content {
+  .app {
     flex-direction: column;
-    align-items: stretch;
-    gap: var(--spacing-lg);
-    padding: 0 var(--spacing-lg);
-  }
-  
-  .app-header h1 {
-    font-size: 1.5rem;
-    text-align: center;
   }
   
   .app-main {
-    min-height: auto;
+    margin-left: 0;
+    min-height: calc(100vh - 80px); /* Adjust for mobile sidebar height */
   }
 }
 

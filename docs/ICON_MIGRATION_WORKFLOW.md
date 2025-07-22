@@ -1,6 +1,6 @@
-# Icon Migration Workflow: Figma to Component Library
+# Icon Migration Workflow: Figma to Design System
 
-This guide outlines the most efficient and precise workflow for porting icons from the Nexla Design System in Figma to our React component library.
+This guide outlines the most efficient and precise workflow for porting icons from the Nexla Design System in Figma to our React design system.
 
 ## 🎯 Overview
 

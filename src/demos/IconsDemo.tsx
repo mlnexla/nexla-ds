@@ -102,7 +102,7 @@ export const IconsDemo: React.FC = () => {
     <div className="icons-demo">
       <div className="demo-header">
         <h1>Icon Gallery</h1>
-        <p>Browse all {totalIcons} icons in the component library</p>
+                    <p>Browse all {totalIcons} icons in the design system</p>
         
         {/* Filter Input */}
         <div className="filter-container" style={{ 

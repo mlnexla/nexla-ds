@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from '../components/Button';
-import { PrimaryActionButton } from '../components/PrimaryActionButton';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import './ButtonsDemo.css';
@@ -84,11 +83,39 @@ export const ButtonsDemo: React.FC = () => {
         Each button state includes both React implementation and CSS styling examples.
       </p>
 
-      {/* Basic Button Section */}
+      {/* Button Variants Section */}
       <section className="button-section">
-        <h3 className="section-title">Basic Action Button</h3>
+        <h3 className="section-title">Button Variants</h3>
         <p className="section-description">
-          The standard button component with all interactive states from Figma design.
+          The Button component supports multiple variants for different use cases and visual hierarchy.
+        </p>
+        
+        <div className="button-grid">
+          <div className="button-example">
+            <Button label="Default" variant="default" />
+            <span className="button-label">Default</span>
+          </div>
+          
+          <div className="button-example">
+            <Button label="Primary" variant="primary" />
+            <span className="button-label">Primary</span>
+          </div>
+          
+          <div className="button-example">
+            <Button label="Secondary" variant="secondary" />
+            <span className="button-label">Secondary</span>
+          </div>
+          
+          <div className="button-example">
+            <Button label="Delete" variant="danger" />
+            <span className="button-label">Danger</span>
+          </div>
+        </div>
+
+        {/* Button States Section */}
+        <h4 style={{ marginTop: '3rem', marginBottom: '1.5rem', fontSize: '1.25rem', fontWeight: '600' }}>Interactive States</h4>
+        <p style={{ marginBottom: '2rem', color: 'var(--color-greyscale-600)' }}>
+          All variants support the same interactive states.
         </p>
         
         <div className="button-grid">
@@ -114,19 +141,18 @@ export const ButtonsDemo: React.FC = () => {
           
           <div className="button-example">
             <Button label="Loading..." variant="primary" loading />
-            <span className="button-label">Spinner</span>
+            <span className="button-label">Loading</span>
           </div>
         </div>
 
         {/* Code Examples for each state */}
         <div className="button-states-code">
           <CodeExample
-            title="Default State"
-            description="The standard button appearance when not interacted with."
+            title="Default Variant"
+            description="Neutral styling for tertiary actions and low-emphasis interactions."
             reactCode={`<Button 
-  label="Default" 
-  variant="primary" 
-  state="default" 
+  label="View Details" 
+  variant="default" 
 />`}
             cssCode={`.basic-action-button--primary {
   background: var(--color-greyscale-00);
@@ -143,19 +169,19 @@ export const ButtonsDemo: React.FC = () => {
           />
 
           <CodeExample
-            title="Hover State"
-            description="Visual feedback when user hovers over the button."
+            title="Primary Variant"
+            description="Enhanced styling for main call-to-action buttons with hover effects."
             reactCode={`<Button 
-  label="Hover" 
+  label="Save Changes" 
   variant="primary" 
-  state="hover" 
+  onClick={handleSave}
 />
 
-// Or with interactive hover
+// With loading state
 <Button 
-  label="Interactive" 
+  label="Submitting..." 
   variant="primary" 
-  onClick={handleClick}
+  loading={isSubmitting}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--hover {
   background: var(--color-greyscale-50);
@@ -170,23 +196,20 @@ export const ButtonsDemo: React.FC = () => {
           />
 
           <CodeExample
-            title="Pressing State"
-            description="Active state when button is being pressed or clicked."
+            title="Secondary Variant"
+            description="Subtle styling for supporting actions and alternative pathways."
             reactCode={`<Button 
-  label="Pressing" 
-  variant="primary" 
-  state="pressing" 
+  label="Cancel" 
+  variant="secondary" 
+  onClick={handleCancel}
 />
 
-// State management example
-const [isPressed, setIsPressed] = useState(false);
-
+// With disabled state
 <Button 
-  label="Click Me"
-  variant="primary"
-  state={isPressed ? "pressing" : "default"}
-  onMouseDown={() => setIsPressed(true)}
-  onMouseUp={() => setIsPressed(false)}
+  label="Skip"
+  variant="secondary"
+  disabled={!canSkip}
+  onClick={handleSkip}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--pressing {
   background: var(--color-greyscale-50);
@@ -200,20 +223,19 @@ const [isPressed, setIsPressed] = useState(false);
           />
 
           <CodeExample
-            title="Disabled State"
-            description="Button is not interactive and shows disabled styling."
+            title="Danger Variant"
+            description="Warning styling for destructive or irreversible actions."
             reactCode={`<Button 
-  label="Disabled" 
-  variant="primary" 
-  disabled 
+  label="Delete Account" 
+  variant="danger" 
+  onClick={handleDelete}
 />
 
-// Conditional disabled state
+// With confirmation state
 <Button 
-  label="Submit"
-  variant="primary"
-  disabled={!isFormValid}
-  onClick={handleSubmit}
+  label={confirmDelete ? "Confirm Delete" : "Delete"}
+  variant="danger"
+  onClick={confirmDelete ? handleConfirmDelete : () => setConfirmDelete(true)}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--disabled {
   background: var(--color-greyscale-100);
@@ -228,12 +250,20 @@ const [isPressed, setIsPressed] = useState(false);
           />
 
           <CodeExample
-            title="Loading State"
-            description="Shows spinner animation during async operations."
-            reactCode={`<Button 
-  label="Loading..." 
+            title="Interactive States"
+            description="All variants support hover, pressing, disabled, and loading states."
+            reactCode={`// Any variant with loading
+<Button 
+  label="Processing..." 
   variant="primary" 
   loading 
+/>
+
+// Disabled state
+<Button 
+  label="Submit"
+  variant="primary"
+  disabled={!isFormValid}
 />
 
 // Loading state management
@@ -252,6 +282,7 @@ const handleAsyncAction = async () => {
   label={isLoading ? "Processing..." : "Submit"}
   variant="primary"
   loading={isLoading}
+  disabled={isLoading}
   onClick={handleAsyncAction}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--loading {
@@ -275,77 +306,108 @@ const handleAsyncAction = async () => {
 
       </section>
 
-      {/* Primary Action Button Section */}
+      {/* Variant Usage Examples Section */}
       <section className="button-section">
-        <h3 className="section-title">Primary Action Button</h3>
+        <h3 className="section-title">Variant Usage Examples</h3>
         <p className="section-description">
-          A specialized primary button for key actions with enhanced styling.
+          Real-world examples showing when to use each button variant.
         </p>
         
         <div className="button-grid">
           <div className="button-example">
-            <PrimaryActionButton 
-              label={primaryClicked ? 'Clicked!' : 'Primary Action'}
-              onClick={handlePrimaryClick}
-            />
-            <span className="button-label">Default</span>
+            <Button label={primaryClicked ? 'Saved!' : 'Save Changes'} variant="primary" state={primaryClicked ? 'pressing' : 'default'} onClick={handlePrimaryClick} />
+            <span className="button-label">Primary CTA</span>
           </div>
           
           <div className="button-example">
-            <PrimaryActionButton 
-              label="Disabled Action"
-              disabled
-            />
-            <span className="button-label">Disabled</span>
+            <Button label="Cancel" variant="secondary" />
+            <span className="button-label">Secondary Action</span>
+          </div>
+          
+          <div className="button-example">
+            <Button label="Delete Account" variant="danger" />
+            <span className="button-label">Destructive Action</span>
+          </div>
+          
+          <div className="button-example">
+            <Button label="View Details" variant="default" />
+            <span className="button-label">Neutral Action</span>
           </div>
         </div>
 
         <CodeExample
-          title="Primary Action Button Implementation"
-          description="Specialized button for main call-to-action elements."
-          reactCode={`import { PrimaryActionButton } from '../components/PrimaryActionButton';
+          title="Button Variant Implementation"
+          description="Choose the right variant for the right action."
+          reactCode={`import { Button } from '../components/Button';
 
-// Basic usage
-<PrimaryActionButton 
-  label="Submit Form"
-  onClick={handleSubmit}
+// Primary - Main call-to-action
+<Button 
+  label="Save Changes" 
+  variant="primary" 
+  onClick={handleSave}
 />
 
-// Disabled state
-<PrimaryActionButton 
-  label="Please Wait..."
-  disabled
+// Secondary - Supporting actions
+<Button 
+  label="Cancel" 
+  variant="secondary" 
+  onClick={handleCancel}
+/>
+
+// Danger - Destructive actions
+<Button 
+  label="Delete Account" 
+  variant="danger" 
+  onClick={handleDelete}
+/>
+
+// Default - Neutral actions
+<Button 
+  label="View Details" 
+  variant="default" 
+  onClick={handleView}
 />
 
 // With state management
 const [isSubmitting, setIsSubmitting] = useState(false);
 
-<PrimaryActionButton 
+<Button 
   label={isSubmitting ? "Submitting..." : "Submit"}
+  variant="primary"
+  loading={isSubmitting}
   disabled={isSubmitting}
   onClick={handleFormSubmit}
 />`}
-          cssCode={`/* Primary Action Button has enhanced styling */
-.primary-action-button {
-  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-600));
-  border: none;
-  border-radius: var(--radius-lg);
-  color: white;
+          cssCode={`/* Variant styling hierarchy */
+
+/* Default - Neutral, low emphasis */
+.basic-action-button--default {
+  background: var(--color-greyscale-00);
+  border-color: var(--color-greyscale-200);
+  color: var(--color-greyscale-700);
+}
+
+/* Primary - High emphasis, main actions */
+.basic-action-button--primary {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-200);
+  color: var(--color-primary-700);
   font-weight: var(--font-weight-semibold);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all var(--transition-base);
+  transform: translateY(-1px) on hover;
 }
 
-.primary-action-button:hover {
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
+/* Secondary - Medium emphasis, supporting actions */
+.basic-action-button--secondary {
+  background: var(--color-greyscale-25);
+  border-color: var(--color-greyscale-300);
+  color: var(--color-greyscale-700);
 }
 
-.primary-action-button:disabled {
-  background: var(--color-greyscale-300);
-  box-shadow: none;
-  cursor: not-allowed;
+/* Danger - High emphasis, destructive actions */
+.basic-action-button--danger {
+  background: var(--color-error-50);
+  border-color: var(--color-error-200);
+  color: var(--color-error-700);
 }`}
         />
       </section>
@@ -470,25 +532,34 @@ const handleCopyFallback = (text: string) => {
         </p>
         
         <div className="comparison-grid">
-          <Button label="Basic Primary" variant="primary" />
-          <Button label="Basic Secondary" variant="secondary" />
-          <PrimaryActionButton label="Primary Action" />
+          <Button label="Default" variant="default" />
+          <Button label="Primary" variant="primary" />
+          <Button label="Secondary" variant="secondary" />
+          <Button label="Danger" variant="danger" />
           <CopyToClipboardButton state="default" />
         </div>
 
         <div className="code-example">
-          <h4>When to Use Each Button Type</h4>
+          <h4>When to Use Each Button Variant</h4>
           <div className="usage-guide">
             <div className="usage-item">
-              <strong>Basic Action Button:</strong> General purpose buttons for most interactions. 
-              Use primary variant for important actions, secondary for less critical ones.
+              <strong>Default:</strong> Neutral actions that don't require emphasis. 
+              Best for tertiary actions like "View", "Edit", or "Learn More".
             </div>
             <div className="usage-item">
-              <strong>Primary Action Button:</strong> Main call-to-action buttons that need to stand out, 
-              such as form submissions, purchase buttons, or primary navigation.
+              <strong>Primary:</strong> Main call-to-action buttons that should draw attention. 
+              Use for form submissions, confirmations, or primary navigation actions.
             </div>
             <div className="usage-item">
-              <strong>Copy to Clipboard Button:</strong> Specifically for copy operations with 
+              <strong>Secondary:</strong> Supporting actions that are important but not primary. 
+              Perfect for "Cancel", "Skip", or alternative pathways.
+            </div>
+            <div className="usage-item">
+              <strong>Danger:</strong> Destructive or irreversible actions that require caution. 
+              Use for "Delete", "Remove", or "Permanently disable" actions.
+            </div>
+            <div className="usage-item">
+              <strong>Copy to Clipboard Button:</strong> Specialized component for copy operations with 
               built-in visual feedback and proper clipboard API integration.
             </div>
           </div>

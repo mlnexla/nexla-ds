@@ -1,23 +1,39 @@
 import { useState } from 'react';
-import { JumpMenu } from './components/JumpMenu';
+import { Sidebar } from './components/Sidebar';
+import { MainPage } from './components/MainPage';
 import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import './styles/global.css';
 
-type DemoType = 'buttons' | 'textInput' | 'icons';
+type DemoType = 'home' | 'buttons' | 'textInput' | 'icons';
 
 function App() {
-  const [currentDemo, setCurrentDemo] = useState<DemoType>('icons');
+  const [currentDemo, setCurrentDemo] = useState<DemoType>('home');
 
   const menuOptions = [
-    { value: 'buttons', label: 'Buttons' },
-    { value: 'textInput', label: 'Text Input' },
-    { value: 'icons', label: 'Icon Gallery' },
+    { 
+      value: 'home', 
+      label: 'Nexla Design System'
+    },
+    { 
+      value: 'buttons', 
+      label: 'Buttons'
+    },
+    { 
+      value: 'textInput', 
+      label: 'Text Input'
+    },
+    { 
+      value: 'icons', 
+      label: 'Icon Gallery'
+    },
   ];
 
   const renderDemo = () => {
     switch (currentDemo) {
+      case 'home':
+        return <MainPage />;
       case 'buttons':
         return <ButtonsDemo />;
       case 'textInput':
@@ -25,23 +41,17 @@ function App() {
       case 'icons':
         return <IconsDemo />;
       default:
-        return <IconsDemo />;
+        return <MainPage />;
     }
   };
 
   return (
     <div className="app">
-      <header className="app-header">
-        <div className="app-header-content">
-          <h1>Component Library</h1>
-          <JumpMenu
-            options={menuOptions}
-            value={currentDemo}
-            onChange={(value) => setCurrentDemo(value as DemoType)}
-            placeholder="Select a demo..."
-          />
-        </div>
-      </header>
+      <Sidebar
+        options={menuOptions}
+        value={currentDemo}
+        onChange={(value) => setCurrentDemo(value as DemoType)}
+      />
       <main className="app-main">
         {renderDemo()}
       </main>
