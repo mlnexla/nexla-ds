@@ -57,7 +57,7 @@ const TypographyDemo: React.FC = () => {
     {
       name: 'Mono Code 400',
       variant: 'mono-code-400',
-      description: 'Code-specific monospace text with regular weight',
+      description: 'Code editor monospace text with regular weight',
       example: 'function calculateTotal(items) { return items.reduce((sum, item) => sum + item.price, 0); }'
     }
   ];
@@ -222,7 +222,7 @@ const TypographyDemo: React.FC = () => {
               Mono Code (13px)
             </Typography>
             <Typography variant="body-default-400">
-              Specifically designed for code blocks and programming examples. Optimized for readability in technical documentation and tutorials.
+              Specifically designed for code editors and IDE interfaces. Optimized for programming environments where code is actively being written and edited.
             </Typography>
           </div>
         </div>
@@ -248,14 +248,14 @@ const TypographyDemo: React.FC = () => {
 /* Mono Typography Variants */
 --typography-mono-default-400: 400 14px/20px var(--font-family-mono);
 --typography-mono-small-400: 400 12px/16px var(--font-family-mono);
---typography-mono-code-400: 400 13px/20px var(--font-family-mono);
+--typography-mono-code-400: 400 13px/20px var(--font-family-mono); /* For code editors */
 
 /* Usage in CSS */
 .my-text {
   font: var(--typography-body-default-400);
 }
 
-.my-code {
+.code-editor {
   font: var(--typography-mono-code-400);
 }`}
           language="css"
@@ -265,4 +265,4 @@ const TypographyDemo: React.FC = () => {
   );
 };
 
-export default TypographyDemo; 
+export default TypographyDemo;
