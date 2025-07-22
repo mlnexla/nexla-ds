@@ -41,6 +41,24 @@ const TypographyDemo: React.FC = () => {
       variant: 'body-large-500',
       description: 'Large body text with medium weight',
       example: 'This is body large text with 500 weight. Perfect for section headers and prominent content.'
+    },
+    {
+      name: 'Mono Default 400',
+      variant: 'mono-default-400',
+      description: 'Default monospace text with regular weight',
+      example: 'const user = { name: "John", age: 30 }; // Perfect for code snippets and technical content'
+    },
+    {
+      name: 'Mono Small 400',
+      variant: 'mono-small-400',
+      description: 'Small monospace text with regular weight',
+      example: 'npm install @nexla/ds // Ideal for inline code and small technical labels'
+    },
+    {
+      name: 'Mono Code 400',
+      variant: 'mono-code-400',
+      description: 'Code-specific monospace text with regular weight',
+      example: 'function calculateTotal(items) { return items.reduce((sum, item) => sum + item.price, 0); }'
     }
   ];
 
@@ -74,7 +92,7 @@ const TypographyDemo: React.FC = () => {
           Typography Variants
         </Typography>
         <Typography variant="body-default-400">
-          The typography system includes 6 variants designed for different use cases and hierarchy levels.
+          The typography system includes 9 variants designed for different use cases and hierarchy levels, including both body text and monospace fonts.
         </Typography>
       </div>
 
@@ -180,6 +198,33 @@ const TypographyDemo: React.FC = () => {
               Ideal for lead paragraphs, highlighted content, and section introductions. Creates visual hierarchy without being a heading.
             </Typography>
           </div>
+          
+          <div className="guideline-card">
+            <Typography variant="body-default-500" as="h3">
+              Mono Default (14px)
+            </Typography>
+            <Typography variant="body-default-400">
+              Use for code snippets, technical content, and inline code. Perfect for displaying programming examples and technical documentation.
+            </Typography>
+          </div>
+          
+          <div className="guideline-card">
+            <Typography variant="body-default-500" as="h3">
+              Mono Small (12px)
+            </Typography>
+            <Typography variant="body-default-400">
+              Ideal for small code labels, file paths, and compact technical information. Great for metadata and secondary code references.
+            </Typography>
+          </div>
+          
+          <div className="guideline-card">
+            <Typography variant="body-default-500" as="h3">
+              Mono Code (13px)
+            </Typography>
+            <Typography variant="body-default-400">
+              Specifically designed for code blocks and programming examples. Optimized for readability in technical documentation and tutorials.
+            </Typography>
+          </div>
         </div>
       </div>
 
@@ -200,9 +245,18 @@ const TypographyDemo: React.FC = () => {
 --typography-body-large-400: 400 16px/24px var(--font-family-default);
 --typography-body-large-500: 500 16px/24px var(--font-family-default);
 
+/* Mono Typography Variants */
+--typography-mono-default-400: 400 14px/20px var(--font-family-mono);
+--typography-mono-small-400: 400 12px/16px var(--font-family-mono);
+--typography-mono-code-400: 400 13px/20px var(--font-family-mono);
+
 /* Usage in CSS */
 .my-text {
   font: var(--typography-body-default-400);
+}
+
+.my-code {
+  font: var(--typography-mono-code-400);
 }`}
           language="css"
         />

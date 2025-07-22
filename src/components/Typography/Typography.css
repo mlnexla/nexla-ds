@@ -30,6 +30,19 @@
   font: var(--typography-body-large-500);
 }
 
+/* Mono Typography Variants */
+.typography-mono-default-400 {
+  font: var(--typography-mono-default-400);
+}
+
+.typography-mono-small-400 {
+  font: var(--typography-mono-small-400);
+}
+
+.typography-mono-code-400 {
+  font: var(--typography-mono-code-400);
+}
+
 /* Typography Utility Classes */
 .text-body-default-400 {
   font: var(--typography-body-default-400);
@@ -53,4 +66,17 @@
 
 .text-body-large-500 {
   font: var(--typography-body-large-500);
+}
+
+/* Mono Utility Classes */
+.text-mono-default-400 {
+  font: var(--typography-mono-default-400);
+}
+
+.text-mono-small-400 {
+  font: var(--typography-mono-small-400);
+}
+
+.text-mono-code-400 {
+  font: var(--typography-mono-code-400);
 } 
