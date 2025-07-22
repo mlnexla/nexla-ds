@@ -238,17 +238,17 @@ export const ButtonsDemo: React.FC = () => {
             title="Secondary Variant"
             description="Subtle styling for supporting actions and alternative pathways."
             reactCode={`<Button 
-  label="Cancel" 
+  label="Add Item" 
   variant="secondary" 
-  onClick={handleCancel}
+  onClick={handleAdd}
 />
 
 // With disabled state
 <Button 
-  label="Skip"
+  label="Export"
   variant="secondary"
-  disabled={!canSkip}
-  onClick={handleSkip}
+  disabled={!canExport}
+  onClick={handleExport}
 />`}
             cssCode={`.basic-action-button--primary.basic-action-button--pressing {
   background: var(--color-greyscale-50);
@@ -358,7 +358,7 @@ const handleAsyncAction = async () => {
           </div>
           
           <div className="button-example">
-            <Button label="Cancel" variant="secondary" />
+            <Button label="Add Item" variant="secondary" />
             <span className="button-label">Secondary Action</span>
           </div>
           
@@ -387,9 +387,9 @@ const handleAsyncAction = async () => {
 
 // Secondary - Supporting actions
 <Button 
-  label="Cancel" 
+  label="Add Item" 
   variant="secondary" 
-  onClick={handleCancel}
+  onClick={handleAdd}
 />
 
 // Danger - Destructive actions
@@ -590,7 +590,7 @@ const handleCopyFallback = (text: string) => {
             </div>
             <div className="usage-item">
               <strong>Secondary:</strong> Supporting actions that are important but not primary. 
-              Perfect for "Cancel", "Skip", or alternative pathways.
+              Perfect for "Add Item", "Export", or alternative pathways.
             </div>
             <div className="usage-item">
               <strong>Danger:</strong> Destructive or irreversible actions that require caution. 
