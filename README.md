@@ -22,7 +22,7 @@ src/
 
 ### Button Component
 - **4 Variants**: Primary, Secondary, Default, and Danger
-- **Interactive States**: Default, Hover, Pressing, Disabled, and Loading
+- **Interactive States**: Default, Hover, Pressing, Disabled, and Processing
 - **Icon Support**: Optional leading icons with consistent sizing
 - **Accessibility**: Full keyboard navigation and screen reader support
 
@@ -54,7 +54,7 @@ src/
 | `variant` | 'primary' \| 'secondary' \| 'default' \| 'danger' | 'default' | Button style variant |
 | `onClick` | () => void | - | Click handler |
 | `disabled` | boolean | false | Disable button |
-| `loading` | boolean | false | Show loading state |
+| `loading` | boolean | false | Show processing state |
 | `className` | string | - | Additional CSS classes |
 | `icon` | ReactNode | - | Optional leading icon |
 
@@ -84,7 +84,7 @@ import { FiRrAdd } from './components/icons';
   Delete
 </Button>
 
-// With loading state
+// With processing state
 <Button variant="primary" loading={isSubmitting}>
   Submit
 </Button>
@@ -152,9 +152,9 @@ Professional design with precise color specifications:
 - **Danger**: Red theme (`#B52020`) - destructive actions
 
 **Interactive States**:
-- Default → Hover → Pressing → Loading/Disabled
+- Default → Hover → Pressing → Processing/Disabled
 - Enhanced shadows and color transitions
-- Loading state with branded spinner
+- Processing state with branded spinner
 
 ### TextInput Design System
 
