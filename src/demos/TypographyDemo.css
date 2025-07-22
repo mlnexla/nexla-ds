@@ -11,13 +11,17 @@
 }
 
 .demo-header h1 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-greyscale-800);
   margin-bottom: var(--spacing-lg);
 }
 
-.demo-description {
+.demo-header .demo-description {
+  font-size: 1.125rem;
   color: var(--color-greyscale-600);
-  max-width: 600px;
-  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 800px;
 }
 
 .demo-section {
