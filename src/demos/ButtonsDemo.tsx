@@ -358,6 +358,11 @@ const handleAsyncAction = async () => {
           </div>
           
           <div className="button-example">
+            <Button label="Publish Now" variant="primary-bold" />
+            <span className="button-label">Primary Bold Action</span>
+          </div>
+          
+          <div className="button-example">
             <Button label="Cancel" variant="secondary" />
             <span className="button-label">Secondary Action</span>
           </div>
@@ -383,6 +388,13 @@ const handleAsyncAction = async () => {
   label="Save Changes" 
   variant="primary" 
   onClick={handleSave}
+/>
+
+// Primary Bold - High-emphasis primary actions
+<Button 
+  label="Publish Now" 
+  variant="primary-bold" 
+  onClick={handlePublish}
 />
 
 // Secondary - Supporting actions
@@ -432,6 +444,17 @@ const [isSubmitting, setIsSubmitting] = useState(false);
   color: var(--color-primary-700);
   font-weight: var(--font-weight-semibold);
   transform: translateY(-1px) on hover;
+}
+
+/* Primary Bold - Highest emphasis, critical actions */
+.basic-action-button--primary-bold {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: var(--color-primary-50);
+  font-family: 'Rubik', var(--font-family-primary);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 /* Secondary - Supporting actions with greyscale text */
@@ -572,6 +595,7 @@ const handleCopyFallback = (text: string) => {
         <div className="comparison-grid">
           <Button label="Default" variant="default" />
           <Button label="Primary" variant="primary" />
+          <Button label="Primary Bold" variant="primary-bold" />
           <Button label="Secondary" variant="secondary" />
           <Button label="Danger" variant="danger" />
           <CopyToClipboardButton state="default" />
@@ -587,6 +611,10 @@ const handleCopyFallback = (text: string) => {
             <div className="usage-item">
               <strong>Primary:</strong> Main call-to-action buttons that should draw attention. 
               Use for form submissions, confirmations, or primary navigation actions.
+            </div>
+            <div className="usage-item">
+              <strong>Primary Bold:</strong> High-emphasis primary actions that require extra attention. 
+              Use sparingly for critical actions like "Delete Account", "Confirm Payment", or "Publish".
             </div>
             <div className="usage-item">
               <strong>Secondary:</strong> Supporting actions that are important but not primary. 
