@@ -6,37 +6,37 @@
 }
 
 .demo-title {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .demo-description {
   font-size: 1.125rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-3xl);
   line-height: 1.6;
   max-width: 800px;
 }
 
 .icons-section {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .section-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .section-description {
   font-size: 1rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
   line-height: 1.6;
 }
 
 .icons-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
 .icon-item {
@@ -45,7 +45,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
   text-align: center;
   position: relative;
 }
@@ -60,14 +60,14 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
   color: var(--color-greyscale-800);
 }
 
 .icon-name {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-xs);
   color: var(--color-greyscale-800);
 }
 
@@ -76,7 +76,7 @@
   color: var(--color-greyscale-600);
   font-family: var(--font-family-mono);
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
   background: var(--color-greyscale-50);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
@@ -84,7 +84,7 @@
 
 .loading {
   text-align: center;
-  padding: 2rem;
+  padding: var(--spacing-xl);
   color: var(--color-greyscale-600);
   font-style: italic;
 }
@@ -92,20 +92,20 @@
 .icon-variations {
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
 }
 
 .demo-code {
   background: #2d3748;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  margin-top: 2rem;
+  padding: var(--spacing-xl);
+  border-radius: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
 }
 
 .demo-code h3 {
   color: #f7fafc;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
   font-size: 1.25rem;
 }
 
@@ -134,11 +134,11 @@
   
   .icons-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--spacing-lg);
   }
   
   .icon-item {
-    padding: 1rem;
+    padding: var(--spacing-lg);
   }
 }
 

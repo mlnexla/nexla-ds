@@ -6,41 +6,69 @@
 }
 
 .demo-title {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .demo-description {
   font-size: 1.125rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-3xl);
   line-height: 1.6;
   max-width: 800px;
 }
 
 .button-section {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-lg);
   color: var(--color-greyscale-800);
 }
 
 .section-description {
   font-size: 1rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
   line-height: 1.6;
 }
 
 .button-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.button-item {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+}
+
+.button-preview {
+  margin-bottom: var(--spacing-lg);
+}
+
+.button-info {
+  margin-bottom: var(--spacing-lg);
+}
+
+.button-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-greyscale-800);
+}
+
+.button-description {
+  font-size: 0.875rem;
+  color: var(--color-greyscale-600);
+  line-height: 1.4;
 }
 
 .button-example {

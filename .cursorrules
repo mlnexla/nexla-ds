@@ -2,6 +2,7 @@
 description: Figma Dev Mode MCP + Design Style Rules
 globs:
   - "**/*.tsx"
+  - "**/*.css"
 alwaysApply: true
 ---
 - Use Tailwind classes defined in the design system tokens.
@@ -9,6 +10,7 @@ alwaysApply: true
 - Do NOT hardcode colors or spacing; use tokens like `bg-primary`, `p-4`, etc.
 - Use PascalCase for all components.
 - DO NOT import new icon packages; all icons come from Figma assets.
+- Use spacing tokens (--spacing-*) instead of hardcoded rem values for consistent spacing.
 
 # Documentation Sync Rule
 - When updating README.md content, ALWAYS update src/components/MainPage/MainPage.tsx to match

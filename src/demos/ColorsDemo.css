@@ -6,43 +6,43 @@
 }
 
 .demo-title {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .demo-description {
   font-size: 1.125rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-3xl);
   line-height: 1.6;
   max-width: 800px;
 }
 
 .color-section {
-  margin-bottom: 4rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-lg);
   color: var(--color-greyscale-800);
 }
 
 .section-description {
   font-size: 1rem;
   color: var(--color-greyscale-600);
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-xl);
   line-height: 1.6;
 }
 
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
-.color-card {
+.color-item {
   background: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -50,58 +50,41 @@
   transition: all var(--transition-base);
 }
 
-.color-card:hover {
+.color-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
-.color-swatch {
+.color-preview {
   height: 80px;
-  width: 100%;
-  border-bottom: 1px solid var(--color-outline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .color-info {
-  padding: 1rem;
+  padding: var(--spacing-lg);
 }
 
 .color-name {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-xs);
   color: var(--color-greyscale-800);
 }
 
-.color-values {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.color-hex {
-  font-family: var(--font-family-mono);
+.color-value {
   font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--color-greyscale-700);
-  text-transform: uppercase;
-}
-
-.color-variable {
-  font-family: var(--font-family-mono);
-  font-size: 0.75rem;
   color: var(--color-greyscale-600);
-  background: var(--color-greyscale-50);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  display: inline-block;
+  font-family: var(--font-family-mono);
+  margin-bottom: var(--spacing-sm);
 }
 
 .color-description {
   font-size: 0.875rem;
   color: var(--color-greyscale-600);
-  line-height: 1.5;
-  margin: 0 0 1rem 0;
+  line-height: 1.4;
 }
 
 .color-actions {
