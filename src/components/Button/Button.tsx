@@ -4,7 +4,7 @@ import './Button.css';
 
 export type ButtonVariant = 'default' | 'primary' | 'primary-bold' | 'secondary' | 'danger';
 export type ButtonSize = 'small' | 'medium' | 'large';
-export type ButtonState = 'default' | 'hover' | 'pressing' | 'disabled' | 'loading';
+export type ButtonState = 'default' | 'hover' | 'pressing' | 'disabled' | 'processing';
 
 export interface ButtonProps {
   label?: string;
@@ -57,7 +57,7 @@ export const Button: React.FC<ButtonProps> = ({
   // Determine the actual state based on props
   // If state is explicitly provided, use it (static)
   // Otherwise use interactive state management
-  const actualState = loading ? 'loading' : disabled ? 'disabled' : (state || currentState);
+  const actualState = loading ? 'processing' : disabled ? 'disabled' : (state || currentState);
 
   const handleMouseEnter = () => {
     // Only change state if no explicit state is provided

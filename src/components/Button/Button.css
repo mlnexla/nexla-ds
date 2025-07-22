@@ -155,14 +155,14 @@
   color: var(--color-greyscale-400);
 }
 
-.basic-action-button--default.basic-action-button--loading {
+.basic-action-button--default.basic-action-button--processing {
   background: var(--color-greyscale-00);
   border-color: var(--color-greyscale-200);
   cursor: default;
   min-width: 100px;
 }
 
-.basic-action-button--default.basic-action-button--loading .basic-action-button__content {
+.basic-action-button--default.basic-action-button--processing .basic-action-button__content {
   justify-content: center;
 }
 
@@ -228,7 +228,7 @@
   color: var(--color-greyscale-400);
 }
 
-.basic-action-button--primary.basic-action-button--loading {
+.basic-action-button--primary.basic-action-button--processing {
   background: var(--color-primary-50);
   border-color: var(--color-primary-200);
   cursor: default;
@@ -236,7 +236,7 @@
   min-width: 100px;
 }
 
-.basic-action-button--primary.basic-action-button--loading .basic-action-button__content {
+.basic-action-button--primary.basic-action-button--processing .basic-action-button__content {
   justify-content: center;
 }
 
@@ -304,14 +304,14 @@
   color: var(--color-greyscale-400);
 }
 
-.basic-action-button--primary-bold.basic-action-button--loading {
+.basic-action-button--primary-bold.basic-action-button--processing {
   background: var(--color-primary-500);
   border-color: var(--color-primary-500);
   cursor: default;
   min-width: 100px;
 }
 
-.basic-action-button--primary-bold.basic-action-button--loading .basic-action-button__content {
+.basic-action-button--primary-bold.basic-action-button--processing .basic-action-button__content {
   justify-content: center;
 }
 
@@ -373,14 +373,14 @@
   color: var(--color-greyscale-400);
 }
 
-.basic-action-button--secondary.basic-action-button--loading {
+.basic-action-button--secondary.basic-action-button--processing {
   background: var(--color-secondary-50);
   border-color: var(--color-secondary-200);
   cursor: default;
   min-width: 100px;
 }
 
-.basic-action-button--secondary.basic-action-button--loading .basic-action-button__content {
+.basic-action-button--secondary.basic-action-button--processing .basic-action-button__content {
   justify-content: center;
 }
 
@@ -443,14 +443,14 @@
   color: var(--color-greyscale-400);
 }
 
-.basic-action-button--danger.basic-action-button--loading {
+.basic-action-button--danger.basic-action-button--processing {
   background: var(--color-danger-50);
   border-color: var(--color-danger-200);
   cursor: default;
   min-width: 100px;
 }
 
-.basic-action-button--danger.basic-action-button--loading .basic-action-button__content {
+.basic-action-button--danger.basic-action-button--processing .basic-action-button__content {
   justify-content: center;
 }
 

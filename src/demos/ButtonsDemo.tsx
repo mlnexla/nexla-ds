@@ -145,8 +145,8 @@ export const ButtonsDemo: React.FC = () => {
           </div>
           
           <div className="button-example">
-            <Button label="Loading..." variant="default" loading />
-            <span className="button-label">Loading</span>
+            <Button variant="default" loading />
+            <span className="button-label">Processing</span>
           </div>
         </div>
 
@@ -182,9 +182,8 @@ export const ButtonsDemo: React.FC = () => {
   onClick={handleSave}
 />
 
-// With loading state
+// With processing state
 <Button 
-  label="Submitting..." 
   variant="primary" 
   loading={isSubmitting}
 />`}
@@ -209,7 +208,7 @@ export const ButtonsDemo: React.FC = () => {
   onClick={handleCreate}
 />
 
-// With loading state
+// With processing state
 <Button 
   variant="primary-bold" 
   loading={isProcessing}
@@ -291,8 +290,8 @@ export const ButtonsDemo: React.FC = () => {
 
           <CodeExample
             title="Interactive States"
-            description="All variants support hover, pressing, disabled, and loading states."
-            reactCode={`// Any variant with loading
+            description="All variants support hover, pressing, disabled, and processing states."
+            reactCode={`// Any variant with processing
 <Button 
   variant="primary" 
   loading 
@@ -305,26 +304,26 @@ export const ButtonsDemo: React.FC = () => {
   disabled={!isFormValid}
 />
 
-// Loading state management
-const [isLoading, setIsLoading] = useState(false);
+// Processing state management
+const [isProcessing, setIsProcessing] = useState(false);
 
 const handleAsyncAction = async () => {
-  setIsLoading(true);
+  setIsProcessing(true);
   try {
     await apiCall();
   } finally {
-    setIsLoading(false);
+    setIsProcessing(false);
   }
 };
 
 <Button 
   label="Submit"
   variant="primary"
-  loading={isLoading}
-  disabled={isLoading}
+  loading={isProcessing}
+  disabled={isProcessing}
   onClick={handleAsyncAction}
 />`}
-            cssCode={`.basic-action-button--primary.basic-action-button--loading {
+            cssCode={`.basic-action-button--primary.basic-action-button--processing {
   background: var(--color-greyscale-00);
   border-color: var(--color-greyscale-200);
   cursor: default;
