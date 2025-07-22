@@ -211,7 +211,6 @@ export const ButtonsDemo: React.FC = () => {
 
 // With loading state
 <Button 
-  label="Processing..." 
   variant="primary-bold" 
   loading={isProcessing}
 />`}
@@ -295,7 +294,6 @@ export const ButtonsDemo: React.FC = () => {
             description="All variants support hover, pressing, disabled, and loading states."
             reactCode={`// Any variant with loading
 <Button 
-  label="Processing..." 
   variant="primary" 
   loading 
 />
@@ -320,7 +318,7 @@ const handleAsyncAction = async () => {
 };
 
 <Button 
-  label={isLoading ? "Processing..." : "Submit"}
+  label="Submit"
   variant="primary"
   loading={isLoading}
   disabled={isLoading}
