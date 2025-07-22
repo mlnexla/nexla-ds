@@ -524,7 +524,6 @@ export { default as ExpandMoreFilledIcon } from './Expandmorefilled';
 export { default as FilterListFilledIcon } from './Filterlistfilled';
 export { default as FolderSelectedIconSolidIcon } from './Folderselectediconsolid';
 export { default as ResizeIcon } from './Resize';
-export { default as IconsIcon } from './Icons';
 export { default as LinkOffFilledIcon } from './Linkofffilled';
 export { default as PeopleAltRoundedIcon } from './Peoplealtrounded';
 export { default as UnfoldLessFilledIcon } from './Unfoldlessfilled';
