@@ -5,10 +5,8 @@
 .demo-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-2xl);
   font-family: var(--font-family-primary);
-  background-color: #f8f9fa;
-  min-height: 100vh;
 }
 
 .demo-container h1 {
@@ -177,7 +175,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .demo-container {
-    padding: 20px 12px;
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
 
   .demo-grid {
@@ -196,5 +194,11 @@
 
   .demo-section h2 {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .demo-container {
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 } 

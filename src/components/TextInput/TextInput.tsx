@@ -199,14 +199,14 @@ export const TextInput: React.FC<TextInputProps> = ({
             )}
           </div>
         )}
-      </div>
 
-      {/* Help Text / Error Message */}
-      {(helpText || error) && (
-        <div className={`text-input-help ${error ? 'error' : ''}`}>
-          {error || helpText}
-        </div>
-      )}
+        {/* Help Text / Error Message - moved inside field container */}
+        {(helpText || error) && (
+          <div className={`text-input-help ${error ? 'error' : ''}`}>
+            {error || helpText}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

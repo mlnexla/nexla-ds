@@ -272,39 +272,7 @@ const handleAsyncAction = async () => {
           />
         </div>
 
-        <div className="code-example">
-          <h4>Advanced Usage Examples</h4>
-          <SyntaxHighlighter
-            code={`import { Button } from '../components/Button';
-import { AddIcon } from '../components/icons';
 
-// Button with custom icon
-<Button 
-  label="Add Item" 
-  variant="primary"
-  icon={<AddIcon />}
-  iconPosition="left"
-  onClick={handleAddItem}
-/>
-
-// Full width button
-<Button 
-  label="Continue" 
-  variant="primary"
-  fullWidth
-  onClick={handleContinue}
-/>
-
-// Different sizes
-<Button label="Small" variant="primary" size="small" />
-<Button label="Medium" variant="primary" size="medium" />
-<Button label="Large" variant="primary" size="large" />
-
-// Secondary variant
-<Button label="Cancel" variant="secondary" onClick={handleCancel} />`}
-            language="typescript"
-          />
-        </div>
       </section>
 
       {/* Primary Action Button Section */}

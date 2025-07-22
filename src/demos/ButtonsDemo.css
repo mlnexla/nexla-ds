@@ -1,7 +1,7 @@
 .buttons-demo {
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-2xl);
 }
 
 .demo-title {
@@ -209,6 +209,71 @@
   border-radius: 0;
 }
 
+.code-content .syntax-highlighter-container {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* Copy button styling for dark code blocks */
+.syntax-highlighter-copy-button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  position: relative !important;
+  z-index: 15 !important;
+}
+
+.syntax-highlighter-copy-button:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.syntax-highlighter-copy-button .copy-button-icon {
+  color: rgba(255, 255, 255, 0.9) !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.syntax-highlighter-copy-button .copy-button-text span {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.syntax-highlighter-copy-button:hover .copy-button-icon {
+  color: white !important;
+}
+
+.syntax-highlighter-copy-button:hover .copy-button-text span {
+  color: white !important;
+}
+
+.syntax-highlighter-copy-button.copied {
+  background: rgba(34, 197, 94, 0.2) !important;
+  border-color: rgba(34, 197, 94, 0.4) !important;
+}
+
+.syntax-highlighter-copy-button.copied .copy-button-icon {
+  color: rgba(34, 197, 94, 0.9) !important;
+}
+
+.syntax-highlighter-copy-button.copied .copy-button-text span {
+  color: rgba(34, 197, 94, 0.9) !important;
+}
+
+/* Enhanced tooltip for dark code blocks */
+.syntax-highlighter-copy-button::before {
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  z-index: 1001 !important;
+}
+
+.syntax-highlighter-copy-button::after {
+  border-bottom-color: rgba(0, 0, 0, 0.9) !important;
+  z-index: 1001 !important;
+}
+
 /* Usage Guide Styles */
 .usage-guide {
   display: flex;
@@ -245,7 +310,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .buttons-demo {
-    padding: 1rem;
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
   
   .button-grid {
@@ -312,5 +377,11 @@
   
   .comparison-grid {
     gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons-demo {
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 } 

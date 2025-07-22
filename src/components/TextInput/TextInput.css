@@ -92,7 +92,6 @@
 /* State variants */
 .text-input-hover {
   border-color: var(--color-greyscale-600);
-  cursor: pointer;
 }
 
 .text-input-active {

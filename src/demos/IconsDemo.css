@@ -1,7 +1,7 @@
 .icons-demo {
-  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-3xl) var(--spacing-2xl);
 }
 
 .demo-title {
@@ -82,6 +82,13 @@
   border: 1px solid var(--color-greyscale-100);
 }
 
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-greyscale-600);
+  font-style: italic;
+}
+
 .icon-variations {
   display: flex;
   justify-content: center;
@@ -114,7 +121,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .icons-demo {
-    padding: 1rem;
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
   
   .icons-grid {
@@ -124,5 +131,11 @@
   
   .icon-item {
     padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .icons-demo {
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 } 

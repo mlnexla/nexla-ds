@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AddIcon } from '../icons';
+
 import './Button.css';
 
 export type ButtonVariant = 'primary' | 'secondary';

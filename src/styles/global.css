@@ -90,4 +90,135 @@ body {
   background-color: var(--color-greyscale-00);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Layout Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--color-greyscale-00);
+  border-bottom: 1px solid var(--color-greyscale-100);
+  padding: var(--spacing-xl) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.app-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xl);
+}
+
+.app-header h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-greyscale-800);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.app-main {
+  flex: 1;
+  background: var(--color-greyscale-25);
+  min-height: calc(100vh - 120px); /* Adjust based on header height */
+}
+
+/* Responsive App Layout */
+@media (max-width: 768px) {
+  .app-header {
+    padding: var(--spacing-lg) 0;
+    position: relative; /* Remove sticky on mobile for better UX */
+  }
+  
+  .app-header-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .app-header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .app-main {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header-content {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .app-header h1 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Syntax Highlighter Styles */
+.syntax-highlighter-container {
+  position: relative;
+  border: 1px solid var(--color-greyscale-200);
+  border-radius: var(--radius-md);
+  background: #2d3748;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.syntax-highlighter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+}
+
+.syntax-highlighter-language {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-family-mono);
+}
+
+.syntax-highlighter-copy-button {
+  /* Override default button styles for dark theme */
+}
+
+.demo-code {
+  margin: 0;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-code);
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.demo-code code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 } 

@@ -8,6 +8,7 @@ interface CopyToClipboardButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
+  tooltip?: string;
 }
 
 export const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = ({
@@ -15,18 +16,26 @@ export const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = ({
   state = "default",
   onClick,
   disabled = false,
-  className = ""
+  className = "",
+  tooltip
 }) => {
-  if (state === 'copied') {
+  const getTooltipText = () => {
+    if (tooltip) return tooltip;
+    if (state === 'copied') return 'Copied!';
+    return label && label.length > 0 ? `Copy ${label}` : 'Copy to clipboard';
+  };
+    if (state === 'copied') {
     return (
-      <div className={`copy-to-clipboard-button copied ${className}`}>
+      <div className={`copy-to-clipboard-button copied ${className}`} title={getTooltipText()}>
         <div className="copy-button-inner">
           <div className="copy-button-icon">
-            <CheckFilledIcon size={12} />
+            <CheckFilledIcon size={12} color="currentColor" />
           </div>
-          <div className="copy-button-text">
-            <span>Copied</span>
-          </div>
+          {label && label.length > 0 && (
+            <div className="copy-button-text">
+              <span>Copied</span>
+            </div>
+          )}
         </div>
       </div>
     );
@@ -38,14 +47,17 @@ export const CopyToClipboardButton: React.FC<CopyToClipboardButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       type="button"
+      title={getTooltipText()}
     >
       <div className="copy-button-inner">
         <div className="copy-button-icon">
-          <ContentCopyFilledIcon size={12} />
+          <ContentCopyFilledIcon size={12} color="currentColor" />
         </div>
-        <div className="copy-button-text">
-          <span>{label}</span>
-        </div>
+        {label && label.length > 0 && (
+          <div className="copy-button-text">
+            <span>{label}</span>
+          </div>
+        )}
       </div>
     </button>
   );
