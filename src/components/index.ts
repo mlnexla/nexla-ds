@@ -6,4 +6,5 @@ export { JumpMenu } from './JumpMenu';
 export { Sidebar } from './Sidebar';
 export { CopyToClipboardButton } from './CopyToClipboardButton';
 export { Typography } from './Typography';
+export { TokenPanel } from './TokenPanel';
 export * from './icons'; 

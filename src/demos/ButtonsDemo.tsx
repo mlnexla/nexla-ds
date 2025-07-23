@@ -3,6 +3,7 @@ import { Button } from '../components/Button';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { SyntaxHighlighter } from '../components/SyntaxHighlighter';
 import { Typography } from '../components/Typography';
+import { TokenPanel } from '../components/TokenPanel';
 import './ButtonsDemo.css';
 
 interface CodeExampleProps {
@@ -76,6 +77,38 @@ export const ButtonsDemo: React.FC = () => {
     setTimeout(() => setCopiedState('default'), 2000);
   };
 
+  // Token data for different button variants
+  const defaultButtonTokens = [
+    { tokenName: '--color-greyscale-00', value: '#ffffff' },
+    { tokenName: '--color-greyscale-200', value: '#e4e4e7' },
+    { tokenName: '--color-primary-600', value: '#357bff' },
+    { tokenName: '--spacing-lg', value: '1rem' },
+    { tokenName: '--spacing-md', value: '0.75rem' },
+    { tokenName: '--radius-full', value: '40px' },
+    { tokenName: '--font-family-default', value: 'Inter, system-ui, sans-serif' },
+    { tokenName: '--font-weight-medium', value: '500' },
+    { tokenName: '--font-size-base', value: '0.875rem' },
+  ];
+
+  const primaryButtonTokens = [
+    { tokenName: '--color-primary-500', value: '#357bff' },
+    { tokenName: '--color-primary-600', value: '#265edb' },
+    { tokenName: '--color-white', value: '#ffffff' },
+    { tokenName: '--spacing-lg', value: '1rem' },
+    { tokenName: '--spacing-md', value: '0.75rem' },
+    { tokenName: '--radius-full', value: '40px' },
+    { tokenName: '--shadow-sm', value: '0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7' },
+  ];
+
+  const dangerButtonTokens = [
+    { tokenName: '--color-danger-500', value: '#ef4444' },
+    { tokenName: '--color-danger-600', value: '#dc2626' },
+    { tokenName: '--color-white', value: '#ffffff' },
+    { tokenName: '--spacing-lg', value: '1rem' },
+    { tokenName: '--spacing-md', value: '0.75rem' },
+    { tokenName: '--radius-full', value: '40px' },
+  ];
+
   return (
     <div className="buttons-demo">
       <div className="demo-header">
@@ -95,27 +128,42 @@ export const ButtonsDemo: React.FC = () => {
         
         <div className="button-grid">
           <div className="button-example">
-            <Button label="Default" variant="default" />
+            <div className="button-example-header">
+              <Button label="Default" variant="default" />
+              <TokenPanel tokens={defaultButtonTokens} />
+            </div>
             <span className="button-label">Default</span>
           </div>
           
           <div className="button-example">
-            <Button label="Primary" variant="primary" />
+            <div className="button-example-header">
+              <Button label="Primary" variant="primary" />
+              <TokenPanel tokens={primaryButtonTokens} />
+            </div>
             <span className="button-label">Primary</span>
           </div>
           
           <div className="button-example">
-            <Button label="Primary Bold" variant="primary-bold" />
+            <div className="button-example-header">
+              <Button label="Primary Bold" variant="primary-bold" />
+              <TokenPanel tokens={primaryButtonTokens} />
+            </div>
             <span className="button-label">Primary Bold</span>
           </div>
           
           <div className="button-example">
-            <Button label="Secondary" variant="secondary" />
+            <div className="button-example-header">
+              <Button label="Secondary" variant="secondary" />
+              <TokenPanel tokens={defaultButtonTokens} />
+            </div>
             <span className="button-label">Secondary</span>
           </div>
           
           <div className="button-example">
-            <Button label="Delete" variant="danger" />
+            <div className="button-example-header">
+              <Button label="Delete" variant="danger" />
+              <TokenPanel tokens={dangerButtonTokens} />
+            </div>
             <span className="button-label">Danger</span>
           </div>
         </div>

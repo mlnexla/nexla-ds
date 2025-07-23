@@ -88,11 +88,27 @@
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
+  position: relative;
 }
 
 .button-example:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.button-example-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.button-example-header .token-panel-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .button-label {
