@@ -79,12 +79,13 @@ const MainPage: React.FC = () => {
             <h3>Recent Updates</h3>
             <ul>
               <li><strong>✅ Comprehensive design system with unified Button component (4 variants)</strong></li>
-              <li><strong>✅ Advanced TextInput component with multiple states and variants</strong></li>
+              <li><strong>✅ Advanced TextInput component with multiple states, variants, and clearable functionality</strong></li>
               <li><strong>✅ Complete Typography system with consistent design tokens</strong></li>
               <li><strong>✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
               <li><strong>✅ Interactive demo pages for all components with syntax highlighting</strong></li>
-              <li><strong>✅ Navigation system with Sidebar and JumpMenu components</strong></li>
+              <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
               <li><strong>✅ Centralized design tokens and CSS variables for consistency</strong></li>
+              <li><strong>✅ Animated gradient title with design system color tokens</strong></li>
             </ul>
 
             <h3>Browser Support</h3>
