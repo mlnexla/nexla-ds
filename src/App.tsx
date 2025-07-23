@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
 import { MainPage } from './components/MainPage';
+import { ScrollToTop } from './components/ScrollToTop';
 import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
@@ -98,6 +99,7 @@ function AppContent() {
 
   return (
     <div className="app">
+      <ScrollToTop />
       <Sidebar groups={navigationGroups} />
       <main className="app-main">
         <Routes>

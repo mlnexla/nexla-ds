@@ -1,6 +1,7 @@
 export { Button } from './Button';
 export { TextInput } from './TextInput';
 export { MainPage } from './MainPage';
+export { ScrollToTop } from './ScrollToTop';
 export { SyntaxHighlighter } from './SyntaxHighlighter';
 export { JumpMenu } from './JumpMenu';
 export { Sidebar } from './Sidebar';

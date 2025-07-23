@@ -11,6 +11,7 @@
 
 .demo-header {
   margin-bottom: var(--spacing-3xl);
+  text-align: left;
 }
 
 .demo-header h1 {
