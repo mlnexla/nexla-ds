@@ -3,6 +3,7 @@ import { Button } from '../components/Button';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { SyntaxHighlighter } from '../components/SyntaxHighlighter';
 import { Typography } from '../components/Typography';
+import { DesignTokensTable } from '../components/DesignTokensTable';
 import './ButtonsDemo.css';
 
 interface CodeExampleProps {
@@ -76,6 +77,38 @@ export const ButtonsDemo: React.FC = () => {
     setTimeout(() => setCopiedState('default'), 2000);
   };
 
+  // Button design tokens data
+  const buttonTokens = [
+    // Color tokens
+    { purpose: 'Primary Background', tokenName: '--color-primary-500', value: '#357bff', category: 'color' as const },
+    { purpose: 'Primary Hover', tokenName: '--color-primary-600', value: '#265edb', category: 'color' as const },
+    { purpose: 'Primary Text', tokenName: '--color-white', value: '#ffffff', category: 'color' as const },
+    { purpose: 'Secondary Background', tokenName: '--color-greyscale-00', value: '#ffffff', category: 'color' as const },
+    { purpose: 'Secondary Border', tokenName: '--color-greyscale-200', value: '#e4e4e7', category: 'color' as const },
+    { purpose: 'Secondary Text', tokenName: '--color-primary-600', value: '#357bff', category: 'color' as const },
+    { purpose: 'Danger Background', tokenName: '--color-danger-500', value: '#ef4444', category: 'color' as const },
+    { purpose: 'Danger Hover', tokenName: '--color-danger-600', value: '#dc2626', category: 'color' as const },
+    { purpose: 'Disabled Background', tokenName: '--color-greyscale-100', value: '#f4f4f5', category: 'color' as const },
+    { purpose: 'Disabled Text', tokenName: '--color-greyscale-400', value: '#a1a1aa', category: 'color' as const },
+    
+    // Spacing tokens
+    { purpose: 'Horizontal Padding', tokenName: '--spacing-lg', value: '1rem', category: 'spacing' as const },
+    { purpose: 'Vertical Padding', tokenName: '--spacing-md', value: '0.75rem', category: 'spacing' as const },
+    { purpose: 'Icon Spacing', tokenName: '--spacing-sm', value: '0.5rem', category: 'spacing' as const },
+    
+    // Typography tokens
+    { purpose: 'Font Family', tokenName: '--font-family-default', value: 'Inter, system-ui, sans-serif', category: 'typography' as const },
+    { purpose: 'Font Weight', tokenName: '--font-weight-medium', value: '500', category: 'typography' as const },
+    { purpose: 'Font Size', tokenName: '--font-size-base', value: '0.875rem', category: 'typography' as const },
+    { purpose: 'Line Height', tokenName: '--line-height-base', value: '1.25rem', category: 'typography' as const },
+    
+    // Border radius tokens
+    { purpose: 'Border Radius', tokenName: '--radius-full', value: '40px', category: 'radius' as const },
+    
+    // Shadow tokens
+    { purpose: 'Hover Shadow', tokenName: '--shadow-sm', value: '0px 5px 25px 0px rgba(228, 228, 231, 0.25), 0px 2px 4px 0px #e4e4e7', category: 'shadow' as const },
+  ];
+
   return (
     <div className="buttons-demo">
       <div className="demo-header">
@@ -119,6 +152,9 @@ export const ButtonsDemo: React.FC = () => {
             <span className="button-label">Danger</span>
           </div>
         </div>
+
+        {/* Design Tokens Section */}
+        <DesignTokensTable tokens={buttonTokens} />
 
         {/* Button States Section */}
         <h4 style={{ marginTop: '3rem', marginBottom: '1.5rem', fontSize: '1.25rem', fontWeight: '600' }}>Interactive States</h4>
@@ -634,6 +670,7 @@ const handleCopyFallback = (text: string) => {
           </div>
         </div>
       </section>
+
     </div>
   );
 }; 
