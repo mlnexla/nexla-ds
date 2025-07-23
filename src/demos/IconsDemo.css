@@ -106,7 +106,7 @@
 .demo-code {
   background: #2d3748;
   padding: var(--spacing-xl);
-  border-radius: var(--spacing-sm);
+  border-radius: var(--radius-sm);
   margin-top: var(--spacing-xl);
 }
 
