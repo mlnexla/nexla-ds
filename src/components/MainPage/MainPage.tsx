@@ -20,44 +20,34 @@ const MainPage: React.FC = () => {
 {`src/
 ├── components/           # All React components
 │   ├── Button/          # Unified Button component with multiple variants
-│   ├── TextInput/       # TextInput component
-│   ├── icons/           # Icon library (600+ Flaticons)
+│   ├── CopyToClipboardButton/  # Copy-to-clipboard functionality
+│   ├── JumpMenu/        # Navigation jump menu
+│   ├── MainPage/        # Main documentation page component
+│   ├── PrimaryActionButton/    # Primary action button (legacy)
+│   ├── Sidebar/         # Navigation sidebar
+│   ├── TextInput/       # TextInput component with multiple states
+│   ├── Typography/      # Typography component system
+│   ├── icons/           # Icon library (539 total icons)
+│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
+│   ├── README.md        # Components documentation
 │   └── index.ts         # Component exports
-├── demos/               # Component demos
+├── demos/               # Component demonstrations
+│   ├── ButtonsDemo.tsx/.css    # Button variants demo
+│   ├── ColorsDemo.tsx/.css     # Color palette demo
+│   ├── IconsDemo.tsx/.css      # Icon gallery demo
+│   ├── TextInputDemo.tsx/.css  # TextInput demo
+│   ├── TypographyDemo.tsx/.css # Typography demo
+│   └── demo.html        # Static HTML preview
 ├── styles/              # Global styles and design tokens
 │   └── global.css       # CSS variables and design tokens
+├── utils/               # Utility functions
+│   └── svgAnalyzer.ts   # SVG analysis utilities
 ├── assets/              # Images, icons, and other assets
 └── index.ts            # Main library exports`}
             </pre>
 
             <h3>Features</h3>
             
-            <h4>Button Component</h4>
-            <ul>
-              <li><strong>4 Variants:</strong> Primary, Secondary, Default, and Danger</li>
-              <li><strong>Interactive States:</strong> Default, Hover, Pressing, Disabled, and Processing</li>
-              <li><strong>Icon Support:</strong> Optional leading icons with consistent sizing</li>
-              <li><strong>Accessibility:</strong> Full keyboard navigation and screen reader support</li>
-            </ul>
-
-            <h4>TextInput Component</h4>
-            <ul>
-              <li><strong>Multiple States:</strong> Default, Hover, Active, Typing, Typed, Error, and Disabled</li>
-              <li><strong>Interactive Behavior:</strong> Automatically switches between states based on user interaction</li>
-              <li><strong>Code Variant:</strong> Special variant for code input with copy functionality</li>
-              <li><strong>Chip Input:</strong> Support for tag/chip inputs with removable items</li>
-              <li><strong>Customizable:</strong> Flexible props for labels, placeholders, help text, and error messages</li>
-            </ul>
-
-            <h4>Icon Library</h4>
-            <ul>
-              <li><strong>600+ Icons:</strong> Complete Flaticons Regular collection</li>
-              <li><strong>Consistent Sizing:</strong> All icons use 24x24 viewBox with proper scaling</li>
-              <li><strong>TypeScript Support:</strong> Full type definitions for all icons</li>
-              <li><strong>Copy-to-Clipboard:</strong> Easy code copying from icon gallery</li>
-            </ul>
-
-            <h4>Design System</h4>
             <ul>
               <li><strong>TypeScript:</strong> Full TypeScript support with proper type definitions</li>
               <li><strong>Accessibility:</strong> Proper labeling and keyboard navigation support</li>
@@ -74,8 +64,28 @@ const MainPage: React.FC = () => {
               <li><strong>Run development server:</strong>
                 <pre className="code-block">npm run dev</pre>
               </li>
-              <li><strong>Open browser:</strong> Navigate to <code>http://localhost:3001</code></li>
+              <li><strong>Check terminal output:</strong> The server will display the available URL (typically <code>http://localhost:3000</code> or <code>http://localhost:3001</code> if port 3000 is in use)</li>
             </ol>
+
+            <h3>Adding New Components</h3>
+            <ol>
+              <li>Create a new folder in <code>src/components/ComponentName/</code></li>
+              <li>Add component files (<code>.tsx</code>, <code>.css</code>, <code>index.ts</code>)</li>
+              <li>Export from <code>src/components/index.ts</code></li>
+              <li>Create a demo in <code>src/demos/</code></li>
+              <li>Import and use: <code>import {`{ ComponentName }`} from './components'</code></li>
+            </ol>
+
+            <h3>Recent Updates</h3>
+            <ul>
+              <li><strong>✅ Comprehensive design system with unified Button component (4 variants)</strong></li>
+              <li><strong>✅ Advanced TextInput component with multiple states and variants</strong></li>
+              <li><strong>✅ Complete Typography system with consistent design tokens</strong></li>
+              <li><strong>✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
+              <li><strong>✅ Interactive demo pages for all components with syntax highlighting</strong></li>
+              <li><strong>✅ Navigation system with Sidebar and JumpMenu components</strong></li>
+              <li><strong>✅ Centralized design tokens and CSS variables for consistency</strong></li>
+            </ul>
 
             <h3>Browser Support</h3>
             <p>The design system works in all modern browsers that support ES6 and CSS Grid/Flexbox.</p>

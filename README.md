@@ -8,43 +8,37 @@ A collection of reusable UI components with consistent styling and behavior.
 src/
 ├── components/           # All React components
 │   ├── Button/          # Unified Button component with multiple variants
-│   ├── TextInput/       # TextInput component
-│   ├── icons/           # Icon library (600+ Flaticons)
+│   ├── CopyToClipboardButton/  # Copy-to-clipboard functionality
+│   ├── JumpMenu/        # Navigation jump menu
+│   ├── MainPage/        # Main documentation page component
+│   ├── PrimaryActionButton/    # Primary action button (legacy)
+│   ├── Sidebar/         # Navigation sidebar
+│   ├── TextInput/       # TextInput component with multiple states
+│   ├── Typography/      # Typography component system
+│   ├── icons/           # Icon library (539 total icons)
+│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
+│   ├── README.md        # Components documentation
 │   └── index.ts         # Component exports
-├── demos/               # Component demos
+├── demos/               # Component demonstrations
+│   ├── ButtonsDemo.tsx/.css    # Button variants demo
+│   ├── ColorsDemo.tsx/.css     # Color palette demo
+│   ├── IconsDemo.tsx/.css      # Icon gallery demo
+│   ├── TextInputDemo.tsx/.css  # TextInput demo
+│   ├── TypographyDemo.tsx/.css # Typography demo
+│   └── demo.html        # Static HTML preview
 ├── styles/              # Global styles and design tokens
 │   └── global.css       # CSS variables and design tokens
+├── utils/               # Utility functions
+│   └── svgAnalyzer.ts   # SVG analysis utilities
 ├── assets/              # Images, icons, and other assets
 └── index.ts            # Main library exports
 ```
 
 ## Features
 
-### Button Component
-- **4 Variants**: Primary, Secondary, Default, and Danger
-- **Interactive States**: Default, Hover, Pressing, Disabled, and Processing
-- **Icon Support**: Optional leading icons with consistent sizing
-- **Accessibility**: Full keyboard navigation and screen reader support
-
-### TextInput Component
-- **Multiple States**: Default, Hover, Active, Typing, Typed, Error, and Disabled
-- **Interactive Behavior**: Automatically switches between states based on user interaction
-- **Code Variant**: Special variant for code input with copy functionality
-- **Chip Input**: Support for tag/chip inputs with removable items
-- **Customizable**: Flexible props for labels, placeholders, help text, and error messages
-
-### Icon Library
-- **600+ Icons**: Complete Flaticons Regular collection
-- **Consistent Sizing**: All icons use 24x24 viewBox with proper scaling
-- **TypeScript Support**: Full type definitions for all icons
-- **Copy-to-Clipboard**: Easy code copying from icon gallery
-
-### Design System
 - **TypeScript**: Full TypeScript support with proper type definitions
 - **Accessibility**: Proper labeling and keyboard navigation support
 - **Design Tokens**: Centralized CSS variables for colors, spacing, and typography
-
-
 
 ## TextInput Component
 
@@ -93,25 +87,50 @@ import { TextInput } from './components';
 />
 ```
 
+## Getting Started
 
-
-## Running the Demo
-
-1. Install dependencies:
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. For development with a build tool:
+2. **Run development server:**
    ```bash
-   # Install additional dev dependencies
-   npm install --save-dev vite @vitejs/plugin-react
-   
-   # Run development server
-   npx vite
+   npm run dev
    ```
 
-3. Or open `index.html` directly in a browser for a simple preview.
+3. **Check terminal output:** The server will display the available URL (typically `http://localhost:3000` or `http://localhost:3001` if port 3000 is in use)
+
+## Running the Demo
+
+For development with a build tool:
+```bash
+# Install additional dev dependencies if needed
+npm install --save-dev vite @vitejs/plugin-react
+
+# Run development server
+npm run dev
+```
+
+Or open `index.html` directly in a browser for a simple preview.
+
+## Adding New Components
+
+1. Create a new folder in `src/components/ComponentName/`
+2. Add component files (`.tsx`, `.css`, `index.ts`)
+3. Export from `src/components/index.ts`
+4. Create a demo in `src/demos/`
+5. Import and use: `import { ComponentName } from './components'`
+
+## Recent Updates
+
+- ✅ Comprehensive design system with unified Button component (4 variants)
+- ✅ Advanced TextInput component with multiple states and variants
+- ✅ Complete Typography system with consistent design tokens
+- ✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality  
+- ✅ Interactive demo pages for all components with syntax highlighting
+- ✅ Navigation system with Sidebar and JumpMenu components
+- ✅ Centralized design tokens and CSS variables for consistency
 
 ## Browser Support
 
