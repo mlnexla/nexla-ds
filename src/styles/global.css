@@ -285,7 +285,7 @@ body {
 
 .demo-code {
   margin: 0;
-  padding: 1rem;
+  padding: var(--spacing-md);
   background: transparent;
   border: none;
   border-radius: 0;
