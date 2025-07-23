@@ -87,29 +87,17 @@
 }
 
 .sidebar-group-header:hover {
-  background: var(--color-greyscale-50);
+  background: none;
 }
 
 .sidebar-group-header.has-active {
-  background: var(--color-primary-50);
+  background: none;
   color: var(--color-primary-700);
 }
 
 .sidebar-group-header-content {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.sidebar-group-icon {
-  display: flex;
-  align-items: center;
-  color: var(--color-greyscale-600);
-  transition: color var(--transition-base);
-}
-
-.sidebar-group-header.has-active .sidebar-group-icon {
-  color: var(--color-primary-600);
 }
 
 .sidebar-group-title {

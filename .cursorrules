@@ -48,6 +48,20 @@ Before completing icon work:
 3. Test copy-to-clipboard functionality in demo
 4. Check that visual appearance matches intended design
 
+# Progressive Complexity Design Philosophy
+- **Start simple**: Begin with minimal viable design - prefer text over icons, content over decoration
+- **Add complexity intentionally**: Only introduce visual elements (icons, backgrounds, animations) when they solve specific user problems
+- **Question every visual element**: Ask "What purpose does this serve?" before adding icons, colors, or decorative elements
+- **Prefer text clarity**: When in doubt, choose readable text over potentially ambiguous visual symbols
+- **Embrace subtraction**: Removing unnecessary complexity is often better than fixing alignment/styling issues
+- **Progressive disclosure**: Start with essential information, add layers only when proven necessary
+
+# UI Hierarchy Guidelines  
+- Use color and typography changes to indicate state rather than backgrounds when possible
+- Avoid visual noise: too many icons, backgrounds, or decorative elements competing for attention
+- Let content breathe: prefer spacing and typography over visual dividers
+- Test comprehension: ensure UI purpose is clear to users unfamiliar with the system
+
 # Component Structure
 - Each component has its own folder: `src/components/ComponentName/`
 - Include: ComponentName.tsx, ComponentName.css, index.ts

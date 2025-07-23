@@ -95,9 +95,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   aria-expanded={isExpanded}
                 >
                   <div className="sidebar-group-header-content">
-                    <span className="sidebar-group-icon">
-                      {group.icon || <FiRrFolder size={16} />}
-                    </span>
                     <span className="sidebar-group-title">{group.title}</span>
                   </div>
                   <span className={`sidebar-group-chevron ${isExpanded ? 'expanded' : ''}`}>
