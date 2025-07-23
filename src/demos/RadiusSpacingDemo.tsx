@@ -43,13 +43,18 @@ const RadiusSpacingDemo: React.FC = () => {
           {spacingTokens.map((token) => (
             <div key={token.variable} className="spacing-item">
               <div className="spacing-visual">
-                <div 
-                  className="spacing-box"
-                  style={{ 
-                    width: `calc(${token.value} * 4)`,
-                    height: `calc(${token.value} * 4)`
-                  }}
-                />
+                <div className="spacing-bar-container">
+                  <div 
+                    className="spacing-bar"
+                    style={{ 
+                      width: `${Math.min(parseInt(token.value) * 2, 80)}px`
+                    }}
+                  />
+                </div>
+                <div className="spacing-scale">
+                  <span>0</span>
+                  <span>{token.value}</span>
+                </div>
               </div>
               <div className="token-info">
                 <Typography variant="body-default-500" as="h3">{token.name}</Typography>

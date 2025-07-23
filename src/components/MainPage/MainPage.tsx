@@ -86,6 +86,9 @@ const MainPage: React.FC = () => {
               <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
               <li><strong>✅ Centralized design tokens and CSS variables for consistency</strong></li>
               <li><strong>✅ Animated gradient title with design system color tokens</strong></li>
+              <li><strong>✅ Extracted Nexla Design System tokens into standalone nexla-ds-tokens.css for reusability</strong></li>
+              <li><strong>✅ Improved component architecture with component-specific styles using design system tokens</strong></li>
+              <li><strong>✅ Complete shadow system (SM, MD, LG, Focus) for proper elevation hierarchy</strong></li>
             </ul>
 
             <h3>Browser Support</h3>

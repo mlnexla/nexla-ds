@@ -62,18 +62,73 @@
 
 .spacing-visual {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80px;
   margin-bottom: var(--spacing-lg);
 }
 
-.spacing-box {
+.spacing-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.spacing-bar {
+  height: 16px;
   background: var(--color-primary-500);
   border-radius: var(--radius-sm);
-  min-width: 8px;
-  min-height: 8px;
-  opacity: 0.8;
+  min-width: 4px;
+  transition: all var(--transition-base);
+}
+
+.spacing-item:hover .spacing-bar {
+  background: var(--color-primary-600);
+  transform: scaleY(1.1);
+}
+
+.spacing-scale {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 80px;
+  font-size: 0.75rem;
+  color: var(--color-greyscale-500);
+  font-family: var(--font-family-mono);
+}
+
+/* Remove the old spacing-scale-indicator styles */
+.spacing-scale-indicator {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.spacing-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary-500);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.spacing-line {
+  height: 2px;
+  background: var(--color-primary-300);
+  border-radius: 1px;
+  flex: 1;
+  max-width: 60px;
+}
+
+.spacing-label {
+  font-size: 0.75rem;
+  color: var(--color-greyscale-500);
+  font-family: var(--font-family-mono);
 }
 
 /* Radius Grid */

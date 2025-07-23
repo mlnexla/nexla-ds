@@ -1,6 +1,11 @@
 /* Import global styles */
 @import '../../styles/global.css';
 
+/* Component-specific tokens using design system spacing */
+.basic-action-button {
+  --button-height-sm: 24px; /* 1.5 * 16px base */
+}
+
 /* Basic Action Button Styles - Following Figma Design */
 
 .basic-action-button {

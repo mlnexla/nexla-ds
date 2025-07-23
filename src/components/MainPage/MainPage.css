@@ -138,14 +138,14 @@
 }
 
 .readme-content code {
-  background: var(--color-greyscale-100);
-  color: var(--color-secondary-700);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--color-greyscale-600);
   font-family: var(--font-family-mono);
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-medium);
-  border: 1px solid var(--color-greyscale-200);
+  background: var(--color-greyscale-50);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  width: fit-content;
 }
 
 .code-block {

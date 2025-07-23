@@ -132,6 +132,9 @@ Or open `index.html` directly in a browser for a simple preview.
 - ✅ Navigation system with grouped, collapsible sidebar and JumpMenu components
 - ✅ Centralized design tokens and CSS variables for consistency
 - ✅ Animated gradient title with design system color tokens
+- ✅ Extracted Nexla Design System tokens into standalone `nexla-ds-tokens.css` for reusability
+- ✅ Improved component architecture with component-specific styles using design system tokens
+- ✅ Complete shadow system (SM, MD, LG, Focus) for proper elevation hierarchy
 
 ## Browser Support
 

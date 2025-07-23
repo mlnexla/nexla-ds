@@ -278,7 +278,9 @@ export const IconsDemo: React.FC = () => {
                   </div>
                   <div className="icon-info">
                     <h3 className="icon-name">{icon.name}</h3>
-                    <span className="icon-label">{icon.label}</span>
+                    <div className="icon-values">
+                      <span className="icon-label">{icon.label}</span>
+                    </div>
                   </div>
                   <div className="icon-actions">
                     <CopyToClipboardButton
@@ -312,7 +314,9 @@ export const IconsDemo: React.FC = () => {
                   </div>
                   <div className="icon-info">
                     <h3 className="icon-name">{icon.name}</h3>
-                    <span className="icon-label">{icon.label}</span>
+                    <div className="icon-values">
+                      <span className="icon-label">{icon.label}</span>
+                    </div>
                   </div>
                   <div className="icon-actions">
                     <CopyToClipboardButton
@@ -346,7 +350,9 @@ export const IconsDemo: React.FC = () => {
                   </div>
                   <div className="icon-info">
                     <h3 className="icon-name">{icon.name}</h3>
-                    <span className="icon-label">{icon.label}</span>
+                    <div className="icon-values">
+                      <span className="icon-label">{icon.label}</span>
+                    </div>
                   </div>
                   <div className="icon-actions">
                     <CopyToClipboardButton
