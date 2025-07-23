@@ -229,11 +229,11 @@
   .sidebar {
     width: 100%;
   }
-  
+
   .sidebar-header {
     padding: var(--spacing-lg);
   }
-  
+
   .sidebar-menu {
     padding: 0 var(--spacing-md);
   }

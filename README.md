@@ -106,11 +106,11 @@ import { TextInput } from './components';
 For development with a build tool:
 ```bash
 # Install additional dev dependencies if needed
-npm install --save-dev vite @vitejs/plugin-react
-
-# Run development server
+   npm install --save-dev vite @vitejs/plugin-react
+   
+   # Run development server
 npm run dev
-```
+   ```
 
 Or open `index.html` directly in a browser for a simple preview.
 

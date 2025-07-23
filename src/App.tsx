@@ -18,10 +18,10 @@ function AppContent() {
     {
       title: 'Overview',
       items: [
-        {
-          value: '/main',
-          label: 'Nexla Design System',
-          path: '/main'
+    { 
+      value: '/main', 
+      label: 'Nexla Design System',
+      path: '/main'
         }
       ],
       defaultExpanded: true
@@ -43,11 +43,11 @@ function AppContent() {
           value: '/shadows',
           label: 'Shadows',
           path: '/shadows'
-        },
-        {
-          value: '/typography',
-          label: 'Typography',
-          path: '/typography'
+    },
+    { 
+      value: '/typography', 
+      label: 'Typography',
+      path: '/typography'
         }
       ],
       defaultExpanded: true
@@ -59,12 +59,12 @@ function AppContent() {
           value: '/badge',
           label: 'Badge',
           path: '/badge'
-        },
-        {
-          value: '/buttons',
+    },
+    { 
+      value: '/buttons', 
           label: 'Button',
-          path: '/buttons'
-        },
+      path: '/buttons'
+    },
         {
           value: '/icons',
           label: 'Icon',
@@ -75,18 +75,18 @@ function AppContent() {
           label: 'Tag',
           path: '/tag'
         },
-        {
-          value: '/inputs',
-          label: 'Text Input',
-          path: '/inputs'
+    { 
+      value: '/inputs', 
+      label: 'Text Input',
+      path: '/inputs'
         }
       ],
       defaultExpanded: true
     },
-    {
+    { 
       title: 'Patterns',
       items: [
-        {
+    { 
           value: '/patterns/coming-soon',
           label: 'Coming Soon',
           path: '/patterns/coming-soon'
@@ -142,4 +142,4 @@ export default function App() {
       <AppContent />
     </Router>
   );
-} 
+}

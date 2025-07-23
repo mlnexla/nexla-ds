@@ -106,21 +106,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   <ul className="sidebar-group-items">
                     {group.items.map((item) => (
                       <li key={item.value} className="sidebar-menu-item">
-                        <Link
+              <Link
                           to={item.path}
-                          className={`sidebar-menu-button ${
+                className={`sidebar-menu-button ${
                             location.pathname === item.path ? 'active' : ''
-                          }`}
-                          onClick={handleMenuItemClick}
-                        >
+                }`}
+                onClick={handleMenuItemClick}
+              >
                           {item.icon && (
                             <span className="sidebar-menu-icon">{item.icon}</span>
-                          )}
+                )}
                           <span className="sidebar-menu-label">{item.label}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+              </Link>
+            </li>
+          ))}
+        </ul>
                 )}
               </div>
             );
