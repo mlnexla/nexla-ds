@@ -239,7 +239,6 @@ export const IconsDemo: React.FC = () => {
         margin: '20px 0',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
         width: '100%'
       }}>
         <div style={{ width: '100%', maxWidth: '400px' }}>
