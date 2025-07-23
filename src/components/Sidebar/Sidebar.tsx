@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import FiRrFolder from '../icons/FiRrFolder';
 import './Sidebar.css';
 
 interface SidebarOption {
@@ -9,8 +10,15 @@ interface SidebarOption {
   icon?: React.ReactNode;
 }
 
+interface SidebarGroup {
+  title: string;
+  icon?: React.ReactNode;
+  items: SidebarOption[];
+  defaultExpanded?: boolean;
+}
+
 interface SidebarProps {
-  options: SidebarOption[];
+  groups: SidebarGroup[];
 }
 
 const HamburgerIcon = () => (
@@ -25,10 +33,21 @@ const CloseIcon = () => (
   </svg>
 );
 
+const ChevronDownIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+
+
 export const Sidebar: React.FC<SidebarProps> = ({
-  options
+  groups
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(
+    new Set(groups.filter(group => group.defaultExpanded !== false).map(group => group.title))
+  );
   const location = useLocation();
 
   const handleMenuItemClick = () => {
@@ -37,6 +56,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleGroup = (groupTitle: string) => {
+    const newExpandedGroups = new Set(expandedGroups);
+    if (expandedGroups.has(groupTitle)) {
+      newExpandedGroups.delete(groupTitle);
+    } else {
+      newExpandedGroups.add(groupTitle);
+    }
+    setExpandedGroups(newExpandedGroups);
   };
 
   return (
@@ -53,24 +82,53 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </div>
       
       <nav className={`sidebar-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-        <ul className="sidebar-menu">
-          {options.map((option) => (
-            <li key={option.value} className="sidebar-menu-item">
-              <Link
-                to={option.path}
-                className={`sidebar-menu-button ${
-                  location.pathname === option.path ? 'active' : ''
-                }`}
-                onClick={handleMenuItemClick}
-              >
-                {option.icon && (
-                  <span className="sidebar-menu-icon">{option.icon}</span>
+        <div className="sidebar-menu">
+          {groups.map((group) => {
+            const isExpanded = expandedGroups.has(group.title);
+            const hasActiveItem = group.items.some(item => location.pathname === item.path);
+            
+            return (
+              <div key={group.title} className="sidebar-group">
+                <button
+                  className={`sidebar-group-header ${hasActiveItem ? 'has-active' : ''}`}
+                  onClick={() => toggleGroup(group.title)}
+                  aria-expanded={isExpanded}
+                >
+                  <div className="sidebar-group-header-content">
+                    <span className="sidebar-group-icon">
+                      {group.icon || <FiRrFolder size={16} />}
+                    </span>
+                    <span className="sidebar-group-title">{group.title}</span>
+                  </div>
+                  <span className={`sidebar-group-chevron ${isExpanded ? 'expanded' : ''}`}>
+                    <ChevronDownIcon />
+                  </span>
+                </button>
+                
+                {isExpanded && (
+                  <ul className="sidebar-group-items">
+                    {group.items.map((item) => (
+                      <li key={item.value} className="sidebar-menu-item">
+                        <Link
+                          to={item.path}
+                          className={`sidebar-menu-button ${
+                            location.pathname === item.path ? 'active' : ''
+                          }`}
+                          onClick={handleMenuItemClick}
+                        >
+                          {item.icon && (
+                            <span className="sidebar-menu-icon">{item.icon}</span>
+                          )}
+                          <span className="sidebar-menu-label">{item.label}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
-                <span className="sidebar-menu-label">{option.label}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+              </div>
+            );
+          })}
+        </div>
       </nav>
     </aside>
   );

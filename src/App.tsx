@@ -6,50 +6,99 @@ import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import { ColorsDemo } from './demos/ColorsDemo';
 import TypographyDemo from './demos/TypographyDemo';
+import RadiusSpacingDemo from './demos/RadiusSpacingDemo';
+import ShadowsDemo from './demos/ShadowsDemo';
+import TagDemo from './demos/TagDemo';
+import BadgeDemo from './demos/BadgeDemo';
 import './styles/global.css';
 
 function AppContent() {
   
-  const menuOptions = [
-    { 
-      value: '/main', 
-      label: 'Nexla Design System',
-      path: '/main'
+  const navigationGroups = [
+    {
+      title: 'Overview',
+      items: [
+        {
+          value: '/main',
+          label: 'Nexla Design System',
+          path: '/main'
+        }
+      ],
+      defaultExpanded: true
     },
-    { 
-      value: '/typography', 
-      label: 'Typography',
-      path: '/typography'
+    {
+      title: 'Foundations',
+      items: [
+        {
+          value: '/colors',
+          label: 'Colors',
+          path: '/colors'
+        },
+        {
+          value: '/radius-spacing',
+          label: 'Radius & Spacing',
+          path: '/radius-spacing'
+        },
+        {
+          value: '/shadows',
+          label: 'Shadows',
+          path: '/shadows'
+        },
+        {
+          value: '/typography',
+          label: 'Typography',
+          path: '/typography'
+        }
+      ],
+      defaultExpanded: true
     },
-    { 
-      value: '/buttons', 
-      label: 'Buttons',
-      path: '/buttons'
+    {
+      title: 'Components',
+      items: [
+        {
+          value: '/badge',
+          label: 'Badge',
+          path: '/badge'
+        },
+        {
+          value: '/buttons',
+          label: 'Button',
+          path: '/buttons'
+        },
+        {
+          value: '/icons',
+          label: 'Icon',
+          path: '/icons'
+        },
+        {
+          value: '/tag',
+          label: 'Tag',
+          path: '/tag'
+        },
+        {
+          value: '/inputs',
+          label: 'Text Input',
+          path: '/inputs'
+        }
+      ],
+      defaultExpanded: true
     },
-    { 
-      value: '/inputs', 
-      label: 'Text Input',
-      path: '/inputs'
-    },
-    { 
-      value: '/colors', 
-      label: 'Colors',
-      path: '/colors'
-    },
-    { 
-      value: '/icons', 
-      label: 'Icon Gallery',
-      path: '/icons'
-    },
+    {
+      title: 'Patterns',
+      items: [
+        {
+          value: '/patterns/coming-soon',
+          label: 'Coming Soon',
+          path: '/patterns/coming-soon'
+        }
+      ],
+      defaultExpanded: false
+    }
   ];
-
-
 
   return (
     <div className="app">
-      <Sidebar
-        options={menuOptions}
-      />
+      <Sidebar groups={navigationGroups} />
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Navigate to="/main" replace />} />
@@ -59,18 +108,38 @@ function AppContent() {
           <Route path="/inputs" element={<TextInputDemo />} />
           <Route path="/colors" element={<ColorsDemo />} />
           <Route path="/icons" element={<IconsDemo />} />
+          <Route path="/radius-spacing" element={<RadiusSpacingDemo />} />
+          <Route path="/shadows" element={<ShadowsDemo />} />
+          <Route path="/tag" element={<TagDemo />} />
+          <Route path="/badge" element={<BadgeDemo />} />
+          <Route path="/patterns/coming-soon" element={
+            <div style={{ 
+              padding: 'var(--spacing-2xl)', 
+              textAlign: 'center',
+              background: 'var(--color-special-galactic-sand)',
+              minHeight: '100vh',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <div>
+                <h1 style={{ marginBottom: 'var(--spacing-lg)' }}>Patterns Coming Soon</h1>
+                <p style={{ color: 'var(--color-greyscale-600)' }}>
+                  Design patterns for forms, notifications, and empty states will be available here soon.
+                </p>
+              </div>
+            </div>
+          } />
         </Routes>
       </main>
     </div>
   );
 }
 
-function App() {
+export default function App() {
   return (
     <Router>
       <AppContent />
     </Router>
   );
-}
-
-export default App; 
+} 
