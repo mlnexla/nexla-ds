@@ -9,6 +9,8 @@ import './IconsDemo.css';
 import * as Icons from '../components/icons';
 // Import Material UI icons specifically
 import { ContentCopyFilledIcon, CheckFilledIcon } from '../components/icons';
+// Import search icon
+import { FiRrSearch } from '../components/icons';
 
 export const IconsDemo: React.FC = () => {
   const [copiedIcon, setCopiedIcon] = useState<string | null>(null);
@@ -250,6 +252,8 @@ export const IconsDemo: React.FC = () => {
             helpText={filterText ? `Showing ${filteredTotal} of ${totalIcons} icons` : `${totalIcons} icons available`}
             showHelpIcon={false}
             className="icon-search-input"
+            icon={<FiRrSearch />}
+            id="icon-search-input"
           />
         </div>
       </div>

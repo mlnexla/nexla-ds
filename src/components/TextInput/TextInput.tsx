@@ -48,6 +48,8 @@ export interface TextInputProps {
   onChipRemove?: (chipId: string) => void;
   onCopy?: () => void;
   className?: string;
+  icon?: React.ReactNode;
+  id?: string;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
@@ -65,7 +67,9 @@ export const TextInput: React.FC<TextInputProps> = ({
   chips = [],
   onChipRemove,
   onCopy,
-  className = ''
+  className = '',
+  icon,
+  id
 }) => {
   const [internalValue, setInternalValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
@@ -152,6 +156,7 @@ export const TextInput: React.FC<TextInputProps> = ({
                 placeholder={placeholder}
                 disabled={disabled}
                 className="text-input-code"
+                id={id}
               />
             </div>
             <button className="text-input-copy-button" onClick={handleCopy}>
@@ -182,6 +187,7 @@ export const TextInput: React.FC<TextInputProps> = ({
               </div>
             ) : (
               <div className="text-input-content">
+                {icon && <div className="text-input-icon">{icon}</div>}
                 <input
                   ref={inputRef}
                   type="text"
@@ -191,6 +197,7 @@ export const TextInput: React.FC<TextInputProps> = ({
                   onBlur={handleBlur}
                   placeholder={placeholder}
                   disabled={disabled}
+                  id={id}
                 />
                 {(activeVariant === 'active' || activeVariant === 'typing') && (
                   <div className={`text-input-cursor ${showCursor ? 'show' : ''}`} />
