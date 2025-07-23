@@ -82,7 +82,7 @@
   color: var(--color-greyscale-600);
   font-family: var(--font-family-mono);
   display: block;
-  margin-bottom: var(--spacing-lg);
+  margin: 0 auto var(--spacing-lg) auto;
   background: var(--color-greyscale-50);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
