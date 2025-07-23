@@ -99,6 +99,22 @@
   pointer-events: none;
 }
 
+/* Clear button */
+.text-input-clear-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-greyscale-600);
+  margin-left: var(--spacing-xs);
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+}
+
 .text-input-cursor.show {
   opacity: 1;
 }

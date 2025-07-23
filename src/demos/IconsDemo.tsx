@@ -243,7 +243,7 @@ export const IconsDemo: React.FC = () => {
         flexDirection: 'column',
         width: '100%'
       }}>
-        <div style={{ width: '100%', maxWidth: '400px' }}>
+        <div className="search-input-wrapper">
           <TextInput
             label=""
             placeholder="Search icons... (e.g., 'arrow', 'user', 'fi-rr-home')"
@@ -254,6 +254,8 @@ export const IconsDemo: React.FC = () => {
             className="icon-search-input"
             icon={<FiRrSearch />}
             id="icon-search-input"
+            clearable={true}
+            onClear={() => setFilterText('')}
           />
         </div>
       </div>

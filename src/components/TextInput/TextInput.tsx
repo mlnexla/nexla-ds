@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import FiRrCrossCircle from '../icons/FiRrCrossCircle';
 import './TextInput.css';
 
 // Icon components
@@ -50,6 +51,8 @@ export interface TextInputProps {
   className?: string;
   icon?: React.ReactNode;
   id?: string;
+  clearable?: boolean;
+  onClear?: () => void;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
@@ -69,7 +72,9 @@ export const TextInput: React.FC<TextInputProps> = ({
   onCopy,
   className = '',
   icon,
-  id
+  id,
+  clearable = false,
+  onClear
 }) => {
   const [internalValue, setInternalValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);
@@ -199,6 +204,21 @@ export const TextInput: React.FC<TextInputProps> = ({
                   disabled={disabled}
                   id={id}
                 />
+                {clearable && internalValue && (
+                  <button
+                    type="button"
+                    className="text-input-clear-button"
+                    onClick={() => {
+                      setInternalValue('');
+                      onChange?.('');
+                      onClear?.();
+                    }}
+                    aria-label="Clear input"
+                    title="Clear input"
+                  >
+                    <FiRrCrossCircle size={16} />
+                  </button>
+                )}
                 {(activeVariant === 'active' || activeVariant === 'typing') && (
                   <div className={`text-input-cursor ${showCursor ? 'show' : ''}`} />
                 )}

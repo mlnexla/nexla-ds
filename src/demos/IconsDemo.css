@@ -96,6 +96,12 @@
   font-style: italic;
 }
 
+/* Search input wrapper */
+.search-input-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
 .icon-variations {
   display: flex;
   justify-content: center;
