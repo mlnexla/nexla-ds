@@ -5,6 +5,19 @@
   font-family: var(--font-family-default);
 }
 
+/* Header Typography Variants */
+.typography-h1 {
+  font: var(--typography-h1);
+}
+
+.typography-h2 {
+  font: var(--typography-h2);
+}
+
+.typography-h3 {
+  font: var(--typography-h3);
+}
+
 /* Typography Variants */
 .typography-body-default-400 {
   font: var(--typography-body-default-400);
@@ -28,6 +41,14 @@
 
 .typography-body-large-500 {
   font: var(--typography-body-large-500);
+}
+
+/* Overline Typography Variant */
+.typography-overline-400 {
+  font: var(--typography-overline-400);
+  color: var(--color-greyscale-400);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Mono Typography Variants */
@@ -79,4 +100,19 @@
 
 .text-mono-code-400 {
   font: var(--typography-mono-code-400);
+}
+
+/* Header Utility Classes */
+.text-h1 {
+  font: var(--typography-h1);
+}
+
+.text-h2 {
+  font: var(--typography-h2);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-greyscale-900);
+}
+
+.text-h3 {
+  font: var(--typography-h3);
 } 

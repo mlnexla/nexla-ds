@@ -12,27 +12,57 @@
 }
 
 .demo-header h1 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-semibold);
   color: var(--color-greyscale-800);
   margin-bottom: var(--spacing-lg);
 }
 
 .demo-header .demo-description {
-  font-size: 1.125rem;
+  font: var(--typography-body-large-400);
   color: var(--color-greyscale-600);
-  line-height: 1.6;
   max-width: 800px;
+}
+
+/* Header Examples */
+.header-examples {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-xl);
+  background: var(--color-greyscale-50);
+  border-radius: var(--radius-md);
+}
+
+.header-example {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.header-example h1,
+.header-example h2,
+.header-example h3 {
+  margin: 0;
+  color: var(--color-greyscale-900);
+}
+
+.header-code-example {
+  margin-top: var(--spacing-lg);
+}
+
+.header-code-example .code-label {
+  display: block;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-greyscale-600);
 }
 
 .demo-section {
   margin-bottom: var(--spacing-3xl);
 }
 
-.demo-section h2 {
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
-}
+
+
+
 
 .demo-section p {
   margin-bottom: var(--spacing-xl);

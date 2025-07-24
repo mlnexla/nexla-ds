@@ -43,6 +43,12 @@ const TypographyDemo: React.FC = () => {
       example: 'This is body large text with 500 weight. Perfect for section headers and prominent content.'
     },
     {
+      name: 'Overline 400',
+      variant: 'overline-400',
+      description: 'Uppercase overline text for labels and categories',
+      example: 'Errors'
+    },
+    {
       name: 'Mono Default 400',
       variant: 'mono-default-400',
       description: 'Default monospace text with regular weight',
@@ -79,18 +85,68 @@ const TypographyDemo: React.FC = () => {
   return (
     <div className="typography-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">
+        <h1 className="text-h1">
           Typography System
-        </Typography>
+        </h1>
         <p className="demo-description">
           A comprehensive typography system with consistent variants based on the Nexla Design System.
         </p>
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-500" as="h2">
+        <h2 className="text-h2">
+          Header Typography
+        </h2>
+                 <Typography variant="body-default-400">
+           Headers are designed for information density with 1:1 font-size to line-height ratios. All headers (H1, H2, H3) use 400 weight for consistent, clean hierarchy.
+         </Typography>
+        
+        <div className="header-examples">
+          <div className="header-example">
+            <h1 className="text-h1">H1: Main Page Title</h1>
+            <Typography variant="body-small-400">
+              32px/32px • Weight 400 • For main page titles and primary sections
+            </Typography>
+          </div>
+          
+          <div className="header-example">
+            <h2 className="text-h2">H2: Section Header</h2>
+                         <Typography variant="body-small-400">
+               24px/24px • Weight 400 • For major section divisions
+             </Typography>
+          </div>
+          
+          <div className="header-example">
+            <h3 className="text-h3">H3: Subsection Header</h3>
+                         <Typography variant="body-small-400">
+               20px/20px • Weight 400 • For subsections and component headers
+             </Typography>
+          </div>
+        </div>
+        
+        <div className="header-code-example">
+          <Typography variant="body-small-500" className="code-label">
+            Usage Example:
+          </Typography>
+          <SyntaxHighlighter 
+            code={`/* Using CSS classes */
+<h1 className="text-h1">Main Page Title</h1>
+<h2 className="text-h2">Section Header</h2>
+<h3 className="text-h3">Subsection Header</h3>
+
+/* Using Typography component */
+<Typography variant="h1" as="h1">Main Page Title</Typography>
+<Typography variant="h2" as="h2">Section Header</Typography>
+<Typography variant="h3" as="h3">Subsection Header</Typography>`}
+            language="tsx"
+          />
+        </div>
+      </div>
+
+      <div className="demo-section">
+        <h2 className="text-h2">
           Typography Variants
-        </Typography>
+        </h2>
         <Typography variant="body-default-400">
           The typography system includes 9 variants designed for different use cases and hierarchy levels, including both body text and monospace fonts.
         </Typography>
@@ -120,7 +176,7 @@ const TypographyDemo: React.FC = () => {
                   Font Size:
                 </Typography>
                 <Typography variant="body-small-500" className="spec-value">
-                  {item.variant.includes('large') ? '16px' : item.variant.includes('small') ? '12px' : '14px'}
+                  {item.variant.includes('large') ? '16px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '12px' : '14px'}
                 </Typography>
               </div>
               <div className="spec-item">
@@ -128,7 +184,7 @@ const TypographyDemo: React.FC = () => {
                   Line Height:
                 </Typography>
                 <Typography variant="body-small-500" className="spec-value">
-                  {item.variant.includes('large') ? '24px' : item.variant.includes('small') ? '16px' : '20px'}
+                  {item.variant.includes('large') ? '24px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '16px' : '20px'}
                 </Typography>
               </div>
               <div className="spec-item">
@@ -167,9 +223,9 @@ const TypographyDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-500" as="h2">
+        <h2 className="text-h2">
           Usage Guidelines
-        </Typography>
+        </h2>
         
         <div className="guidelines-grid">
           <div className="guideline-card">
@@ -229,9 +285,9 @@ const TypographyDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <Typography variant="body-large-500" as="h2">
+        <h2 className="text-h2">
           CSS Variables
-        </Typography>
+        </h2>
         <Typography variant="body-default-400">
           All typography variants are available as CSS custom properties for use in your own styles.
         </Typography>
@@ -245,6 +301,14 @@ const TypographyDemo: React.FC = () => {
 --typography-body-large-400: 400 16px/24px var(--font-family-default);
 --typography-body-large-500: 500 16px/24px var(--font-family-default);
 
+/* Overline Typography Variant */
+--typography-overline-400: 400 12px/16px var(--font-family-default);
+
+/* Header Typography Variants */
+--typography-h1: 400 32px/32px var(--font-family-default);
+--typography-h2: 400 24px/24px var(--font-family-default);
+--typography-h3: 400 20px/20px var(--font-family-default);
+
 /* Mono Typography Variants */
 --typography-mono-default-400: 400 14px/20px var(--font-family-mono);
 --typography-mono-small-400: 400 12px/16px var(--font-family-mono);
@@ -253,6 +317,10 @@ const TypographyDemo: React.FC = () => {
 /* Usage in CSS */
 .my-text {
   font: var(--typography-body-default-400);
+}
+
+.my-header {
+  font: var(--typography-h1);
 }
 
 .code-editor {

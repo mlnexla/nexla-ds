@@ -1,0 +1,215 @@
+.product-principles {
+  width: 100%;
+  padding: var(--spacing-xl);
+  background: var(--color-special-galactic-sand);
+  font-family: var(--font-family-default);
+}
+
+.product-principles__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+}
+
+.product-principles__header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-greyscale-200);
+}
+
+.product-principles__title {
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  margin: 0 0 var(--spacing-md) 0;
+  background: linear-gradient(
+    45deg,
+    var(--color-primary-600),
+    var(--color-secondary-600),
+    var(--color-primary-500),
+    var(--color-secondary-500),
+    var(--color-primary-600)
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.product-principles__subtitle {
+  font-size: 1.25rem;
+  color: var(--color-greyscale-600);
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-principles__content {
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3xl);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--color-outline);
+}
+
+.principles-list {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.principle {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-greyscale-100);
+}
+
+.principle:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.principle__title {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-greyscale-900);
+  margin: 0 0 var(--spacing-md) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.principle__number {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.75rem;
+  min-width: 2.5rem;
+}
+
+.principle__description {
+  font-size: 1.125rem;
+  color: var(--color-greyscale-700);
+  margin: 0 0 var(--spacing-md) 0;
+  font-weight: var(--font-weight-medium);
+  margin-left: 2.5rem;
+  padding-left: var(--spacing-sm);
+}
+
+.principle__details {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  margin-left: 2.5rem;
+  color: var(--color-greyscale-600);
+  line-height: 1.6;
+}
+
+.principle__details li {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+.principle__details li:last-child {
+  margin-bottom: 0;
+}
+
+.design-review-checkpoints {
+  background: var(--color-greyscale-25);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-greyscale-100);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+  color: var(--color-greyscale-900);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.section-description {
+  font: var(--typography-body-default-400);
+  color: var(--color-greyscale-700);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.checkpoint-list {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  color: var(--color-greyscale-600);
+  line-height: 1.6;
+}
+
+.checkpoint-list li {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.checkpoint-list li:last-child {
+  margin-bottom: 0;
+}
+
+.principles-footer {
+  text-align: center;
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-greyscale-100);
+}
+
+.principles-footer p {
+  font-size: 1.125rem;
+  color: var(--color-greyscale-600);
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-principles__container {
+    padding: var(--spacing-lg);
+  }
+
+  .product-principles__title {
+    font-size: 2rem;
+  }
+
+  .product-principles__subtitle {
+    font-size: 1.125rem;
+  }
+
+  .product-principles__content {
+    padding: var(--spacing-xl);
+  }
+
+  .principle__title {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .principle__number {
+    font-size: 1.5rem;
+    min-width: auto;
+  }
+
+  .principle__description,
+  .principle__details {
+    margin-left: 0;
+  }
+
+  .design-review-checkpoints {
+    padding: var(--spacing-lg);
+  }
+} 
