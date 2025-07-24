@@ -124,17 +124,14 @@ Or open `index.html` directly in a browser for a simple preview.
 
 ## Recent Updates
 
+- ✅ **Typography System Enhancement** - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency
+- ✅ **Design Token Improvements** - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth
+- ✅ **Component Architecture** - Enhanced Typography component with overline support and updated all documentation to match actual implementation
 - ✅ Comprehensive design system with unified Button component (4 variants)
 - ✅ Advanced TextInput component with multiple states, variants, and clearable functionality
-- ✅ Complete Typography system with consistent design tokens
 - ✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality  
 - ✅ Interactive demo pages for all components with syntax highlighting
 - ✅ Navigation system with grouped, collapsible sidebar and JumpMenu components
-- ✅ Centralized design tokens and CSS variables for consistency
-- ✅ Animated gradient title with design system color tokens
-- ✅ Extracted Nexla Design System tokens into standalone `nexla-ds-tokens.css` for reusability
-- ✅ Improved component architecture with component-specific styles using design system tokens
-- ✅ Complete shadow system (SM, MD, LG, Focus) for proper elevation hierarchy
 
 ## Browser Support
 

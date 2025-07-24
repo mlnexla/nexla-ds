@@ -78,17 +78,14 @@ const MainPage: React.FC = () => {
 
             <h3>Recent Updates</h3>
             <ul>
+              <li><strong>✅ Typography System Enhancement</strong> - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency</li>
+              <li><strong>✅ Design Token Improvements</strong> - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth</li>
+              <li><strong>✅ Component Architecture</strong> - Enhanced Typography component with overline support and updated all documentation to match actual implementation</li>
               <li><strong>✅ Comprehensive design system with unified Button component (4 variants)</strong></li>
               <li><strong>✅ Advanced TextInput component with multiple states, variants, and clearable functionality</strong></li>
-              <li><strong>✅ Complete Typography system with consistent design tokens</strong></li>
               <li><strong>✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
               <li><strong>✅ Interactive demo pages for all components with syntax highlighting</strong></li>
               <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
-              <li><strong>✅ Centralized design tokens and CSS variables for consistency</strong></li>
-              <li><strong>✅ Animated gradient title with design system color tokens</strong></li>
-              <li><strong>✅ Extracted Nexla Design System tokens into standalone nexla-ds-tokens.css for reusability</strong></li>
-              <li><strong>✅ Improved component architecture with component-specific styles using design system tokens</strong></li>
-              <li><strong>✅ Complete shadow system (SM, MD, LG, Focus) for proper elevation hierarchy</strong></li>
             </ul>
 
             <h3>Browser Support</h3>
