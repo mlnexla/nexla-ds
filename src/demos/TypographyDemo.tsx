@@ -148,7 +148,7 @@ const TypographyDemo: React.FC = () => {
           Typography Variants
         </h2>
         <Typography variant="body-default-400">
-          The typography system includes 9 variants designed for different use cases and hierarchy levels, including both body text and monospace fonts.
+          The typography system includes multiple variants designed for different use cases and hierarchy levels, including both body text and monospace fonts.
         </Typography>
       </div>
 

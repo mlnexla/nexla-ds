@@ -27,7 +27,7 @@ const MainPage: React.FC = () => {
 │   ├── Sidebar/         # Navigation sidebar
 │   ├── TextInput/       # TextInput component with multiple states
 │   ├── Typography/      # Typography component system
-│   ├── icons/           # Icon library (539 total icons)
+│   ├── icons/           # Extensive icon library
 │   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
 │   ├── README.md        # Components documentation
 │   └── index.ts         # Component exports
@@ -81,9 +81,9 @@ const MainPage: React.FC = () => {
               <li><strong>✅ Typography System Enhancement</strong> - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency</li>
               <li><strong>✅ Design Token Improvements</strong> - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth</li>
               <li><strong>✅ Component Architecture</strong> - Enhanced Typography component with overline support and updated all documentation to match actual implementation</li>
-              <li><strong>✅ Comprehensive design system with unified Button component (4 variants)</strong></li>
+              <li><strong>✅ Comprehensive design system with unified Button component (multiple variants)</strong></li>
               <li><strong>✅ Advanced TextInput component with multiple states, variants, and clearable functionality</strong></li>
-              <li><strong>✅ Icon library with 539 icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
+              <li><strong>✅ Extensive icon library with hundreds of icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
               <li><strong>✅ Interactive demo pages for all components with syntax highlighting</strong></li>
               <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
             </ul>

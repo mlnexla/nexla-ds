@@ -30,7 +30,7 @@ ComponentName/
 
 ## Current Components
 
-- **Button** - Unified button component with 4 variants (Primary, Secondary, Default, Danger), interactive states, and icon support. Secondary variant matches exact Figma design specifications with orange theme.
+- **Button** - Unified button component with multiple variants (Primary, Secondary, Default, Danger), interactive states, and icon support. Secondary variant matches exact Figma design specifications with orange theme.
 - **TextInput** - Multi-state input field with various variants including default, code, chip, and error states
 - **Icons** - Complete library of 600+ Flaticons Regular icons with consistent 24x24 sizing and TypeScript support
 
