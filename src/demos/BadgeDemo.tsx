@@ -8,7 +8,7 @@ const BadgeDemo: React.FC = () => {
   return (
     <div className="badge-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">Badge Component</Typography>
+        <h1 className="text-h1">Badge Component</h1>
         <p className="demo-description">
           Badge components for displaying counts, statuses, and notifications. 
           Badges provide contextual information and draw attention to important updates.
@@ -129,7 +129,7 @@ const BadgeDemo: React.FC = () => {
         
         <div className="mockup-section">
           <div className="mockup-group">
-            <h4>Notification Badges</h4>
+            <h3 className="text-h3">Notification Badges</h3>
             <div className="mockup-examples">
               <div className="mockup-item">
                 <div className="mockup-base">Button</div>
@@ -147,7 +147,7 @@ const BadgeDemo: React.FC = () => {
           </div>
           
           <div className="mockup-group">
-            <h4>Status Badges</h4>
+            <h3 className="text-h3">Status Badges</h3>
             <div className="mockup-examples">
               <div className="mockup-item">
                 <div className="mockup-base mockup-avatar">👤</div>

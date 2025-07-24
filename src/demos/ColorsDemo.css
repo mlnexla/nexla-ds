@@ -11,16 +11,13 @@
 }
 
 .demo-header h1 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-semibold);
   color: var(--color-greyscale-800);
   margin-bottom: var(--spacing-lg);
 }
 
 .demo-header .demo-description {
-  font-size: 1.125rem;
+  font: var(--typography-body-large-400);
   color: var(--color-greyscale-600);
-  line-height: 1.6;
   max-width: 800px;
 }
 
@@ -29,17 +26,14 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
   margin-bottom: var(--spacing-lg);
   color: var(--color-greyscale-800);
 }
 
 .section-description {
-  font-size: 1rem;
+  font: var(--typography-body-default-400);
   color: var(--color-greyscale-600);
   margin-bottom: var(--spacing-xl);
-  line-height: 1.6;
 }
 
 .color-grid {
@@ -73,8 +67,7 @@
 }
 
 .color-name {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
+  font: var(--typography-body-default-500);
   margin-bottom: var(--spacing-xs);
   color: var(--color-greyscale-800);
 }
@@ -146,9 +139,7 @@
   border-left: 4px solid var(--color-primary-500);
 }
 
-.guideline-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
+.guideline-card h3 {
   margin: 0 0 0.75rem 0;
   color: var(--color-greyscale-800);
 }

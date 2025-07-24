@@ -31,14 +31,14 @@ const TextInputDemo: React.FC = () => {
   return (
     <div className="demo-container">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">TextInput Component Demo</Typography>
-        <p>A React component based on the Figma design with multiple states and variants.</p>
+        <h1 className="text-h1">TextInput Component Demo</h1>
+        <p className="demo-description">A React component based on the Figma design with multiple states and variants.</p>
       </div>
 
       <div className="demo-grid">
         {/* Default State */}
         <div className="demo-item">
-          <h3>Default State</h3>
+          <h3 className="text-h3">Default State</h3>
           <TextInput
             value={defaultValue}
             onChange={setDefaultValue}
@@ -48,7 +48,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Hover State (simulated) */}
         <div className="demo-item">
-          <h3>Hover State</h3>
+          <h3 className="text-h3">Hover State</h3>
           <TextInput
             variant="hover"
             value={hoverValue}
@@ -59,7 +59,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Active State */}
         <div className="demo-item">
-          <h3>Active State (Focused)</h3>
+          <h3 className="text-h3">Active State (Focused)</h3>
           <TextInput
             variant="active"
             value={activeValue}
@@ -70,7 +70,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Typing State */}
         <div className="demo-item">
-          <h3>Typing State</h3>
+          <h3 className="text-h3">Typing State</h3>
           <TextInput
             variant="typing"
             value={typingValue}
@@ -81,7 +81,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Typed State */}
         <div className="demo-item">
-          <h3>Typed State</h3>
+          <h3 className="text-h3">Typed State</h3>
           <TextInput
             variant="typed"
             value={typedValue}
@@ -92,7 +92,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Error State */}
         <div className="demo-item">
-          <h3>Error State</h3>
+          <h3 className="text-h3">Error State</h3>
           <TextInput
             variant="error"
             value={errorValue}
@@ -104,7 +104,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Disabled State */}
         <div className="demo-item">
-          <h3>Disabled State</h3>
+          <h3 className="text-h3">Disabled State</h3>
           <TextInput
             disabled
             value={disabledValue}
@@ -115,7 +115,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Code Variant */}
         <div className="demo-item">
-          <h3>Code Variant (with Copy)</h3>
+          <h3 className="text-h3">Code Variant (with Copy)</h3>
           <TextInput
             variant="code"
             value={codeValue}
@@ -127,7 +127,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Chip Empty */}
         <div className="demo-item">
-          <h3>Chip Input (Empty)</h3>
+          <h3 className="text-h3">Chip Input (Empty)</h3>
           <TextInput
             variant="chip-empty"
             value={chipValue}
@@ -138,7 +138,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Chip Selected */}
         <div className="demo-item">
-          <h3>Chip Input (With Chips)</h3>
+          <h3 className="text-h3">Chip Input (With Chips)</h3>
           <TextInput
             variant="chip-selected"
             chips={chips}
@@ -149,7 +149,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Without Help Icon */}
         <div className="demo-item">
-          <h3>Without Help Icon</h3>
+          <h3 className="text-h3">Without Help Icon</h3>
           <TextInput
             showHelpIcon={false}
             placeholder="Placeholder text"
@@ -158,7 +158,7 @@ const TextInputDemo: React.FC = () => {
 
         {/* Custom Help Text */}
         <div className="demo-item">
-          <h3>Custom Help Text</h3>
+          <h3 className="text-h3">Custom Help Text</h3>
           <TextInput
             helpText="This is custom help text for the input field"
             placeholder="Placeholder text"

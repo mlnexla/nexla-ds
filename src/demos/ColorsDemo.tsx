@@ -109,7 +109,7 @@ export const ColorsDemo: React.FC = () => {
 
   const renderColorPalette = (title: string, colors: ColorToken[], description: string) => (
     <section className="color-section">
-      <h3 className="section-title">{title}</h3>
+              <h2 className="text-h2 section-title">{title}</h2>
       <p className="section-description">{description}</p>
       <div className="color-grid">
         {colors.map((color) => (
@@ -119,7 +119,7 @@ export const ColorsDemo: React.FC = () => {
               style={{ backgroundColor: `var(${color.variable})` }}
             />
             <div className="color-info">
-              <h4 className="color-name">{color.name}</h4>
+              <h3 className="color-name">{color.name}</h3>
               <div className="color-values">
                 <span className="color-hex">{color.value}</span>
                 <span className="color-variable">{color.variable}</span>
@@ -149,7 +149,7 @@ export const ColorsDemo: React.FC = () => {
   return (
     <div className="colors-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1" className="demo-title">Color System</Typography>
+        <h1 className="text-h1">Color System</h1>
         <p className="demo-description">
           A comprehensive color palette designed for accessibility and consistency. All colors are defined as CSS custom properties
           and follow a systematic scale from light to dark across multiple semantic categories.
@@ -199,22 +199,22 @@ export const ColorsDemo: React.FC = () => {
       )}
 
       <section className="usage-guidelines">
-        <h3 className="section-title">Usage Guidelines</h3>
+        <h2 className="text-h2 section-title">Usage Guidelines</h2>
         <div className="guidelines-grid">
           <div className="guideline-card">
-            <h4>Contrast & Accessibility</h4>
+            <h3 className="text-h3">Contrast & Accessibility</h3>
             <p>All color combinations maintain WCAG AA contrast ratios for accessibility. Use darker shades (600-900) for text on light backgrounds.</p>
           </div>
           <div className="guideline-card">
-            <h4>Semantic Meaning</h4>
+            <h3 className="text-h3">Semantic Meaning</h3>
             <p>Success (green) for positive actions, Warning (yellow) for caution, Danger (red) for errors and destructive actions.</p>
           </div>
           <div className="guideline-card">
-            <h4>Implementation</h4>
+            <h3 className="text-h3">Implementation</h3>
             <p>Use CSS custom properties like <code>var(--color-primary-500)</code> instead of hex values for consistency and theming.</p>
           </div>
           <div className="guideline-card">
-            <h4>Scale System</h4>
+            <h3 className="text-h3">Scale System</h3>
             <p>50-100: Light backgrounds, 200-400: UI elements, 500-600: Main colors, 700-900: Text and emphasis.</p>
           </div>
         </div>

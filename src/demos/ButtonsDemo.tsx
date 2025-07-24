@@ -20,7 +20,7 @@ const CodeExample: React.FC<CodeExampleProps> = ({ title, reactCode, cssCode, de
     <div className="code-example-section">
       <div className="code-example-header">
         <div className="code-example-header-content">
-          <h4 className="code-example-title">{title}</h4>
+          <h3 className="text-h3 code-example-title">{title}</h3>
           {description && <p className="code-example-description">{description}</p>}
         </div>
         <Button
@@ -79,7 +79,7 @@ export const ButtonsDemo: React.FC = () => {
   return (
     <div className="buttons-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1" className="demo-title">Button Components</Typography>
+        <h1 className="text-h1">Button Components</h1>
         <p className="demo-description">
           A collection of button components with different styles and behaviors for various use cases.
           Each button state includes both React implementation and CSS styling examples.
@@ -88,7 +88,7 @@ export const ButtonsDemo: React.FC = () => {
 
       {/* Button Variants Section */}
       <section className="button-section">
-        <h3 className="section-title">Button Variants</h3>
+        <h2 className="text-h2 section-title">Button Variants</h2>
         <p className="section-description">
           The Button component supports multiple variants for different use cases and visual hierarchy.
         </p>
@@ -121,8 +121,8 @@ export const ButtonsDemo: React.FC = () => {
         </div>
 
         {/* Button States Section */}
-        <h4 style={{ marginTop: '3rem', marginBottom: '1.5rem', fontSize: '1.25rem', fontWeight: '600' }}>Interactive States</h4>
-        <p style={{ marginBottom: '2rem', color: 'var(--color-greyscale-600)' }}>
+        <h3 className="text-h3" style={{ marginTop: '3rem', marginBottom: '1.5rem' }}>Interactive States</h3>
+        <p className="section-description">
           All variants support the same interactive states.
         </p>
         
@@ -349,7 +349,7 @@ const handleAsyncAction = async () => {
 
       {/* Variant Usage Examples Section */}
       <section className="button-section">
-        <h3 className="section-title">Variant Usage Examples</h3>
+        <h2 className="text-h2 section-title">Variant Usage Examples</h2>
         <p className="section-description">
           Real-world examples showing when to use each button variant.
         </p>
@@ -478,7 +478,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 
       {/* Copy to Clipboard Button Section */}
       <section className="button-section">
-        <h3 className="section-title">Copy to Clipboard Button</h3>
+        <h2 className="text-h2 section-title">Copy to Clipboard Button</h2>
         <p className="section-description">
           A compact button for copy operations with visual feedback states.
         </p>
@@ -590,7 +590,7 @@ const handleCopyFallback = (text: string) => {
 
       {/* Component Comparison */}
       <section className="button-section">
-        <h3 className="section-title">Component Comparison</h3>
+        <h2 className="text-h2 section-title">Component Comparison</h2>
         <p className="section-description">
           All button components displayed together for comparison.
         </p>
@@ -605,7 +605,7 @@ const handleCopyFallback = (text: string) => {
         </div>
 
         <div className="code-example">
-          <h4>When to Use Each Button Variant</h4>
+          <h3 className="text-h3">When to Use Each Button Variant</h3>
           <div className="usage-guide">
             <div className="usage-item">
               <strong>Default:</strong> Neutral actions that don't require emphasis. 

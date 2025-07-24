@@ -25,7 +25,7 @@ const RadiusSpacingDemo: React.FC = () => {
   return (
     <div className="radius-spacing-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">Radius & Spacing</Typography>
+        <h1 className="text-h1">Radius & Spacing</h1>
         <p className="demo-description">
           Foundation tokens for consistent spacing and border radius throughout the design system.
           These tokens ensure visual harmony and predictable layouts.

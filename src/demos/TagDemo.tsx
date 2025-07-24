@@ -8,7 +8,7 @@ const TagDemo: React.FC = () => {
   return (
     <div className="tag-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">Tag Component</Typography>
+        <h1 className="text-h1">Tag Component</h1>
         <p className="demo-description">
           Tag components for labeling, categorizing, and organizing content. 
           Tags provide a flexible way to add metadata and improve content discoverability.

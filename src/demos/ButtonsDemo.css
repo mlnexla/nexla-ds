@@ -11,16 +11,13 @@
 }
 
 .demo-header h1 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-semibold);
   color: var(--color-greyscale-800);
   margin-bottom: var(--spacing-lg);
 }
 
 .demo-header .demo-description {
-  font-size: 1.125rem;
+  font: var(--typography-body-large-400);
   color: var(--color-greyscale-600);
-  line-height: 1.6;
   max-width: 800px;
 }
 
@@ -29,17 +26,14 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
   margin-bottom: var(--spacing-lg);
   color: var(--color-greyscale-800);
 }
 
 .section-description {
-  font-size: 1rem;
+  font: var(--typography-body-default-400);
   color: var(--color-greyscale-600);
   margin-bottom: var(--spacing-xl);
-  line-height: 1.6;
 }
 
 .button-grid {
@@ -119,9 +113,7 @@
   margin-top: 2rem;
 }
 
-.code-example h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
+.code-example h3 {
   margin-bottom: 1rem;
   color: var(--color-greyscale-800);
 }

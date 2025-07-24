@@ -35,7 +35,7 @@ const ShadowsDemo: React.FC = () => {
   return (
     <div className="shadows-demo">
       <div className="demo-header">
-        <Typography variant="body-large-500" as="h1">Shadows</Typography>
+        <h1 className="text-h1">Shadows</h1>
         <p className="demo-description">
           Shadow tokens and examples for creating depth and visual hierarchy in the design system.
           Consistent elevation helps establish component relationships and focus states.

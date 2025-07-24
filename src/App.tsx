@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Sidebar } from './components/Sidebar';
 import { MainPage } from './components/MainPage';
+import { ProductPrinciples } from './components/ProductPrinciples';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
@@ -23,6 +24,11 @@ function AppContent() {
       value: '/main', 
       label: 'Nexla Design System',
       path: '/main'
+        },
+        {
+          value: '/product-principles',
+          label: 'Nexla Product Principles',
+          path: '/product-principles'
         }
       ],
       defaultExpanded: true
@@ -105,6 +111,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Navigate to="/main" replace />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path="/product-principles" element={<ProductPrinciples />} />
           <Route path="/typography" element={<TypographyDemo />} />
           <Route path="/buttons" element={<ButtonsDemo />} />
           <Route path="/inputs" element={<TextInputDemo />} />
