@@ -1,7 +1,7 @@
 .shadows-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -29,7 +29,7 @@
 
 .demo-section p {
   margin-bottom: var(--spacing-xl);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Shadows Grid */
@@ -123,7 +123,7 @@
 
 .usage-example h3 {
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 /* Interactive Examples */
@@ -163,12 +163,12 @@
 
 .guideline-card h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .guideline-card p {
   margin: 0;
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   line-height: 1.5;
 }
 

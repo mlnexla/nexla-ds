@@ -125,7 +125,7 @@ function AppContent() {
             <div style={{ 
               padding: 'var(--spacing-2xl)', 
               textAlign: 'center',
-              background: 'var(--color-special-galactic-sand)',
+              background: 'var(--color-special-galactic-sand-bg)',
               minHeight: '100vh',
               display: 'flex',
               alignItems: 'center',

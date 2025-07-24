@@ -437,7 +437,7 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 .basic-action-button--default {
   background: var(--color-greyscale-00);
   border-color: var(--color-greyscale-200);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Primary - High emphasis, main actions */
@@ -572,7 +572,7 @@ const handleCopyFallback = (text: string) => {
 
 .copy-button:hover {
   background: var(--color-greyscale-100);
-  border-color: var(--color-greyscale-300);
+  border-color: var(--color-greyscale-200);
 }
 
 .copy-button--copied {

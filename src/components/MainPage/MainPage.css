@@ -1,7 +1,7 @@
 .main-page {
   width: 100%;
   padding: var(--spacing-xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -23,14 +23,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-600);
   margin: 0 0 0.5rem 0;
-  background: linear-gradient(
-    45deg,
-    var(--color-primary-600),
-    var(--color-secondary-600),
-    var(--color-primary-500),
-    var(--color-secondary-500),
-    var(--color-primary-600)
-  );
+  background: var(--color-special-naboo-sunrise-bg);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -74,7 +67,7 @@
 .readme-content h2 {
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
   margin: 0 0 1rem 0;
   border-bottom: 2px solid var(--color-primary-100);
   padding-bottom: 0.5rem;
@@ -103,19 +96,19 @@
 .readme-content h4 {
   font-size: 1.25rem;
   font-weight: var(--font-weight-semibold);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 1.5rem 0 0.75rem 0;
 }
 
 .readme-content h5 {
   font-size: 1.1rem;
   font-weight: var(--font-weight-medium);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 1rem 0 0.5rem 0;
 }
 
 .readme-content p {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 0 0 1rem 0;
   font-size: 1rem;
 }
@@ -127,7 +120,7 @@
 }
 
 .readme-content li {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 0.5rem 0;
   font-size: 1rem;
 }
@@ -149,7 +142,7 @@
 }
 
 .code-block {
-  background: var(--color-greyscale-900);
+  background: var(--color-text-default);
   color: var(--color-greyscale-100);
   padding: 1.5rem;
   border-radius: var(--radius-md);
@@ -158,7 +151,7 @@
   line-height: 1.5;
   overflow-x: auto;
   margin: 1rem 0;
-  border: 1px solid var(--color-greyscale-300);
+  border: 1px solid var(--color-greyscale-200);
   position: relative;
 }
 
@@ -214,7 +207,7 @@
 
   .code-block {
     background: var(--color-greyscale-100);
-    color: var(--color-greyscale-900);
-    border: 1px solid var(--color-greyscale-300);
+    color: var(--color-text-default);
+    border: 1px solid var(--color-greyscale-200);
   }
 } 

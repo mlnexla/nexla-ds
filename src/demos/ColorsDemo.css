@@ -1,7 +1,7 @@
 .colors-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -38,9 +38,13 @@
 
 .color-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
+}
+
+.color-grid .color-card {
+  max-width: 300px;
 }
 
 .color-card {
@@ -83,7 +87,7 @@
   font-family: var(--font-family-mono);
   font-size: 0.875rem;
   font-weight: var(--font-weight-medium);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   text-transform: uppercase;
 }
 
@@ -157,7 +161,7 @@
   background: var(--color-greyscale-100);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Responsive Design */

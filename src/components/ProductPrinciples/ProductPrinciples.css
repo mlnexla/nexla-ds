@@ -1,7 +1,7 @@
 .product-principles {
   width: 100%;
   padding: var(--spacing-xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -23,14 +23,7 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-600);
   margin: 0 0 var(--spacing-md) 0;
-  background: linear-gradient(
-    45deg,
-    var(--color-primary-600),
-    var(--color-secondary-600),
-    var(--color-primary-500),
-    var(--color-secondary-500),
-    var(--color-primary-600)
-  );
+  background: var(--color-special-naboo-sunrise-bg);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -83,7 +76,7 @@
 .principle__title {
   font-size: 1.75rem;
   font-weight: var(--font-weight-semibold);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
   margin: 0 0 var(--spacing-md) 0;
   display: flex;
   align-items: center;
@@ -99,7 +92,7 @@
 
 .principle__description {
   font-size: 1.125rem;
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 0 0 var(--spacing-md) 0;
   font-weight: var(--font-weight-medium);
   margin-left: 2.5rem;
@@ -132,13 +125,13 @@
 }
 
 .section-title {
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
   margin: 0 0 var(--spacing-md) 0;
 }
 
 .section-description {
   font: var(--typography-body-default-400);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin: 0 0 var(--spacing-lg) 0;
 }
 

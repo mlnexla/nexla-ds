@@ -342,11 +342,11 @@
 }
 
 .basic-action-button--secondary.basic-action-button--hover .basic-action-button__label {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 .basic-action-button--secondary.basic-action-button--hover .basic-action-button__icon {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 .basic-action-button--secondary.basic-action-button--pressing {
@@ -356,11 +356,11 @@
 }
 
 .basic-action-button--secondary.basic-action-button--pressing .basic-action-button__label {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 .basic-action-button--secondary.basic-action-button--pressing .basic-action-button__icon {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 .basic-action-button--secondary.basic-action-button--disabled {

@@ -12,12 +12,9 @@
   --color-greyscale-75: #EAEAED;
   --color-greyscale-100: #E4E4E7;
   --color-greyscale-200: #C8C9D0;
-  --color-greyscale-300: #B0B1BA;
   --color-greyscale-400: #9293A0;
   --color-greyscale-600: #5F606D;
-  --color-greyscale-700: #42434A;
   --color-greyscale-800: #2F3037;
-  --color-greyscale-900: #1C1C1E;
   --color-greyscale-1000: #0C0C0E;
   
   /* Colors - Primary */
@@ -81,10 +78,12 @@
   --color-danger-900: #780C0C;
   
   /* Colors - Special */
-  --color-special-galactic-sand: #F8F6F2;
+  --color-special-galactic-sand-bg: #F8F6F2;
+  --color-special-naboo-sunrise-bg: linear-gradient(225deg, #0A217A 0%, #FFF5E8 100%);
   
   /* Semantic Colors */
   --color-outline: var(--color-greyscale-100);
+  --color-text-default: var(--color-greyscale-800);  /* Default text color for body content */
   
   /* Font Families */
   --font-family-default: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

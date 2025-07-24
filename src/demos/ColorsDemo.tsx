@@ -19,12 +19,12 @@ const colorPalettes = {
     { name: 'Greyscale 75', variable: '--color-greyscale-75', value: '#EAEAED', description: 'Soft grey for dividers' },
     { name: 'Greyscale 100', variable: '--color-greyscale-100', value: '#E4E4E7', description: 'Medium-light grey for borders' },
     { name: 'Greyscale 200', variable: '--color-greyscale-200', value: '#C8C9D0', description: 'Medium grey for inactive elements' },
-    { name: 'Greyscale 300', variable: '--color-greyscale-300', value: '#B0B1BA', description: 'Medium-dark grey for placeholders' },
+    
     { name: 'Greyscale 400', variable: '--color-greyscale-400', value: '#9293A0', description: 'Dark grey for secondary text' },
     { name: 'Greyscale 600', variable: '--color-greyscale-600', value: '#5F606D', description: 'Darker grey for body text' },
-    { name: 'Greyscale 700', variable: '--color-greyscale-700', value: '#42434A', description: 'Very dark grey for headings' },
+    
     { name: 'Greyscale 800', variable: '--color-greyscale-800', value: '#2F3037', description: 'Near-black for primary text' },
-    { name: 'Greyscale 900', variable: '--color-greyscale-900', value: '#1C1C1E', description: 'Almost black for emphasis' },
+
     { name: 'Greyscale 1000', variable: '--color-greyscale-1000', value: '#0C0C0E', description: 'Pure black for maximum contrast' },
   ],
   primary: [
@@ -88,7 +88,12 @@ const colorPalettes = {
     { name: 'Danger 900', variable: '--color-danger-900', value: '#780C0C', description: 'Darkest red for emphasis' },
   ],
   special: [
-    { name: 'Galactic Sand', variable: '--color-special-galactic-sand', value: '#F8F6F2', description: 'Warm neutral background color' },
+    { name: 'Galactic Sand BG', variable: '--color-special-galactic-sand-bg', value: '#F8F6F2', description: 'Warm neutral background color' },
+    { name: 'Naboo Sunrise BG', variable: '--color-special-naboo-sunrise-bg', value: 'linear-gradient(225deg, #0A217A 0%, #FFF5E8 100%)', description: 'Blue to cream gradient background' },
+  ],
+  semantic: [
+    { name: 'Default Text', variable: '--color-text-default', value: '#2F3037', description: 'Primary text color for body content' },
+    { name: 'Outline', variable: '--color-outline', value: '#E4E4E7', description: 'Default border color for components' },
   ],
 };
 
@@ -115,8 +120,11 @@ export const ColorsDemo: React.FC = () => {
         {colors.map((color) => (
           <div key={color.variable} className="color-card">
             <div 
-              className="color-swatch" 
-              style={{ backgroundColor: `var(${color.variable})` }}
+              className="color-swatch"
+              style={{ 
+                background: `var(${color.variable})`,
+                backgroundColor: `var(${color.variable})`
+              }}
             />
             <div className="color-info">
               <h3 className="color-name">{color.name}</h3>
@@ -196,6 +204,12 @@ export const ColorsDemo: React.FC = () => {
         'Special Colors',
         colorPalettes.special,
         'Unique colors for specific design needs and branded elements that don\'t fit standard categories.'
+      )}
+
+      {renderColorPalette(
+        'Semantic Colors',
+        colorPalettes.semantic,
+        'Meaningful color tokens that reference base colors for specific use cases, making design decisions clearer and more maintainable.'
       )}
 
       <section className="usage-guidelines">

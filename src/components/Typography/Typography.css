@@ -110,7 +110,7 @@
 .text-h2 {
   font: var(--typography-h2);
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .text-h3 {

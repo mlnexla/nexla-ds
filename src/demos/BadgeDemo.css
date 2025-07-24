@@ -1,7 +1,7 @@
 .badge-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -29,7 +29,7 @@
 
 .demo-section p {
   margin-bottom: var(--spacing-xl);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Coming Soon Card */
@@ -49,12 +49,12 @@
 
 .coming-soon-card h2 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .coming-soon-card p {
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 .feature-list {
@@ -66,7 +66,7 @@
 
 .feature-list li {
   margin-bottom: var(--spacing-sm);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   line-height: 1.5;
 }
 
@@ -93,12 +93,12 @@
 
 .feature-card h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .feature-card p {
   margin: 0;
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   line-height: 1.5;
 }
 
@@ -119,7 +119,7 @@
 
 .usage-example h3 {
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 /* Mockup Section */
@@ -139,7 +139,7 @@
 
 .mockup-group h3 {
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
   text-align: center;
 }
 
@@ -163,7 +163,7 @@
   background: var(--color-greyscale-100);
   border-radius: var(--radius-md);
   font-size: var(--font-size-base-sm);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   position: relative;
 }
 

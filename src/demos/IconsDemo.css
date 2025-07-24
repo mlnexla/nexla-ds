@@ -1,7 +1,7 @@
 .icons-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 

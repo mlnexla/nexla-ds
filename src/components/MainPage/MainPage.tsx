@@ -7,7 +7,7 @@ const MainPage: React.FC = () => {
       <div className="main-page__container">
         <header className="main-page__header">
           <h1 className="main-page__title">Nexla Design System</h1>
-          <p className="main-page__subtitle">Reusable React components for consistent UI</p>
+          <p className="main-page__subtitle">Reusable components for consistent and beautiful UI</p>
         </header>
         
         <main className="main-page__content">

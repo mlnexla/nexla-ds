@@ -2,7 +2,7 @@
 .typography-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -43,7 +43,7 @@
 .header-example h2,
 .header-example h3 {
   margin: 0;
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .header-code-example {
@@ -66,7 +66,7 @@
 
 .demo-section p {
   margin-bottom: var(--spacing-xl);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Variants Grid */
@@ -91,7 +91,7 @@
 
 .variant-header h3 {
   margin-bottom: var(--spacing-sm);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .variant-description {
@@ -132,7 +132,7 @@
 }
 
 .spec-value {
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -152,7 +152,7 @@
   padding: var(--spacing-md);
   background: var(--color-greyscale-50);
   border-bottom: 1px solid var(--color-greyscale-200);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   font-weight: var(--font-weight-medium);
 }
 
@@ -173,11 +173,11 @@
 
 .guideline-card h3 {
   margin-bottom: var(--spacing-md);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 .guideline-card p {
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
   margin-bottom: 0;
 }
 

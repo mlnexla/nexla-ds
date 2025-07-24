@@ -25,7 +25,7 @@ body {
   font-family: var(--font-family-default);
   font-size: var(--font-size-base);
   color: var(--color-greyscale-800);
-  background-color: var(--color-special-galactic-sand);
+  background-color: var(--color-special-galactic-sand-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -40,7 +40,7 @@ body {
 .app-main {
   flex: 1;
   margin-left: 280px; /* Width of sidebar */
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   min-height: 100vh;
   overflow-x: auto;
 }
@@ -99,7 +99,7 @@ body {
   }
 
   .demo-code {
-    background: var(--color-greyscale-900);
+    background: var(--color-text-default);
     color: var(--color-white);
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);

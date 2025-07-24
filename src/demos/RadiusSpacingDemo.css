@@ -1,7 +1,7 @@
 .radius-spacing-demo {
   width: 100%;
   padding: var(--spacing-2xl);
-  background: var(--color-special-galactic-sand);
+  background: var(--color-special-galactic-sand-bg);
   font-family: var(--font-family-default);
 }
 
@@ -29,7 +29,7 @@
 
 .demo-section p {
   margin-bottom: var(--spacing-xl);
-  color: var(--color-greyscale-700);
+  color: var(--color-greyscale-600);
 }
 
 /* Spacing Grid */
@@ -92,7 +92,7 @@
   width: 100%;
   max-width: 80px;
   font-size: 0.75rem;
-  color: var(--color-greyscale-500);
+  color: var(--color-greyscale-400);
   font-family: var(--font-family-mono);
 }
 
@@ -122,7 +122,7 @@
 
 .spacing-label {
   font-size: 0.75rem;
-  color: var(--color-greyscale-500);
+  color: var(--color-greyscale-400);
   font-family: var(--font-family-mono);
 }
 
@@ -209,7 +209,7 @@
 
 .usage-example h3 {
   margin-bottom: var(--spacing-lg);
-  color: var(--color-greyscale-900);
+  color: var(--color-text-default);
 }
 
 /* Responsive */

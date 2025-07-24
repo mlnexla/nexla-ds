@@ -8,8 +8,8 @@ const ProductPrinciples: React.FC = () => {
         <header className="product-principles__header">
           <h1 className="product-principles__title">Nexla Product Principles</h1>
           <p className="product-principles__subtitle">
-            A concise, actionable set of guidelines designed to align design, engineering, and product teams. 
-            They're grounded in real product decisions and reflect how Nexla thinks about building tools for data professionals.
+            These principles act as a north star to ensure Nexla's product remains intuitive, 
+            scalable, and trustworthy for both novice and expert users.
           </p>
         </header>
         
@@ -107,8 +107,8 @@ const ProductPrinciples: React.FC = () => {
 
           <footer className="principles-footer">
             <p>
-              These principles act as a north star to ensure Nexla's product remains intuitive, 
-              scalable, and trustworthy for both novice and expert users.
+              A concise, actionable set of guidelines designed to align design, engineering, and product teams. 
+              They're grounded in real product decisions and reflect how Nexla thinks about building tools for data professionals.
             </p>
           </footer>
         </main>
