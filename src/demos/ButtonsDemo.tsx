@@ -517,6 +517,24 @@ const [isSubmitting, setIsSubmitting] = useState(false);
             />
             <span className="button-label">Disabled</span>
           </div>
+          
+          <div className="button-example dark-mode-example">
+            <CopyToClipboardButton
+              state="default"
+              label="Copy Code"
+              className="syntax-highlighter-copy-button"
+            />
+            <span className="button-label">Dark Mode</span>
+          </div>
+          
+          <div className="button-example dark-mode-example">
+            <CopyToClipboardButton
+              state="copied"
+              label="Copy Code"
+              className="syntax-highlighter-copy-button"
+            />
+            <span className="button-label">Dark Mode (Copied)</span>
+          </div>
         </div>
 
         <CodeExample

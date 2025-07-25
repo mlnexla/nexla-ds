@@ -235,63 +235,17 @@
   border-radius: 0;
 }
 
-/* Copy button styling for dark code blocks */
-.syntax-highlighter-copy-button {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
-  min-width: 32px !important;
-  height: 32px !important;
-  position: relative !important;
-  z-index: 15 !important;
+/* Copy button uses standard component styles - no customization */
+
+/* Dark mode example container */
+.button-example.dark-mode-example {
+  background: #2d3748;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
 }
 
-.syntax-highlighter-copy-button:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.syntax-highlighter-copy-button .copy-button-icon {
-  color: rgba(255, 255, 255, 0.9) !important;
-  width: 16px !important;
-  height: 16px !important;
-}
-
-.syntax-highlighter-copy-button .copy-button-text span {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.syntax-highlighter-copy-button:hover .copy-button-icon {
-  color: white !important;
-}
-
-.syntax-highlighter-copy-button:hover .copy-button-text span {
-  color: white !important;
-}
-
-.syntax-highlighter-copy-button.copied {
-  background: rgba(34, 197, 94, 0.2) !important;
-  border-color: rgba(34, 197, 94, 0.4) !important;
-}
-
-.syntax-highlighter-copy-button.copied .copy-button-icon {
-  color: rgba(34, 197, 94, 0.9) !important;
-}
-
-.syntax-highlighter-copy-button.copied .copy-button-text span {
-  color: rgba(34, 197, 94, 0.9) !important;
-}
-
-/* Enhanced tooltip for dark code blocks */
-.syntax-highlighter-copy-button::before {
-  background: rgba(0, 0, 0, 0.9) !important;
-  color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  z-index: 1001 !important;
-}
-
-.syntax-highlighter-copy-button::after {
-  border-bottom-color: rgba(0, 0, 0, 0.9) !important;
-  z-index: 1001 !important;
+.button-example.dark-mode-example .button-label {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Usage Guide Styles */

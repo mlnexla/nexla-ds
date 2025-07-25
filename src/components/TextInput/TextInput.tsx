@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import FiRrCrossCircle from '../icons/FiRrCrossCircle';
+import { CopyToClipboardButton } from '../CopyToClipboardButton';
 import './TextInput.css';
 
 // Icon components
@@ -14,12 +15,7 @@ const CloseIcon = () => (
   </svg>
 );
 
-const CopyIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="3" y="3" width="6" height="6" stroke="#5F606D" strokeWidth="1"/>
-    <path d="M1 1H7V2H2V7H1V1Z" fill="#5F606D"/>
-  </svg>
-);
+// CopyIcon removed - using CopyToClipboardButton instead
 
 export type TextInputVariant = 
   | 'default' 
@@ -80,6 +76,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   const [isFocused, setIsFocused] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [showCursor, setShowCursor] = useState(false);
+  const [copiedState, setCopiedState] = useState<'default' | 'copied'>('default');
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -114,6 +111,8 @@ export const TextInput: React.FC<TextInputProps> = ({
   const handleCopy = () => {
     if (inputRef.current) {
       navigator.clipboard.writeText(inputRef.current.value);
+      setCopiedState('copied');
+      setTimeout(() => setCopiedState('default'), 2000);
       onCopy?.();
     }
   };
@@ -164,10 +163,12 @@ export const TextInput: React.FC<TextInputProps> = ({
                 id={id}
               />
             </div>
-            <button className="text-input-copy-button" onClick={handleCopy}>
-              <CopyIcon />
-              <span>Copy</span>
-            </button>
+            <CopyToClipboardButton
+              state={copiedState}
+              onClick={handleCopy}
+              label="Copy"
+              className="text-input-copy-button"
+            />
           </div>
         ) : (
           <div 

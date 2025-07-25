@@ -1,0 +1,88 @@
+/* Import global styles */
+@import '../../styles/global.css';
+
+/* Tooltip Component Styles */
+
+.tooltip {
+  /* Base styles */
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.tooltip__content {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  overflow: hidden;
+}
+
+.tooltip__text {
+  color: var(--color-white);
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  white-space: nowrap;
+  text-align: center;
+  display: block;
+}
+
+.tooltip__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Direction variants */
+.tooltip--default {
+  flex-direction: row;
+}
+
+.tooltip--top {
+  flex-direction: column-reverse;
+}
+
+.tooltip--bottom {
+  flex-direction: column-reverse;
+}
+
+.tooltip--left {
+  flex-direction: row-reverse;
+}
+
+.tooltip--right {
+  flex-direction: row-reverse;
+}
+
+/* Arrow positioning */
+.tooltip__arrow--top {
+  margin-top: 0;
+}
+
+.tooltip__arrow--bottom {
+  margin-top: 0;
+}
+
+.tooltip__arrow--left {
+  margin-left: 0;
+}
+
+.tooltip__arrow--right {
+  margin-left: 0;
+}
+
+/* Text alignment per direction */
+.tooltip--left .tooltip__text,
+.tooltip--right .tooltip__text {
+  text-align: left;
+}
+
+.tooltip--default .tooltip__text,
+.tooltip--top .tooltip__text,
+.tooltip--bottom .tooltip__text {
+  text-align: center;
+} 

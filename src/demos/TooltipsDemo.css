@@ -1,0 +1,98 @@
+/* Import global styles */
+@import '../styles/global.css';
+
+/* Tooltips Demo Styles */
+.tooltips-demo {
+  padding: var(--spacing-3xl) var(--spacing-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tooltips-demo__title {
+  font: var(--typography-h1);
+  color: var(--color-greyscale-800);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tooltips-demo__description {
+  font: var(--typography-body-large-400);
+  color: var(--color-greyscale-600);
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Section Styles */
+.tooltips-demo__section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.tooltips-demo__section-title {
+  font: var(--typography-h2);
+  color: var(--color-greyscale-800);
+  margin-bottom: var(--spacing-md);
+}
+
+.tooltips-demo__section-description {
+  font: var(--typography-body-default-400);
+  color: var(--color-greyscale-600);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Contact Sheet Grid */
+.tooltips-demo__contact-sheet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+/* Individual Variant Card */
+.tooltips-demo__variant {
+  background: var(--color-white);
+  border: 1px solid var(--color-greyscale-100);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+}
+
+.tooltips-demo__variant-title {
+  font: var(--typography-body-default-500);
+  color: var(--color-greyscale-800);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Preview Area */
+.tooltips-demo__preview {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-greyscale-25);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+/* Code Section */
+.tooltips-demo__code {
+  border: 1px solid var(--color-greyscale-100);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.tooltips-demo__code-header {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-greyscale-50);
+  border-bottom: 1px solid var(--color-greyscale-100);
+}
+
+.tooltips-demo__code-label {
+  font: var(--typography-body-small-500);
+  color: var(--color-greyscale-600);
+}
+
+/* Placeholder sections */
+.tooltips-demo__section--placeholder {
+  opacity: 0.6;
+}
+
+.tooltips-demo__section--placeholder .tooltips-demo__section-description {
+  font-style: italic;
+} 

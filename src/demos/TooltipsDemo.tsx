@@ -1,0 +1,85 @@
+import React from 'react';
+import { Tooltip } from '../components';
+import SyntaxHighlighter from '../components/SyntaxHighlighter';
+import './TooltipsDemo.css';
+
+const TooltipsDemo: React.FC = () => {
+  const directions = ['default', 'top', 'bottom', 'left', 'right'] as const;
+
+  // Code examples for each direction
+  const codeExamples = {
+    default: `<Tooltip text="Tooltip Text" direction="default" />`,
+    top: `<Tooltip text="Tooltip Text" direction="top" />`,
+    bottom: `<Tooltip text="Tooltip Text" direction="bottom" />`,
+    left: `<Tooltip text="Tooltip Text" direction="left" />`,
+    right: `<Tooltip text="Tooltip Text" direction="right" />`
+  };
+
+  return (
+    <div className="tooltips-demo">
+      <h1 className="tooltips-demo__title">Tooltips</h1>
+      <p className="tooltips-demo__description">
+        Tooltips provide helpful information when users hover over, focus on, or tap an element.
+      </p>
+
+      {/* Tooltip (label) Contact Sheet */}
+      <section className="tooltips-demo__section">
+        <h2 className="tooltips-demo__section-title">Tooltip (label)</h2>
+        <p className="tooltips-demo__section-description">
+          Single-line tooltips for brief contextual information.
+        </p>
+
+        <div className="tooltips-demo__contact-sheet">
+          {directions.map((direction) => (
+            <div key={direction} className="tooltips-demo__variant">
+              <h3 className="tooltips-demo__variant-title">
+                {direction.charAt(0).toUpperCase() + direction.slice(1)}
+              </h3>
+              
+              <div className="tooltips-demo__preview">
+                <Tooltip 
+                  text="Tooltip Text" 
+                  direction={direction}
+                />
+              </div>
+
+              <div className="tooltips-demo__code">
+                <div className="tooltips-demo__code-header">
+                  <span className="tooltips-demo__code-label">Usage</span>
+                </div>
+                <SyntaxHighlighter 
+                  language="tsx" 
+                  code={codeExamples[direction]}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Placeholder sections for future tooltip types */}
+      <section className="tooltips-demo__section tooltips-demo__section--placeholder">
+        <h2 className="tooltips-demo__section-title">Informational Tooltip (multi-line)</h2>
+        <p className="tooltips-demo__section-description">
+          Coming soon: Multi-line tooltips for more detailed information.
+        </p>
+      </section>
+
+      <section className="tooltips-demo__section tooltips-demo__section--placeholder">
+        <h2 className="tooltips-demo__section-title">Informational Tooltip (long form)</h2>
+        <p className="tooltips-demo__section-description">
+          Coming soon: Long-form tooltips for extensive contextual help.
+        </p>
+      </section>
+
+      <section className="tooltips-demo__section tooltips-demo__section--placeholder">
+        <h2 className="tooltips-demo__section-title">Informational Tooltip (long form) small</h2>
+        <p className="tooltips-demo__section-description">
+          Coming soon: Compact long-form tooltips for space-constrained areas.
+        </p>
+      </section>
+    </div>
+  );
+};
+
+export default TooltipsDemo; 

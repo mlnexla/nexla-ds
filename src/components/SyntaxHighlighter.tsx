@@ -52,8 +52,7 @@ export const SyntaxHighlighter: React.FC<SyntaxHighlighterProps> = ({
           state={copyState}
           onClick={handleCopy}
           className="syntax-highlighter-copy-button"
-          label=""
-          tooltip={copyState === 'copied' ? 'Copied!' : 'Copy code'}
+          label="Copy Code"
         />
       </div>
       <pre className="demo-code">
