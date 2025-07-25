@@ -16,12 +16,14 @@ const TooltipPortal = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Icon components
-const InfoIcon = ({ tooltipText, tooltipVariant, showTooltip, onMouseEnter, onMouseLeave }: { 
+const InfoIcon = ({ tooltipText, tooltipVariant, showTooltip, onMouseEnter, onMouseLeave, onTooltipContentMouseEnter, onTooltipContentMouseLeave }: { 
   tooltipText?: string;
   tooltipVariant?: TooltipVariant;
   showTooltip: boolean;
   onMouseEnter: () => void;
   onMouseLeave: () => void;
+  onTooltipContentMouseEnter: () => void;
+  onTooltipContentMouseLeave: () => void;
 }) => {
   const iconRef = useRef<HTMLDivElement>(null);
   const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 });
@@ -53,15 +55,18 @@ const InfoIcon = ({ tooltipText, tooltipVariant, showTooltip, onMouseEnter, onMo
         </div>
         {showTooltip && (
           <TooltipPortal>
-            <div style={{ 
-              position: 'fixed', 
-              left: tooltipPosition.left, 
-              top: tooltipPosition.top,
-              transform: 'translateY(-50%)', 
-              zIndex: 1000,
-              pointerEvents: 'none',
-              '--tooltip-transform-origin': 'left center'
-            } as React.CSSProperties}>
+            <div 
+              style={{ 
+                position: 'fixed', 
+                left: tooltipPosition.left, 
+                top: tooltipPosition.top,
+                transform: 'translateY(-50%)', 
+                zIndex: 1000,
+                '--tooltip-transform-origin': 'left center'
+              } as React.CSSProperties}
+              onMouseEnter={onTooltipContentMouseEnter}
+              onMouseLeave={onTooltipContentMouseLeave}
+            >
               <Tooltip text={tooltipText} direction="right" variant={tooltipVariant} />
             </div>
           </TooltipPortal>
@@ -147,11 +152,21 @@ export const TextInput: React.FC<TextInputProps> = ({
   const [showCursor, setShowCursor] = useState(false);
   const [copiedState, setCopiedState] = useState<'default' | 'copied'>('default');
   const [showTooltip, setShowTooltip] = useState(false);
+  const [isTooltipHovered, setIsTooltipHovered] = useState(false);
+  const tooltipTimeoutRef = useRef<number | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setInternalValue(value);
   }, [value]);
+
+  useEffect(() => {
+    return () => {
+      if (tooltipTimeoutRef.current) {
+        clearTimeout(tooltipTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (variant === 'active' || variant === 'typing') {
@@ -187,6 +202,43 @@ export const TextInput: React.FC<TextInputProps> = ({
     }
   };
 
+  const handleTooltipMouseEnter = () => {
+    if (tooltipTimeoutRef.current) {
+      clearTimeout(tooltipTimeoutRef.current);
+      tooltipTimeoutRef.current = null;
+    }
+    setShowTooltip(true);
+  };
+
+  const handleTooltipMouseLeave = () => {
+    if (tooltipTimeoutRef.current) {
+      clearTimeout(tooltipTimeoutRef.current);
+    }
+    tooltipTimeoutRef.current = window.setTimeout(() => {
+      if (!isTooltipHovered) {
+        setShowTooltip(false);
+      }
+    }, 100);
+  };
+
+  const handleTooltipContentMouseEnter = () => {
+    setIsTooltipHovered(true);
+    if (tooltipTimeoutRef.current) {
+      clearTimeout(tooltipTimeoutRef.current);
+      tooltipTimeoutRef.current = null;
+    }
+  };
+
+  const handleTooltipContentMouseLeave = () => {
+    setIsTooltipHovered(false);
+    if (tooltipTimeoutRef.current) {
+      clearTimeout(tooltipTimeoutRef.current);
+    }
+    tooltipTimeoutRef.current = window.setTimeout(() => {
+      setShowTooltip(false);
+    }, 200);
+  };
+
   // Determine the actual variant based on state
   const getActiveVariant = (): TextInputVariant => {
     if (disabled) return 'disabled';
@@ -215,8 +267,10 @@ export const TextInput: React.FC<TextInputProps> = ({
             tooltipText={tooltipText}
             tooltipVariant={tooltipVariant}
             showTooltip={showTooltip}
-            onMouseEnter={() => setShowTooltip(true)}
-            onMouseLeave={() => setShowTooltip(false)}
+            onMouseEnter={handleTooltipMouseEnter}
+            onMouseLeave={handleTooltipMouseLeave}
+            onTooltipContentMouseEnter={handleTooltipContentMouseEnter}
+            onTooltipContentMouseLeave={handleTooltipContentMouseLeave}
           />
         )}
       </div>
