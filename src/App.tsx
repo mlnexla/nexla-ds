@@ -9,7 +9,8 @@ import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import { ColorsDemo } from './demos/ColorsDemo';
 import TypographyDemo from './demos/TypographyDemo';
-import RadiusSpacingDemo from './demos/RadiusSpacingDemo';
+import SpacingDemo from './demos/SpacingDemo';
+import RadiusDemo from './demos/RadiusDemo';
 import ShadowsDemo from './demos/ShadowsDemo';
 import TagDemo from './demos/TagDemo';
 import BadgeDemo from './demos/BadgeDemo';
@@ -46,9 +47,14 @@ function AppContent() {
           path: '/colors'
         },
         {
-          value: '/radius-spacing',
-          label: 'Radius & Spacing',
-          path: '/radius-spacing'
+          value: '/spacing',
+          label: 'Spacing',
+          path: '/spacing'
+        },
+        {
+          value: '/radius',
+          label: 'Radius',
+          path: '/radius'
         },
         {
           value: '/shadows',
@@ -143,7 +149,8 @@ function AppContent() {
           <Route path="/inputs" element={<TextInputDemo />} />
           <Route path="/colors" element={<ColorsDemo />} />
           <Route path="/icons" element={<IconsDemo />} />
-          <Route path="/radius-spacing" element={<RadiusSpacingDemo />} />
+          <Route path="/spacing" element={<SpacingDemo />} />
+          <Route path="/radius" element={<RadiusDemo />} />
           <Route path="/shadows" element={<ShadowsDemo />} />
           <Route path="/tag" element={<TagDemo />} />
           <Route path="/badge" element={<BadgeDemo />} />

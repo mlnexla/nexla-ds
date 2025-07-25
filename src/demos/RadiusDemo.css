@@ -1,4 +1,4 @@
-.radius-spacing-demo {
+.radius-demo {
   width: 100%;
   padding: var(--spacing-2xl);
   background: var(--color-special-galactic-sand-bg);
@@ -25,105 +25,9 @@
   margin-bottom: var(--spacing-3xl);
 }
 
-
-
 .demo-section p {
   margin-bottom: var(--spacing-xl);
   color: var(--color-greyscale-600);
-}
-
-/* Spacing Grid */
-.spacing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
-}
-
-.spacing-item {
-  background: var(--color-white);
-  border: 1px solid var(--color-greyscale-200);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-}
-
-.spacing-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
-
-.spacing-visual {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  margin-bottom: var(--spacing-lg);
-}
-
-.spacing-bar-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  margin-bottom: var(--spacing-sm);
-  position: relative;
-}
-
-.spacing-bar {
-  height: 16px;
-  background: var(--color-primary-500);
-  border-radius: var(--radius-sm);
-  min-width: 4px;
-  transition: all var(--transition-base);
-}
-
-.spacing-item:hover .spacing-bar {
-  background: var(--color-primary-600);
-  transform: scaleY(1.1);
-}
-
-.spacing-scale {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 80px;
-  font-size: 0.75rem;
-  color: var(--color-greyscale-400);
-  font-family: var(--font-family-mono);
-}
-
-/* Remove the old spacing-scale-indicator styles */
-.spacing-scale-indicator {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
-}
-
-.spacing-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--color-primary-500);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.spacing-line {
-  height: 2px;
-  background: var(--color-primary-300);
-  border-radius: 1px;
-  flex: 1;
-  max-width: 60px;
-}
-
-.spacing-label {
-  font-size: 0.75rem;
-  color: var(--color-greyscale-400);
-  font-family: var(--font-family-mono);
 }
 
 /* Radius Grid */
@@ -214,11 +118,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .radius-spacing-demo {
+  .radius-demo {
     padding: var(--spacing-lg);
   }
   
-  .spacing-grid,
   .radius-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);

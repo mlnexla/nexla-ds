@@ -35,6 +35,8 @@ const MainPage: React.FC = () => {
 │   ├── ButtonsDemo.tsx/.css    # Button variants demo
 │   ├── ColorsDemo.tsx/.css     # Color palette demo
 │   ├── IconsDemo.tsx/.css      # Icon gallery demo
+│   ├── RadiusDemo.tsx/.css     # Border radius demo
+│   ├── SpacingDemo.tsx/.css    # Spacing tokens demo
 │   ├── TextInputDemo.tsx/.css  # TextInput demo
 │   ├── TypographyDemo.tsx/.css # Typography demo
 │   └── demo.html        # Static HTML preview
