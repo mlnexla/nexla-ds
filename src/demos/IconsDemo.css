@@ -158,12 +158,12 @@
   }
   
   .icons-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
   }
   
   .icon-item {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
   }
 }
 

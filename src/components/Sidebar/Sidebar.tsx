@@ -19,6 +19,8 @@ interface SidebarGroup {
 
 interface SidebarProps {
   groups: SidebarGroup[];
+  isMobileOpen?: boolean;
+  onMobileToggle?: () => void;
 }
 
 const HamburgerIcon = () => (
@@ -42,9 +44,15 @@ const ChevronDownIcon = () => (
 
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  groups
+  groups,
+  isMobileOpen = false,
+  onMobileToggle
 }) => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [internalMobileMenuOpen, setInternalMobileMenuOpen] = useState(false);
+  
+  // Use external mobile state if provided, otherwise use internal state
+  const isMobileMenuOpen = onMobileToggle ? isMobileOpen : internalMobileMenuOpen;
+  const setIsMobileMenuOpen = onMobileToggle ? onMobileToggle : setInternalMobileMenuOpen;
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(
     new Set(groups.filter(group => group.defaultExpanded !== false).map(group => group.title))
   );
@@ -69,7 +77,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
       <div className="sidebar-header">
         <h2 className="sidebar-title">Nexla DS</h2>
         <button 
@@ -81,7 +89,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </button>
       </div>
       
-      <nav className={`sidebar-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+      <nav className="sidebar-nav">
         <div className="sidebar-menu">
           {groups.map((group) => {
             const isExpanded = expandedGroups.has(group.title);

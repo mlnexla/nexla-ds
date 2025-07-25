@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useState } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { MainPage } from './components/MainPage';
 import { ProductPrinciples } from './components/ProductPrinciples';
@@ -17,6 +18,7 @@ import TooltipsDemo from './demos/TooltipsDemo';
 import './styles/global.css';
 
 function AppContent() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const navigationGroups = [
     {
@@ -115,7 +117,22 @@ function AppContent() {
   return (
     <div className="app">
       <ScrollToTop />
-      <Sidebar groups={navigationGroups} />
+      
+      {/* Mobile Header */}
+      <header className="app-mobile-header">
+        <button 
+          className="app-mobile-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <h1 className="app-mobile-title">Nexla DS</h1>
+      </header>
+      
+      <Sidebar groups={navigationGroups} isMobileOpen={isMobileMenuOpen} onMobileToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Navigate to="/main" replace />} />
