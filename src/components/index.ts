@@ -8,6 +8,7 @@ export { ScrollToTop } from './ScrollToTop';
 export { Sidebar } from './Sidebar';
 export { TextInput } from './TextInput';
 export { Tooltip } from './Tooltip';
+export { InformationalTooltip } from './InformationalTooltip';
 export { Typography } from './Typography';
 
 // Icons

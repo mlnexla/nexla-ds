@@ -13,6 +13,7 @@ import ShadowsDemo from './demos/ShadowsDemo';
 import TagDemo from './demos/TagDemo';
 import BadgeDemo from './demos/BadgeDemo';
 import TooltipsDemo from './demos/TooltipsDemo';
+
 import './styles/global.css';
 
 function AppContent() {
@@ -92,7 +93,8 @@ function AppContent() {
           value: '/tooltips',
           label: 'Tooltip',
           path: '/tooltips'
-        }
+        },
+
       ],
       defaultExpanded: true
     },
@@ -128,6 +130,7 @@ function AppContent() {
           <Route path="/tag" element={<TagDemo />} />
           <Route path="/badge" element={<BadgeDemo />} />
           <Route path="/tooltips" element={<TooltipsDemo />} />
+
           <Route path="/patterns/coming-soon" element={
             <div style={{ 
               padding: 'var(--spacing-2xl)', 

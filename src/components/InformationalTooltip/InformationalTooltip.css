@@ -1,0 +1,78 @@
+.informational-tooltip {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  opacity: 0.8;
+}
+
+.informational-tooltip__content {
+  background: var(--color-greyscale-800);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.informational-tooltip__text {
+  font: var(--typography-body-small-400);
+  color: var(--color-white);
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.informational-tooltip__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Direction-specific layouts */
+.informational-tooltip--top {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.informational-tooltip--bottom {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.informational-tooltip--left {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.informational-tooltip--right {
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 0;
+}
+
+.informational-tooltip--default {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text alignment for different directions */
+.informational-tooltip--left .informational-tooltip__text,
+.informational-tooltip--right .informational-tooltip__text {
+  text-align: left;
+}
+
+.informational-tooltip--top .informational-tooltip__text,
+.informational-tooltip--bottom .informational-tooltip__text {
+  text-align: center;
+}
+
+/* Default variant uses center alignment as per Figma design */
+.informational-tooltip--default .informational-tooltip__text {
+  text-align: center;
+} 

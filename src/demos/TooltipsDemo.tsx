@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip } from '../components';
+import { Tooltip, InformationalTooltip } from '../components';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import './TooltipsDemo.css';
 
@@ -14,6 +14,17 @@ const TooltipsDemo: React.FC = () => {
     left: `<Tooltip text="Tooltip Text" direction="left" />`,
     right: `<Tooltip text="Tooltip Text" direction="right" />`
   };
+
+  // Code examples for informational tooltip
+  const informationalCodeExamples = {
+    default: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." />`,
+    top: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." direction="top" />`,
+    bottom: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." direction="bottom" />`,
+    left: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." direction="left" />`,
+    right: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." direction="right" />`
+  };
+
+  const multiLineText = "This is a multi-line informational tooltip that provides helpful context and guidance to users. It can contain longer text content.";
 
   return (
     <div className="tooltips-demo">
@@ -57,12 +68,39 @@ const TooltipsDemo: React.FC = () => {
         </div>
       </section>
 
-      {/* Placeholder sections for future tooltip types */}
-      <section className="tooltips-demo__section tooltips-demo__section--placeholder">
+      {/* Informational Tooltip (multi-line) Contact Sheet */}
+      <section className="tooltips-demo__section">
         <h2 className="tooltips-demo__section-title">Informational Tooltip (multi-line)</h2>
         <p className="tooltips-demo__section-description">
-          Coming soon: Multi-line tooltips for more detailed information.
+          Multi-line tooltips for more detailed information and contextual guidance.
         </p>
+
+        <div className="tooltips-demo__contact-sheet">
+          {directions.map((direction) => (
+            <div key={`informational-${direction}`} className="tooltips-demo__variant">
+              <h3 className="tooltips-demo__variant-title">
+                {direction.charAt(0).toUpperCase() + direction.slice(1)}
+              </h3>
+              
+              <div className="tooltips-demo__preview">
+                <InformationalTooltip 
+                  text={multiLineText}
+                  direction={direction}
+                />
+              </div>
+
+              <div className="tooltips-demo__code">
+                <div className="tooltips-demo__code-header">
+                  <span className="tooltips-demo__code-label">Usage</span>
+                </div>
+                <SyntaxHighlighter 
+                  language="tsx" 
+                  code={informationalCodeExamples[direction]}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="tooltips-demo__section tooltips-demo__section--placeholder">
