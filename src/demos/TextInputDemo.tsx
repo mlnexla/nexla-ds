@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { TextInput } from '../components/TextInput';
 import { Typography } from '../components/Typography';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
+
 import './TextInputDemo.css';
 
 const TextInputDemo: React.FC = () => {
@@ -14,6 +15,7 @@ const TextInputDemo: React.FC = () => {
   const [disabledValue, setDisabledValue] = useState('Typed');
   const [codeValue, setCodeValue] = useState('const example = "code";');
   const [chipValue, setChipValue] = useState('');
+
   
   const [chips, setChips] = useState([
     { id: '1', label: 'Chip 1', count: 3 },
@@ -25,7 +27,7 @@ const TextInputDemo: React.FC = () => {
   };
 
   const handleCopy = () => {
-    alert('Code copied to clipboard!');
+    // Copy functionality is handled by the CopyToClipboardButton component
   };
 
   return (
@@ -33,6 +35,63 @@ const TextInputDemo: React.FC = () => {
       <div className="demo-header">
         <h1 className="text-h1">TextInput Component Demo</h1>
         <p className="demo-description">A React component based on the Figma design with multiple states and variants.</p>
+      </div>
+
+      <div className="demo-interactive-grid">
+        <div className="demo-section">
+          <p>This example shows a multi-line tooltip with modest content:</p>
+          <div className="demo-interactive">
+            <TextInput
+              placeholder="Try typing, focusing, and hovering..."
+              helpText="This input will automatically switch between states"
+              tooltipText="This is an informational tooltip that appears when you hover over the info icon"
+            />
+          </div>
+        </div>
+
+        <div className="demo-section">
+          <p>This example shows a white tooltip with detailed content:</p>
+          <div className="demo-interactive">
+            <TextInput
+              label="API Configuration"
+              placeholder="Enter API configuration..."
+              helpText="Configure your API settings"
+              tooltipText="<strong>Specify path to data in API response</strong><br/><br/>You can choose which part of the API response should be treated as relevant data by Nexla. For ex: when pulling a list of items from a REST API endpoint, the API will usually return an array of records along with some metadata. You can configure this field such that Nexla can treat each element of that array as a record.<br/><br/>For JSON API response, please specify the JSON Path to point to the object or array you want Nexla to consider as relevant data, and for XML API use XPATH.<br/><br/>For ex: JSONPath could be $.data[*] if the response has an array named data at the top level. Select one of the smart tokens generated when you test the API, or try out JSON Path examples at <a href='https://jsonpath.com'>https://jsonpath.com</a>"
+              tooltipVariant="white"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="demo-section">
+        <h2>Usage</h2>
+        <p>Here's how to use the TextInput component with tooltips:</p>
+        <SyntaxHighlighter
+          code={`import { TextInput } from './components/TextInput';
+
+// Basic TextInput with standard tooltip
+<TextInput
+  label="Field Label"
+  placeholder="Enter text..."
+  tooltipText="This is a standard multi-line tooltip with detailed content"
+/>
+
+// TextInput with white tooltip
+<TextInput
+  label="API Configuration"
+  placeholder="Enter API configuration..."
+  tooltipText="Specify path to data in API response. You can choose which part of the API response should be treated as relevant data by Nexla."
+  tooltipVariant="white"
+/>
+
+// TextInput without tooltip
+<TextInput
+  label="Simple Field"
+  placeholder="Enter text..."
+  showHelpIcon={false}
+/>`}
+          language="typescript"
+        />
       </div>
 
       <div className="demo-grid">
@@ -167,17 +226,6 @@ const TextInputDemo: React.FC = () => {
       </div>
 
       <div className="demo-section">
-        <h2>Interactive Example</h2>
-        <p>This input automatically changes states based on user interaction:</p>
-        <div className="demo-interactive">
-          <TextInput
-            placeholder="Try typing, focusing, and hovering..."
-            helpText="This input will automatically switch between states"
-          />
-        </div>
-      </div>
-
-      <div className="demo-section">
         <h2>Usage</h2>
         <SyntaxHighlighter
           code={`import TextInput from './TextInput';
@@ -194,6 +242,14 @@ const TextInputDemo: React.FC = () => {
   value={value}
   onChange={setValue}
   error="This field is required"
+/>
+
+// With info icon on label
+<TextInput
+  label="Field Label"
+  showHelpIcon={true}
+  helpText="This is help text that appears below the input"
+  placeholder="Enter text..."
 />
 
 // Code variant with copy

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LabelTooltip, Tooltip, WhiteTooltip } from '../components';
+import { LabelTooltip, Tooltip } from '../components';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import './TooltipsDemo.css';
 
@@ -26,25 +26,25 @@ const TooltipsDemo: React.FC = () => {
 
   // Code examples for white tooltip
   const whiteTooltipCodeExamples = {
-    default: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." />`,
-    top: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="top" />`,
-    bottom: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="bottom" />`,
-    left: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="left" />`,
-    right: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="right" />`
+      default: `<Tooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." variant="white" />`,
+  top: `<Tooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="top" variant="white" />`,
+  bottom: `<Tooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="bottom" variant="white" />`,
+  left: `<Tooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="left" variant="white" />`,
+  right: `<Tooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="right" variant="white" />`
   };
 
   // Code examples for long form white tooltip
   const longFormCodeExamples = {
-    default: `<WhiteTooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." />`,
-    top: `<WhiteTooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="top" />`,
-    bottom: `<WhiteTooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="bottom" />`,
-    left: `<WhiteTooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="left" />`,
-    right: `<WhiteTooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="right" />`
+    default: `<Tooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." variant="white" />`,
+    top: `<Tooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="top" variant="white" />`,
+    bottom: `<Tooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="bottom" variant="white" />`,
+    left: `<Tooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="left" variant="white" />`,
+    right: `<Tooltip text="This is a long-form informational tooltip that provides extensive contextual help and guidance to users. It contains detailed information with a minimum of 13 words to demonstrate how longer content is handled within the white tooltip component." direction="right" variant="white" />`
   };
 
   // Code example for advanced example white tooltip (default variant only)
   const advancedExampleCodeExamples = {
-    default: `<WhiteTooltip text="<strong>Configure File Parsing Rules</strong>\n\nThe platform's default configurations of automatically detecting Nexsets from file content are primarily driven by parsing appropriately based on file extensions.\n\nBut, you can override the default parsing and further customize how the files are processed by selecting appropriate File Content Format choices.\n\nSome common scenarios are -\n\n<ol>\n<li>Files without extension to indicate what type of parser should be applied</li>\n<li>Compressed Zip or Tar files. Select Custom Text Format and the platform will automatically un-compress and parse the un-compressed files based on those settings.</li>\n<li>Text files with fixed width or custom column delimiters</li>\n<li>CSV files without a header row. The platform will automatically assign attribute names as attribute1, attribute2, etc.</li>\n<li>Structured files where the some lines have to be skipped before processing rows</li>\n<li>Files where name extension does not match the desired parser (ex json content in a .dat file)</li>\n<li>Files where some customization has to be applied to how the default extension parser treats data.</li>\n</ol>" />`
+    default: `<Tooltip text="<strong>Configure File Parsing Rules</strong>\n\nThe platform's default configurations of automatically detecting Nexsets from file content are primarily driven by parsing appropriately based on file extensions.\n\nBut, you can override the default parsing and further customize how the files are processed by selecting appropriate File Content Format choices.\n\nSome common scenarios are -\n\n<ol>\n<li>Files without extension to indicate what type of parser should be applied</li>\n<li>Compressed Zip or Tar files. Select Custom Text Format and the platform will automatically un-compress and parse the un-compressed files based on those settings.</li>\n<li>Text files with fixed width or custom column delimiters</li>\n<li>CSV files without a header row. The platform will automatically assign attribute names as attribute1, attribute2, etc.</li>\n<li>Structured files where the some lines have to be skipped before processing rows</li>\n<li>Files where name extension does not match the desired parser (ex json content in a .dat file)</li>\n<li>Files where some customization has to be applied to how the default extension parser treats data.</li>\n</ol>" variant="white" />`
   };
 
   const multiLineText = "This is a multi-line informational tooltip that provides helpful context and guidance to users. It can contain longer text content.";
@@ -150,9 +150,10 @@ Some common scenarios are -
               </h3>
               
               <div className="tooltips-demo__preview">
-                <WhiteTooltip 
+                <Tooltip 
                   text={whiteTooltipText}
                   direction={direction}
+                  variant="white"
                 />
               </div>
 
@@ -180,9 +181,10 @@ Some common scenarios are -
               </h3>
               
               <div className="tooltips-demo__preview">
-                <WhiteTooltip 
+                <Tooltip 
                   text={longFormText}
                   direction={direction}
+                  variant="white"
                   className="white-tooltip--long-form"
                 />
               </div>
@@ -200,15 +202,16 @@ Some common scenarios are -
       <section className="tooltips-demo__section">
         <h2 className="tooltips-demo__section-title">White Tooltip (Long Form) Advanced Example</h2>
         <p className="tooltips-demo__section-description">
-          Advanced example showing how WhiteTooltip handles complex, structured content with detailed information.
+          Advanced example showing how Tooltip handles complex, structured content with detailed information.
         </p>
 
         <div className="tooltips-demo__contact-sheet">
           <div className="tooltips-demo__variant">
             <div className="tooltips-demo__preview">
-              <WhiteTooltip 
+              <Tooltip 
                 text={advancedExampleText}
                 direction="default"
+                variant="white"
                 className="white-tooltip--long-form"
               />
             </div>

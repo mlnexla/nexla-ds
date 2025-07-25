@@ -9,7 +9,7 @@ export { Sidebar } from './Sidebar';
 export { TextInput } from './TextInput';
 export { LabelTooltip } from './Tooltip';
 export { Tooltip } from './InformationalTooltip';
-export { WhiteTooltip } from './WhiteTooltip';
+
 export { Typography } from './Typography';
 
 // Icons

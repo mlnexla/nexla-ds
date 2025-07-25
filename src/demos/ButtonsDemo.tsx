@@ -194,7 +194,7 @@ export const ButtonsDemo: React.FC = () => {
   background: var(--color-greyscale-50);
   border-color: var(--color-greyscale-200);
   box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 
-              0px 2px 4px 0px #e4e4e7;
+              0px 2px 4px 0px var(--color-greyscale-100);
 }
 
 .basic-action-button--primary.basic-action-button--hover .basic-action-button__label {
@@ -233,7 +233,7 @@ export const ButtonsDemo: React.FC = () => {
   background: var(--color-primary-500);
   border-color: var(--color-primary-500);
   box-shadow: 0px 5px 25px 0px rgba(228, 228, 231, 0.25), 
-              0px 2px 4px 0px #e4e4e7;
+              0px 2px 4px 0px var(--color-greyscale-100);
 }`}
           />
 

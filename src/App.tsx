@@ -76,12 +76,12 @@ function AppContent() {
           value: '/badge',
           label: 'Badge',
           path: '/badge'
-    },
-    { 
-      value: '/buttons', 
+        },
+        {
+          value: '/buttons',
           label: 'Button',
-      path: '/buttons'
-    },
+          path: '/buttons'
+        },
         {
           value: '/icons',
           label: 'Icon',
@@ -92,18 +92,16 @@ function AppContent() {
           label: 'Tag',
           path: '/tag'
         },
-    { 
-      value: '/inputs', 
-      label: 'Text Input',
-      path: '/inputs'
+        {
+          value: '/inputs',
+          label: 'Text Input',
+          path: '/inputs'
         },
         {
           value: '/tooltips',
           label: 'Tooltip',
           path: '/tooltips'
-        },
-
-
+        }
       ],
       defaultExpanded: true
     },

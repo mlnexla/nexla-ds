@@ -156,7 +156,7 @@
 .text-input-code-container {
   display: flex;
   gap: var(--spacing-md);
-  align-items: flex-start;
+  align-items: center;
 }
 
 .text-input-code-container .text-input-field {
@@ -169,6 +169,7 @@
   font-size: var(--font-size-code) !important;
   line-height: var(--line-height-normal) !important;
   color: var(--color-greyscale-600) !important;
+  text-align: left !important;
 }
 
 /* Using standard CopyToClipboardButton component instead */
@@ -255,9 +256,12 @@
 }
 
 .text-input-label-container .fi-rr-info {
-  font-size: 16px;
-  color: var(--color-greyscale-400);
+  /* Icon styling is now handled by the FiRrInfo component */
 }
+
+
+
+
 
 /* Focus styles */
 .text-input-field:focus-within {

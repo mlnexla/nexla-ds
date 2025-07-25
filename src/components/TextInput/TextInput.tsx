@@ -1,12 +1,77 @@
 import React, { useState, useRef, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import FiRrCrossCircle from '../icons/FiRrCrossCircle';
+import FiRrInfo from '../icons/FiRrInfo';
 import { CopyToClipboardButton } from '../CopyToClipboardButton';
+import { Tooltip, TooltipVariant } from '../InformationalTooltip';
+import '../InformationalTooltip/InformationalTooltip.css';
 import './TextInput.css';
 
+// Tooltip Portal component
+const TooltipPortal = ({ children }: { children: React.ReactNode }) => {
+  return ReactDOM.createPortal(
+    children,
+    document.body
+  );
+};
+
 // Icon components
-const InfoIcon = () => (
-  <i className="fi-rr-info"></i>
-);
+const InfoIcon = ({ tooltipText, tooltipVariant, showTooltip, onMouseEnter, onMouseLeave }: { 
+  tooltipText?: string;
+  tooltipVariant?: TooltipVariant;
+  showTooltip: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}) => {
+  const iconRef = useRef<HTMLDivElement>(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ left: 0, top: 0 });
+  
+  useEffect(() => {
+    if (showTooltip && iconRef.current) {
+      const rect = iconRef.current.getBoundingClientRect();
+      setTooltipPosition({
+        left: rect.right + 4, // 4px gap
+        top: rect.top + rect.height / 2
+      });
+    }
+  }, [showTooltip]);
+  
+  if (tooltipText) {
+    return (
+      <>
+        <div 
+          ref={iconRef}
+          style={{ 
+            cursor: 'help', 
+            display: 'inline-flex',
+            alignItems: 'center'
+          }}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
+          <FiRrInfo size={16} color="currentColor" />
+        </div>
+        {showTooltip && (
+          <TooltipPortal>
+            <div style={{ 
+              position: 'fixed', 
+              left: tooltipPosition.left, 
+              top: tooltipPosition.top,
+              transform: 'translateY(-50%)', 
+              zIndex: 1000,
+              pointerEvents: 'none',
+              '--tooltip-transform-origin': 'left center'
+            } as React.CSSProperties}>
+              <Tooltip text={tooltipText} direction="right" variant={tooltipVariant} />
+            </div>
+          </TooltipPortal>
+        )}
+      </>
+    );
+  }
+  
+  return <FiRrInfo size={16} color="currentColor" />;
+};
 
 const CloseIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,6 +104,8 @@ export interface TextInputProps {
   variant?: TextInputVariant;
   showHelpIcon?: boolean;
   helpText?: string;
+  tooltipText?: string;
+  tooltipVariant?: TooltipVariant;
   error?: string;
   disabled?: boolean;
   chips?: Array<{ id: string; label: string; count?: number }>;
@@ -61,6 +128,8 @@ export const TextInput: React.FC<TextInputProps> = ({
   variant = 'default',
   showHelpIcon = true,
   helpText = 'Help text should be written here',
+  tooltipText,
+  tooltipVariant = 'default',
   error,
   disabled = false,
   chips = [],
@@ -77,6 +146,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   const [showCursor, setShowCursor] = useState(false);
   const [copiedState, setCopiedState] = useState<'default' | 'copied'>('default');
+  const [showTooltip, setShowTooltip] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -140,7 +210,15 @@ export const TextInput: React.FC<TextInputProps> = ({
       {/* Label */}
       <div className="text-input-label-container">
         <label className="text-input-label">{label}</label>
-        {showHelpIcon && <InfoIcon />}
+        {showHelpIcon && (
+          <InfoIcon 
+            tooltipText={tooltipText}
+            tooltipVariant={tooltipVariant}
+            showTooltip={showTooltip}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+          />
+        )}
       </div>
 
       {/* Input Field */}
@@ -148,20 +226,22 @@ export const TextInput: React.FC<TextInputProps> = ({
         {isCodeVariant ? (
           <div className="text-input-code-container">
             <div className={`text-input-field text-input-${activeVariant}`}>
-              <input
-                ref={inputRef}
-                type="text"
-                value={internalValue}
-                onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                placeholder={placeholder}
-                disabled={disabled}
-                className="text-input-code"
-                id={id}
-              />
+              <div className="text-input-content">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  value={internalValue}
+                  onChange={handleChange}
+                  onFocus={handleFocus}
+                  onBlur={handleBlur}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  placeholder={placeholder}
+                  disabled={disabled}
+                  className="text-input-code"
+                  id={id}
+                />
+              </div>
             </div>
             <CopyToClipboardButton
               state={copiedState}
