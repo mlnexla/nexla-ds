@@ -111,6 +111,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Add extra spacing after Usage Examples section */
+.demo-section:has(.usage-examples) {
+  margin-bottom: calc(var(--spacing-3xl) * 2);
 }
 
 .usage-example {
@@ -140,10 +146,27 @@
   text-align: center;
   cursor: pointer;
   transition: box-shadow var(--transition-base);
+  box-shadow: var(--shadow-sm);
 }
 
 .interactive-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
+}
+
+.interactive-card-lg {
+  box-shadow: var(--shadow-md);
+}
+
+.interactive-card-lg:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.interactive-card-focus {
+  box-shadow: var(--shadow-sm);
+}
+
+.interactive-card-focus:hover {
+  box-shadow: var(--shadow-focus);
 }
 
 /* Guidelines */

@@ -54,15 +54,10 @@ const TooltipsDemo: React.FC = () => {
                 />
               </div>
 
-              <div className="tooltips-demo__code">
-                <div className="tooltips-demo__code-header">
-                  <span className="tooltips-demo__code-label">Usage</span>
-                </div>
-                <SyntaxHighlighter 
-                  language="tsx" 
-                  code={codeExamples[direction]}
-                />
-              </div>
+              <SyntaxHighlighter 
+                language="tsx" 
+                code={codeExamples[direction]}
+              />
             </div>
           ))}
         </div>
@@ -89,15 +84,10 @@ const TooltipsDemo: React.FC = () => {
                 />
               </div>
 
-              <div className="tooltips-demo__code">
-                <div className="tooltips-demo__code-header">
-                  <span className="tooltips-demo__code-label">Usage</span>
-                </div>
-                <SyntaxHighlighter 
-                  language="tsx" 
-                  code={informationalCodeExamples[direction]}
-                />
-              </div>
+              <SyntaxHighlighter 
+                language="tsx" 
+                code={informationalCodeExamples[direction]}
+              />
             </div>
           ))}
         </div>

@@ -125,9 +125,6 @@ const TypographyDemo: React.FC = () => {
         </div>
         
         <div className="header-code-example">
-          <Typography variant="body-small-500" className="code-label">
-            Usage Example:
-          </Typography>
           <SyntaxHighlighter 
             code={`/* Using CSS classes */
 <h1 className="text-h1">Main Page Title</h1>
@@ -198,25 +195,15 @@ const TypographyDemo: React.FC = () => {
             </div>
 
             <div className="variant-code">
-              <div className="code-section">
-                <Typography variant="body-small-500" className="code-label">
-                  Component Usage:
-                </Typography>
-                <SyntaxHighlighter 
-                  code={generateUsageCode(item.variant)}
-                  language="tsx"
-                />
-              </div>
+              <SyntaxHighlighter 
+                code={generateUsageCode(item.variant)}
+                language="tsx"
+              />
               
-              <div className="code-section">
-                <Typography variant="body-small-500" className="code-label">
-                  Utility Class:
-                </Typography>
-                <SyntaxHighlighter 
-                  code={generateUtilityCode(item.variant)}
-                  language="html"
-                />
-              </div>
+              <SyntaxHighlighter 
+                code={generateUtilityCode(item.variant)}
+                language="html"
+              />
             </div>
           </div>
         ))}
