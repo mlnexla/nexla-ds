@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tooltip, InformationalTooltip } from '../components';
+import { Tooltip, InformationalTooltip, WhiteTooltip } from '../components';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 import './TooltipsDemo.css';
 
@@ -24,7 +24,17 @@ const TooltipsDemo: React.FC = () => {
     right: `<InformationalTooltip text="This is a multi-line informational tooltip that provides helpful context and guidance to users." direction="right" />`
   };
 
+  // Code examples for white tooltip
+  const whiteTooltipCodeExamples = {
+    default: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." />`,
+    top: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="top" />`,
+    bottom: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="bottom" />`,
+    left: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="left" />`,
+    right: `<WhiteTooltip text="This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility." direction="right" />`
+  };
+
   const multiLineText = "This is a multi-line informational tooltip that provides helpful context and guidance to users. It can contain longer text content.";
+  const whiteTooltipText = "This is a white tooltip with dark text, shadow, and 12px padding for enhanced visibility.";
 
   return (
     <div className="tooltips-demo">
@@ -87,6 +97,36 @@ const TooltipsDemo: React.FC = () => {
               <SyntaxHighlighter 
                 language="tsx" 
                 code={informationalCodeExamples[direction]}
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* White Tooltip Contact Sheet */}
+      <section className="tooltips-demo__section">
+        <h2 className="tooltips-demo__section-title">White Tooltip</h2>
+        <p className="tooltips-demo__section-description">
+          White tooltips with dark text, shadow, and 12px padding for enhanced visibility and contrast.
+        </p>
+
+        <div className="tooltips-demo__contact-sheet">
+          {directions.map((direction) => (
+            <div key={`white-${direction}`} className="tooltips-demo__variant">
+              <h3 className="tooltips-demo__variant-title">
+                {direction.charAt(0).toUpperCase() + direction.slice(1)}
+              </h3>
+              
+              <div className="tooltips-demo__preview">
+                <WhiteTooltip 
+                  text={whiteTooltipText}
+                  direction={direction}
+                />
+              </div>
+
+              <SyntaxHighlighter 
+                language="tsx" 
+                code={whiteTooltipCodeExamples[direction]}
               />
             </div>
           ))}
