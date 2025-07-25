@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
-import { Typography } from '../components/Typography';
+// import { Typography } from '../components/Typography';
 import './ColorsDemo.css';
 
 interface ColorToken {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput } from '../components/TextInput';
-import { Typography } from '../components/Typography';
+// import { Typography } from '../components/Typography';
 import SyntaxHighlighter from '../components/SyntaxHighlighter';
 
 import './TextInputDemo.css';

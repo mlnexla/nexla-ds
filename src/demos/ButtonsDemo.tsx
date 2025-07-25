@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '../components/Button';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { SyntaxHighlighter } from '../components/SyntaxHighlighter';
-import { Typography } from '../components/Typography';
+// import { Typography } from '../components/Typography';
 import './ButtonsDemo.css';
 
 interface CodeExampleProps {

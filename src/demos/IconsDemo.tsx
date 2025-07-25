@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { renderToString } from 'react-dom/server';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 import { TextInput } from '../components/TextInput';
-import { Typography } from '../components/Typography';
+// import { Typography } from '../components/Typography';
 import './IconsDemo.css';
 
 // Import all Flaticon icons

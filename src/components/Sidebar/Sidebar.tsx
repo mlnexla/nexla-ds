@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import FiRrFolder from '../icons/FiRrFolder';
+// import FiRrFolder from '../icons/FiRrFolder';
 import './Sidebar.css';
 
 interface SidebarOption {
