@@ -16,7 +16,7 @@ const ProductPrinciples: React.FC = () => {
         <main className="product-principles__content">
           <section className="principles-list">
             <div className="principle">
-              <h2 className="principle__title">
+              <h2 className="principle__title text-h2">
                 <span className="principle__number">1.</span>
                 Design for the Next Action
               </h2>
@@ -31,7 +31,7 @@ const ProductPrinciples: React.FC = () => {
             </div>
 
             <div className="principle">
-              <h2 className="principle__title">
+              <h2 className="principle__title text-h2">
                 <span className="principle__number">2.</span>
                 Expose Power, Don't Force It
               </h2>
@@ -46,7 +46,7 @@ const ProductPrinciples: React.FC = () => {
             </div>
 
             <div className="principle">
-              <h2 className="principle__title">
+              <h2 className="principle__title text-h2">
                 <span className="principle__number">3.</span>
                 Consistency Beats Cleverness
               </h2>
@@ -61,7 +61,7 @@ const ProductPrinciples: React.FC = () => {
             </div>
 
             <div className="principle">
-              <h2 className="principle__title">
+              <h2 className="principle__title text-h2">
                 <span className="principle__number">4.</span>
                 Safe Defaults, Visible Risk
               </h2>
@@ -76,7 +76,7 @@ const ProductPrinciples: React.FC = () => {
             </div>
 
             <div className="principle">
-              <h2 className="principle__title">
+              <h2 className="principle__title text-h2">
                 <span className="principle__number">5.</span>
                 Think in Systems, Build in Surfaces
               </h2>

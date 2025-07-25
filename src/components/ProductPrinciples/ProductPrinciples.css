@@ -85,7 +85,7 @@
 
 .principle__number {
   color: var(--color-primary-600);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-regular);
   font-size: 1.75rem;
   min-width: 2.5rem;
 }

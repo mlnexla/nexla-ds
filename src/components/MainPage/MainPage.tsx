@@ -12,10 +12,10 @@ const MainPage: React.FC = () => {
         
         <main className="main-page__content">
           <section className="readme-content">
-            <h2>About the Design System</h2>
+            <h2 className="text-h2">About the Design System</h2>
             <p>A collection of reusable UI components with consistent styling and behavior.</p>
             
-            <h3>Project Structure</h3>
+            <h3 className="text-h3">Project Structure</h3>
             <pre className="code-block">
 {`src/
 ├── components/           # All React components
@@ -46,7 +46,7 @@ const MainPage: React.FC = () => {
 └── index.ts            # Main library exports`}
             </pre>
 
-            <h3>Features</h3>
+            <h3 className="text-h3">Features</h3>
             
             <ul>
               <li><strong>TypeScript:</strong> Full TypeScript support with proper type definitions</li>
@@ -56,7 +56,7 @@ const MainPage: React.FC = () => {
 
 
 
-            <h3>Getting Started</h3>
+            <h3 className="text-h3">Getting Started</h3>
             <ol>
               <li><strong>Install dependencies:</strong>
                 <pre className="code-block">npm install</pre>
@@ -67,7 +67,7 @@ const MainPage: React.FC = () => {
               <li><strong>Check terminal output:</strong> The server will display the available URL (typically <code>http://localhost:3000</code> or <code>http://localhost:3001</code> if port 3000 is in use)</li>
             </ol>
 
-            <h3>Adding New Components</h3>
+            <h3 className="text-h3">Adding New Components</h3>
             <ol>
               <li>Create a new folder in <code>src/components/ComponentName/</code></li>
               <li>Add component files (<code>.tsx</code>, <code>.css</code>, <code>index.ts</code>)</li>
@@ -76,7 +76,7 @@ const MainPage: React.FC = () => {
               <li>Import and use: <code>import {`{ ComponentName }`} from './components'</code></li>
             </ol>
 
-            <h3>Recent Updates</h3>
+            <h3 className="text-h3">Recent Updates</h3>
             <ul>
               <li><strong>✅ Typography System Enhancement</strong> - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency</li>
               <li><strong>✅ Design Token Improvements</strong> - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth</li>
@@ -88,7 +88,7 @@ const MainPage: React.FC = () => {
               <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
             </ul>
 
-            <h3>Browser Support</h3>
+            <h3 className="text-h3">Browser Support</h3>
             <p>The design system works in all modern browsers that support ES6 and CSS Grid/Flexbox.</p>
           </section>
         </main>
