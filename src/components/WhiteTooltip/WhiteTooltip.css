@@ -86,4 +86,16 @@
 /* Long form variants use left alignment for better readability */
 .white-tooltip--long-form .white-tooltip__text {
   text-align: left;
+}
+
+/* Reduce spacing for ordered lists in white tooltips */
+.white-tooltip__text ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: var(--spacing-lg);
+}
+
+.white-tooltip__text li {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
 } 
