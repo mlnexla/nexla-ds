@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import spinnerImage from '../../assets/progress-spinner-grey.png';
+import spinnerImage2x from '../../assets/progress-spinner-grey@2x.png';
 
 import './Button.css';
 
@@ -26,8 +28,8 @@ const Spinner = () => {
     <div className="button-spinner">
       <div className="progress-spinner-container">
         <img 
-          src="/src/assets/progress-spinner-grey.png"
-          srcSet="/src/assets/progress-spinner-grey.png 1x, /src/assets/progress-spinner-grey@2x.png 2x"
+          src={spinnerImage}
+          srcSet={`${spinnerImage} 1x, ${spinnerImage2x} 2x`}
           alt="Loading"
           className="progress-spinner-image"
           width="20"
