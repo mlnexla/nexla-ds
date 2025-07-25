@@ -1,15 +1,15 @@
 import React from 'react';
 import './InformationalTooltip.css';
 
-export type InformationalTooltipDirection = 'default' | 'top' | 'bottom' | 'left' | 'right';
+export type TooltipDirection = 'default' | 'top' | 'bottom' | 'left' | 'right';
 
-export interface InformationalTooltipProps {
+export interface TooltipProps {
   text: string;
-  direction?: InformationalTooltipDirection;
+  direction?: TooltipDirection;
   className?: string;
 }
 
-export const InformationalTooltip: React.FC<InformationalTooltipProps> = ({
+export const Tooltip: React.FC<TooltipProps> = ({
   text,
   direction = 'default',
   className = ''
@@ -46,13 +46,13 @@ export const InformationalTooltip: React.FC<InformationalTooltipProps> = ({
   };
 
   return (
-    <div className={`informational-tooltip informational-tooltip--${direction} ${className}`}>
+    <div className={`tooltip tooltip--${direction} ${className}`}>
       {direction === 'top' && (
         <>
-          <div className="informational-tooltip__content">
-            <p className="informational-tooltip__text">{text}</p>
+          <div className="tooltip__content">
+            <p className="tooltip__text">{text}</p>
           </div>
-          <div className="informational-tooltip__arrow">
+          <div className="tooltip__arrow">
             {renderArrow()}
           </div>
         </>
@@ -60,21 +60,21 @@ export const InformationalTooltip: React.FC<InformationalTooltipProps> = ({
       
       {direction === 'bottom' && (
         <>
-          <div className="informational-tooltip__arrow">
+          <div className="tooltip__arrow">
             {renderArrow()}
           </div>
-          <div className="informational-tooltip__content">
-            <p className="informational-tooltip__text">{text}</p>
+          <div className="tooltip__content">
+            <p className="tooltip__text">{text}</p>
           </div>
         </>
       )}
       
       {direction === 'left' && (
         <>
-          <div className="informational-tooltip__content">
-            <p className="informational-tooltip__text">{text}</p>
+          <div className="tooltip__content">
+            <p className="tooltip__text">{text}</p>
           </div>
-          <div className="informational-tooltip__arrow">
+          <div className="tooltip__arrow">
             {renderArrow()}
           </div>
         </>
@@ -82,18 +82,18 @@ export const InformationalTooltip: React.FC<InformationalTooltipProps> = ({
       
       {direction === 'right' && (
         <>
-          <div className="informational-tooltip__arrow">
+          <div className="tooltip__arrow">
             {renderArrow()}
           </div>
-          <div className="informational-tooltip__content">
-            <p className="informational-tooltip__text">{text}</p>
+          <div className="tooltip__content">
+            <p className="tooltip__text">{text}</p>
           </div>
         </>
       )}
       
       {direction === 'default' && (
-        <div className="informational-tooltip__content">
-          <p className="informational-tooltip__text">{text}</p>
+        <div className="tooltip__content">
+          <p className="tooltip__text">{text}</p>
         </div>
       )}
     </div>

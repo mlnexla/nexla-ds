@@ -7,8 +7,8 @@ export { ProductPrinciples } from './ProductPrinciples';
 export { ScrollToTop } from './ScrollToTop';
 export { Sidebar } from './Sidebar';
 export { TextInput } from './TextInput';
-export { Tooltip } from './Tooltip';
-export { InformationalTooltip } from './InformationalTooltip';
+export { LabelTooltip } from './Tooltip';
+export { Tooltip } from './InformationalTooltip';
 export { WhiteTooltip } from './WhiteTooltip';
 export { Typography } from './Typography';
 

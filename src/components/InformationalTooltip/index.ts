@@ -1,2 +1,2 @@
-export { InformationalTooltip } from './InformationalTooltip';
-export type { InformationalTooltipProps, InformationalTooltipDirection } from './InformationalTooltip'; 
+export { Tooltip } from './InformationalTooltip';
+export type { TooltipProps, TooltipDirection } from './InformationalTooltip'; 

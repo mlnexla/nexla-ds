@@ -50,7 +50,7 @@ export const WhiteTooltip: React.FC<WhiteTooltipProps> = ({
       {direction === 'top' && (
         <>
           <div className="white-tooltip__content">
-            <p className="white-tooltip__text">{text}</p>
+            <p className="white-tooltip__text" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
           <div className="white-tooltip__arrow">
             {renderArrow()}
@@ -64,7 +64,7 @@ export const WhiteTooltip: React.FC<WhiteTooltipProps> = ({
             {renderArrow()}
           </div>
           <div className="white-tooltip__content">
-            <p className="white-tooltip__text">{text}</p>
+            <p className="white-tooltip__text" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         </>
       )}
@@ -72,7 +72,7 @@ export const WhiteTooltip: React.FC<WhiteTooltipProps> = ({
       {direction === 'left' && (
         <>
           <div className="white-tooltip__content">
-            <p className="white-tooltip__text">{text}</p>
+            <p className="white-tooltip__text" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
           <div className="white-tooltip__arrow">
             {renderArrow()}
@@ -86,14 +86,14 @@ export const WhiteTooltip: React.FC<WhiteTooltipProps> = ({
             {renderArrow()}
           </div>
           <div className="white-tooltip__content">
-            <p className="white-tooltip__text">{text}</p>
+            <p className="white-tooltip__text" dangerouslySetInnerHTML={{ __html: text }} />
           </div>
         </>
       )}
       
       {direction === 'default' && (
         <div className="white-tooltip__content">
-          <p className="white-tooltip__text">{text}</p>
+          <p className="white-tooltip__text" dangerouslySetInnerHTML={{ __html: text }} />
         </div>
       )}
     </div>

@@ -3,7 +3,7 @@
 
 /* Tooltip Component Styles */
 
-.tooltip {
+.label-tooltip {
   /* Base styles */
   position: relative;
   display: inline-flex;
@@ -12,14 +12,14 @@
   opacity: 0.8;
 }
 
-.tooltip__content {
+.label-tooltip__content {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: var(--radius-sm);
   padding: var(--spacing-sm) var(--spacing-md);
   overflow: hidden;
 }
 
-.tooltip__text {
+.label-tooltip__text {
   color: var(--color-white);
   font-family: var(--font-family-default);
   font-weight: var(--font-weight-regular);
@@ -30,7 +30,7 @@
   display: block;
 }
 
-.tooltip__arrow {
+.label-tooltip__arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,51 +38,51 @@
 }
 
 /* Direction variants */
-.tooltip--default {
+.label-tooltip--default {
   flex-direction: row;
 }
 
-.tooltip--top {
+.label-tooltip--top {
   flex-direction: column-reverse;
 }
 
-.tooltip--bottom {
+.label-tooltip--bottom {
   flex-direction: column-reverse;
 }
 
-.tooltip--left {
+.label-tooltip--left {
   flex-direction: row-reverse;
 }
 
-.tooltip--right {
+.label-tooltip--right {
   flex-direction: row-reverse;
 }
 
 /* Arrow positioning */
-.tooltip__arrow--top {
+.label-tooltip__arrow--top {
   margin-top: 0;
 }
 
-.tooltip__arrow--bottom {
+.label-tooltip__arrow--bottom {
   margin-top: 0;
 }
 
-.tooltip__arrow--left {
+.label-tooltip__arrow--left {
   margin-left: 0;
 }
 
-.tooltip__arrow--right {
+.label-tooltip__arrow--right {
   margin-left: 0;
 }
 
 /* Text alignment per direction */
-.tooltip--left .tooltip__text,
-.tooltip--right .tooltip__text {
+.label-tooltip--left .label-tooltip__text,
+.label-tooltip--right .label-tooltip__text {
   text-align: left;
 }
 
-.tooltip--default .tooltip__text,
-.tooltip--top .tooltip__text,
-.tooltip--bottom .tooltip__text {
+.label-tooltip--default .label-tooltip__text,
+.label-tooltip--top .label-tooltip__text,
+.label-tooltip--bottom .label-tooltip__text {
   text-align: center;
 } 
