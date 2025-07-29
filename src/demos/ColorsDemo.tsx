@@ -129,23 +129,29 @@ export const ColorsDemo: React.FC = () => {
             <div className="color-info">
               <h3 className="color-name">{color.name}</h3>
               <div className="color-values">
-                <span className="color-hex">{color.value}</span>
                 <span className="color-variable">{color.variable}</span>
               </div>
               {color.description && (
                 <p className="color-description">{color.description}</p>
               )}
-              <div className="color-actions">
-                <CopyToClipboardButton
-                  state={copiedColor === color.variable ? 'copied' : 'default'}
-                  onClick={() => copyToClipboard(color.value, color.variable)}
-                  label="Copy Hex"
-                />
+              <div 
+                className="color-actions" 
+                style={{ justifyContent: 'space-between', alignItems: 'center' }}
+              >
                 <CopyToClipboardButton
                   state={copiedColor === `${color.variable}-var` ? 'copied' : 'default'}
                   onClick={() => copyToClipboard(`var(${color.variable})`, `${color.variable}-var`)}
                   label="Copy CSS"
                 />
+                <span 
+                  className="color-hex" 
+                  style={{ 
+                    userSelect: 'none',
+                    fontSize: 'var(--font-size-sm)'
+                  }}
+                >
+                  {color.value}
+                </span>
               </div>
             </div>
           </div>
