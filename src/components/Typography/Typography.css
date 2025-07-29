@@ -44,11 +44,12 @@
 }
 
 /* Overline Typography Variant */
-.typography-overline-400 {
+.typography-overline-400,
+.overline {
   font: var(--typography-overline-400);
   color: var(--color-greyscale-400);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: var(--typography-overline-transform);
+  letter-spacing: var(--typography-overline-spacing);
 }
 
 /* Mono Typography Variants */
