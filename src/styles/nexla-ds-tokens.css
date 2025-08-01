@@ -155,6 +155,7 @@
   /* Transitions */
   --transition-fast: 0.1s ease;
   --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
   
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);

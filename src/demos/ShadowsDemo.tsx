@@ -74,7 +74,8 @@ const ShadowsDemo: React.FC = () => {
           <div className="usage-example">
             <Typography variant="body-default-500" as="h3">Component Usage</Typography>
             <SyntaxHighlighter
-              code={`.card {
+              code={`/* Standard card with base transition */
+.card {
   box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition-base);
 }
@@ -83,12 +84,16 @@ const ShadowsDemo: React.FC = () => {
   box-shadow: var(--shadow-md);
 }
 
+/* Modal with slow transition for dramatic effect */
 .modal {
   box-shadow: var(--shadow-lg);
+  transition: all var(--transition-slow);
 }
 
+/* Quick focus feedback */
 .button:focus {
   box-shadow: var(--shadow-focus);
+  transition: box-shadow var(--transition-fast);
 }`}
               language="css"
             />

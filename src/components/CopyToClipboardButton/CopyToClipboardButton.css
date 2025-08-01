@@ -95,11 +95,9 @@
 }
 
 /* Animation for state change */
-.copy-to-clipboard-button {
-  transition: all 0.2s ease;
-}
-
 .copy-to-clipboard-button.copied {
+  /* Note: Using hardcoded 0.3s instead of var(--transition-slow) 
+     because CSS variables in animation durations have browser compatibility issues */
   animation: copySuccess 0.3s ease-out;
 }
 

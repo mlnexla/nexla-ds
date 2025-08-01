@@ -15,6 +15,7 @@ import ShadowsDemo from './demos/ShadowsDemo';
 import TagDemo from './demos/TagDemo';
 import BadgeDemo from './demos/BadgeDemo';
 import TooltipsDemo from './demos/TooltipsDemo';
+import TransitionsDemo from './demos/TransitionsDemo';
 
 import './styles/global.css';
 
@@ -61,6 +62,11 @@ function AppContent() {
           label: 'Shadows',
           path: '/shadows'
     },
+        {
+          value: '/transitions',
+          label: 'Transitions',
+          path: '/transitions'
+        },
     { 
       value: '/typography', 
       label: 'Typography',
@@ -150,6 +156,7 @@ function AppContent() {
           <Route path="/spacing" element={<SpacingDemo />} />
           <Route path="/radius" element={<RadiusDemo />} />
           <Route path="/shadows" element={<ShadowsDemo />} />
+          <Route path="/transitions" element={<TransitionsDemo />} />
           <Route path="/tag" element={<TagDemo />} />
           <Route path="/badge" element={<BadgeDemo />} />
           <Route path="/tooltips" element={<TooltipsDemo />} />
