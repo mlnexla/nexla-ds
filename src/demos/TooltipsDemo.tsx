@@ -1,6 +1,6 @@
 import React from 'react';
 import { LabelTooltip, Tooltip } from '../components';
-import SyntaxHighlighter from '../components/SyntaxHighlighter';
+import SyntaxHighlighter from '../demo-components/SyntaxHighlighter';
 import './TooltipsDemo.css';
 
 const TooltipsDemo: React.FC = () => {

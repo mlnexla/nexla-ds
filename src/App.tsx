@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
-import { DemoSidebar } from './components/DemoSidebar';
-import { MainPage } from './components/MainPage';
-import { ProductPrinciples } from './components/ProductPrinciples';
-import { ScrollToTop } from './components/ScrollToTop';
+import { DemoSidebar } from './demo-components/DemoSidebar';
+import { MainPage } from './demo-components/MainPage';
+import { ProductPrinciples } from './demo-components/ProductPrinciples';
+import { ScrollToTop } from './demo-components/ScrollToTop';
 import { ButtonsDemo } from './demos/ButtonsDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';

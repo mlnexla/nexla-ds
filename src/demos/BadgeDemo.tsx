@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
-import { SyntaxHighlighter } from '../components/SyntaxHighlighter';
+import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './BadgeDemo.css';
 
 const BadgeDemo: React.FC = () => {

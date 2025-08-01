@@ -24,6 +24,7 @@ const MainPage: React.FC = () => {
 │   ├── JumpMenu/        # Navigation jump menu
 │   ├── MainPage/        # Main documentation page component
 │   ├── PrimaryActionButton/    # Primary action button (legacy)
+├── demo-components/      # Demo-specific components (not in design system build)
 │   ├── DemoSidebar/     # DemoSidebar - Navigation sidebar for demo site
 │   ├── TextInput/       # TextInput component with multiple states
 │   ├── Typography/      # Typography component system

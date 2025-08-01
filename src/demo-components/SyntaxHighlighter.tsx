@@ -4,7 +4,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
 import 'prismjs/themes/prism-tomorrow.css';
-import { CopyToClipboardButton } from './CopyToClipboardButton';
+import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
 
 interface SyntaxHighlighterProps {
   code: string;
