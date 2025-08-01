@@ -5,7 +5,7 @@ export { JumpMenu } from './JumpMenu';
 export { MainPage } from './MainPage';
 export { ProductPrinciples } from './ProductPrinciples';
 export { ScrollToTop } from './ScrollToTop';
-export { Sidebar } from './Sidebar';
+export { DemoSidebar } from './DemoSidebar';
 export { TextInput } from './TextInput';
 export { LabelTooltip } from './Tooltip';
 export { Tooltip } from './InformationalTooltip';

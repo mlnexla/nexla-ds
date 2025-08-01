@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // import FiRrFolder from '../icons/FiRrFolder';
-import './Sidebar.css';
+import './DemoSidebar.css';
 
-interface SidebarOption {
+interface DemoSidebarOption {
   value: string;
   label: string;
   path: string;
   icon?: React.ReactNode;
 }
 
-interface SidebarGroup {
+interface DemoSidebarGroup {
   title: string;
   icon?: React.ReactNode;
-  items: SidebarOption[];
+  items: DemoSidebarOption[];
   defaultExpanded?: boolean;
 }
 
-interface SidebarProps {
-  groups: SidebarGroup[];
+interface DemoSidebarProps {
+  groups: DemoSidebarGroup[];
   isMobileOpen?: boolean;
   onMobileToggle?: () => void;
 }
@@ -43,7 +43,7 @@ const ChevronDownIcon = () => (
 
 
 
-export const Sidebar: React.FC<SidebarProps> = ({
+export const DemoSidebar: React.FC<DemoSidebarProps> = ({
   groups,
   isMobileOpen = false,
   onMobileToggle
@@ -77,11 +77,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
   };
 
   return (
-    <aside className={`sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-      <div className="sidebar-header">
-        <h2 className="sidebar-title">Nexla DS</h2>
+    <aside className={`demo-sidebar ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+      <div className="demo-sidebar-header">
+        <h2 className="demo-sidebar-title">Nexla DS</h2>
         <button 
-          className="sidebar-mobile-toggle"
+          className="demo-sidebar-mobile-toggle"
           onClick={toggleMobileMenu}
           aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
@@ -89,42 +89,42 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </button>
       </div>
       
-      <nav className="sidebar-nav">
-        <div className="sidebar-menu">
+      <nav className="demo-sidebar-nav">
+        <div className="demo-sidebar-menu">
           {groups.map((group) => {
             const isExpanded = expandedGroups.has(group.title);
             const hasActiveItem = group.items.some(item => location.pathname === item.path);
             
             return (
-              <div key={group.title} className="sidebar-group">
+              <div key={group.title} className="demo-sidebar-group">
                 <button
-                  className={`sidebar-group-header ${hasActiveItem ? 'has-active' : ''}`}
+                  className={`demo-sidebar-group-header ${hasActiveItem ? 'has-active' : ''}`}
                   onClick={() => toggleGroup(group.title)}
                   aria-expanded={isExpanded}
                 >
-                  <div className="sidebar-group-header-content">
-                    <span className="sidebar-group-title">{group.title}</span>
+                  <div className="demo-sidebar-group-header-content">
+                    <span className="demo-sidebar-group-title">{group.title}</span>
                   </div>
-                  <span className={`sidebar-group-chevron ${isExpanded ? 'expanded' : ''}`}>
+                  <span className={`demo-sidebar-group-chevron ${isExpanded ? 'expanded' : ''}`}>
                     <ChevronDownIcon />
                   </span>
                 </button>
                 
                 {isExpanded && (
-                  <ul className="sidebar-group-items">
+                  <ul className="demo-sidebar-group-items">
                     {group.items.map((item) => (
-                      <li key={item.value} className="sidebar-menu-item">
+                      <li key={item.value} className="demo-sidebar-menu-item">
               <Link
                           to={item.path}
-                className={`sidebar-menu-button ${
+                className={`demo-sidebar-menu-button ${
                             location.pathname === item.path ? 'active' : ''
                 }`}
                 onClick={handleMenuItemClick}
               >
                           {item.icon && (
-                            <span className="sidebar-menu-icon">{item.icon}</span>
+                            <span className="demo-sidebar-menu-icon">{item.icon}</span>
                 )}
-                          <span className="sidebar-menu-label">{item.label}</span>
+                          <span className="demo-sidebar-menu-label">{item.label}</span>
               </Link>
             </li>
           ))}
@@ -137,4 +137,4 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </nav>
     </aside>
   );
-}; 
+};

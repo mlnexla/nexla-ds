@@ -24,7 +24,7 @@ const MainPage: React.FC = () => {
 │   ├── JumpMenu/        # Navigation jump menu
 │   ├── MainPage/        # Main documentation page component
 │   ├── PrimaryActionButton/    # Primary action button (legacy)
-│   ├── Sidebar/         # Navigation sidebar
+│   ├── DemoSidebar/     # DemoSidebar - Navigation sidebar for demo site
 │   ├── TextInput/       # TextInput component with multiple states
 │   ├── Typography/      # Typography component system
 │   ├── icons/           # Extensive icon library
@@ -87,7 +87,7 @@ const MainPage: React.FC = () => {
               <li><strong>✅ Advanced TextInput component with multiple states, variants, and clearable functionality</strong></li>
               <li><strong>✅ Extensive icon library with hundreds of icons (Flaticons, Material UI, and custom icons) and copy-to-clipboard functionality</strong></li>
               <li><strong>✅ Interactive demo pages for all components with syntax highlighting</strong></li>
-              <li><strong>✅ Navigation system with grouped, collapsible sidebar and JumpMenu components</strong></li>
+              <li><strong>✅ Navigation system with grouped, collapsible demo sidebar and JumpMenu components</strong></li>
             </ul>
 
             <h3 className="text-h3">Browser Support</h3>

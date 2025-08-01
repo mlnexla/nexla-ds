@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Sidebar } from './components/Sidebar';
+import { DemoSidebar } from './components/DemoSidebar';
 import { MainPage } from './components/MainPage';
 import { ProductPrinciples } from './components/ProductPrinciples';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -136,7 +136,7 @@ function AppContent() {
         <h1 className="app-mobile-title">Nexla DS</h1>
       </header>
       
-      <Sidebar groups={navigationGroups} isMobileOpen={isMobileMenuOpen} onMobileToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+      <DemoSidebar groups={navigationGroups} isMobileOpen={isMobileMenuOpen} onMobileToggle={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
       <main className="app-main">
         <Routes>
           <Route path="/" element={<Navigate to="/main" replace />} />
