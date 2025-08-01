@@ -98,6 +98,31 @@ export const IconsDemo: React.FC = () => {
       }), []
   );
 
+  // Filter to get only FiSr icons (Flaticon Solid Regular) and create icon list
+  const allFiSrIconList = useMemo(() => 
+    Object.keys(Icons)
+      .filter(key => key.startsWith('FiSr') && !key.endsWith('Icon'))
+      .sort()
+      .map(iconKey => {
+        const IconComponent = (Icons as any)[iconKey];
+        const displayName = iconKey
+          .replace('FiSr', '')
+          .replace(/([A-Z])/g, ' $1')
+          .trim();
+        const label = iconKey
+          .replace('FiSr', 'fi-sr')
+          .replace(/([A-Z])/g, '-$1')
+          .toLowerCase();
+        
+        return {
+          name: displayName,
+          component: IconComponent,
+          label: label,
+          key: iconKey
+        };
+      }), []
+  );
+
   // Material UI icons (including both ContentCopy/CheckFilled and Material UI style icons)
   const allMuiIcons = useMemo(() => {
     const baseMuiIcons = [
@@ -223,8 +248,19 @@ export const IconsDemo: React.FC = () => {
     );
   }, [allCustomIcons, filterText]);
 
-  const totalIcons = allIconList.length + allMuiIcons.length + allCustomIcons.length;
-  const filteredTotal = filteredIconList.length + filteredMuiIcons.length + filteredCustomIcons.length;
+  const filteredFiSrIcons = useMemo(() => {
+    if (!filterText.trim()) return allFiSrIconList;
+    
+    const searchTerm = filterText.toLowerCase();
+    return allFiSrIconList.filter(icon => 
+      icon.name.toLowerCase().includes(searchTerm) ||
+      icon.label.toLowerCase().includes(searchTerm) ||
+      icon.key.toLowerCase().includes(searchTerm)
+    );
+  }, [allFiSrIconList, filterText]);
+
+  const totalIcons = allIconList.length + allFiSrIconList.length + allMuiIcons.length + allCustomIcons.length;
+  const filteredTotal = filteredIconList.length + filteredFiSrIcons.length + filteredMuiIcons.length + filteredCustomIcons.length;
 
   return (
     <div className="icons-demo">
@@ -269,6 +305,42 @@ export const IconsDemo: React.FC = () => {
           </p>
           <div className="icons-grid">
             {filteredIconList.map((icon) => {
+              const IconComponent = icon.component;
+              
+              return (
+                <div key={icon.key} className="icon-item">
+                  <div className="icon-preview">
+                    <IconComponent size={24} />
+                  </div>
+                  <div className="icon-info">
+                    <h3 className="icon-name">{icon.name}</h3>
+                    <div className="icon-values">
+                      <span className="icon-label">{icon.label}</span>
+                    </div>
+                  </div>
+                  <div className="icon-actions">
+                    <CopyToClipboardButton
+                      state={copiedIcon === icon.label ? 'copied' : 'default'}
+                      onClick={() => copyToClipboard(extractSvgContent(IconComponent, 24, 'currentColor', icon.label), icon.label)}
+                      label="Copy SVG"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Flaticon Solid Regular Icons Section */}
+      {filteredFiSrIcons.length > 0 && (
+        <section className="icons-section">
+          <h3 className="text-h3 section-title">Flaticon Solid Regular Icons ({filteredFiSrIcons.length})</h3>
+          <p className="section-description">
+            Collection of Flaticon Solid Regular icons with filled designs, consistent 24x24 sizing and optimized SVG paths.
+          </p>
+          <div className="icons-grid">
+            {filteredFiSrIcons.map((icon) => {
               const IconComponent = icon.component;
               
               return (

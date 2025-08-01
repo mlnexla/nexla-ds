@@ -536,6 +536,7 @@ export { default as FiRrFunctionSquareIcon } from './FiRrFunctionSquare';
 export { default as FiRrPlugIcon } from './FiRrPlug';
 export { default as FiRrSortAltIcon } from './FiRrSortAlt';
 export { default as FiSrExpandArrowsAltIcon } from './FiSrExpandArrowsAlt';
+export { default as FiSrPulse } from './FiSrPulse';
 export { default as FiSrPuzzleAltIcon } from './FiSrPuzzleAlt';
 export { default as InsightsOutlinedIcon } from './InsightsOutlined';
 export { default as CodeBranchBoldIcon } from './CodeBranchBold';
