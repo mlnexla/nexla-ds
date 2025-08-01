@@ -18,20 +18,24 @@ const MainPage: React.FC = () => {
             <h3 className="text-h3">Project Structure</h3>
             <pre className="code-block">
 {`src/
-├── components/           # All React components
+├── components/           # Design system components only (included in build)
 │   ├── Button/          # Unified Button component with multiple variants
 │   ├── CopyToClipboardButton/  # Copy-to-clipboard functionality
-│   ├── JumpMenu/        # Navigation jump menu
-│   ├── MainPage/        # Main documentation page component
-│   ├── PrimaryActionButton/    # Primary action button (legacy)
-├── demo-components/      # Demo-specific components (not in design system build)
-│   ├── DemoSidebar/     # DemoSidebar - Navigation sidebar for demo site
 │   ├── TextInput/       # TextInput component with multiple states
 │   ├── Typography/      # Typography component system
+│   ├── Tooltip/         # Tooltip components
+│   ├── InformationalTooltip/  # Informational tooltip
 │   ├── icons/           # Extensive icon library
-│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
 │   ├── README.md        # Components documentation
-│   └── index.ts         # Component exports
+│   └── index.ts         # Design system exports only
+├── demo-components/      # Demo-specific components (not in design system build)
+│   ├── DemoSidebar/     # Navigation sidebar for demo site
+│   ├── MainPage/        # Main documentation page component
+│   ├── ProductPrinciples/  # Product principles page
+│   ├── JumpMenu/        # Navigation jump menu
+│   ├── ScrollToTop/     # Scroll to top utility
+│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
+│   └── index.ts         # Demo component exports
 ├── demos/               # Component demonstrations
 │   ├── ButtonsDemo.tsx/.css    # Button variants demo
 │   ├── ColorsDemo.tsx/.css     # Color palette demo
