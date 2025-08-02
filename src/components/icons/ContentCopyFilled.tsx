@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface ContentCopyFilledIconProps {
+interface ContentCopyFilledProps {
   className?: string;
   size?: number;
   color?: string;
 }
 
-export const ContentCopyFilledIcon: React.FC<ContentCopyFilledIconProps> = ({ 
+export const ContentCopyFilled: React.FC<ContentCopyFilledProps> = ({ 
   className = '', 
   size = 24, 
   color = 'currentColor' 
@@ -28,4 +28,4 @@ export const ContentCopyFilledIcon: React.FC<ContentCopyFilledIconProps> = ({
   );
 };
 
-export default ContentCopyFilledIcon; 
+export default ContentCopyFilled; 

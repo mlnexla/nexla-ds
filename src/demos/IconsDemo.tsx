@@ -8,7 +8,7 @@ import './IconsDemo.css';
 // Import all Flaticon icons
 import * as Icons from '../components/icons';
 // Import Material UI icons specifically
-import { ContentCopyFilledIcon, CheckFilledIcon, SearchFilled } from '../components/icons';
+import { ContentCopyFilled, CheckFilled, SearchFilled } from '../components/icons';
 // Import search icon
 import { FiRrSearch } from '../components/icons';
 
@@ -128,13 +128,13 @@ export const IconsDemo: React.FC = () => {
     const baseMuiIcons = [
       {
         name: 'Content Copy Filled',
-        component: ContentCopyFilledIcon,
+        component: ContentCopyFilled,
         label: 'content-copy-filled',
         key: 'ContentCopyFilled'
       },
       {
         name: 'Check Filled',
-        component: CheckFilledIcon,
+        component: CheckFilled,
         label: 'check-filled',
         key: 'CheckFilled'
       },
@@ -148,12 +148,12 @@ export const IconsDemo: React.FC = () => {
 
     const muiStyleIcons = Object.keys(Icons)
       .filter(key => 
-        (key === 'ArrowDropdownFilledIcon' || key === 'ChevronLeftFilledIcon' || 
-         key === 'ChevronRightFilledIcon' || key === 'CodeRoundedIcon' ||
-         key === 'ExpandLessFilledIcon' || key === 'ExpandMoreFilledIcon' || 
-         key === 'FilterListFilledIcon' || key === 'LinkOffFilledIcon' ||
-         key === 'PeopleAltRoundedIcon' || key === 'UnfoldLessFilledIcon' ||
-         key === 'UnfoldMoreFilledIcon' || key === 'VerticalSplitOutlinedIcon')
+        (key === 'ArrowDropdownFilled' || key === 'ChevronLeftFilled' || 
+         key === 'ChevronRightFilled' || key === 'CodeRounded' ||
+         key === 'ExpandLessFilled' || key === 'ExpandMoreFilled' || 
+         key === 'FilterListFilled' || key === 'LinkOffFilled' ||
+         key === 'PeopleAltRounded' || key === 'UnfoldLessFilled' ||
+         key === 'UnfoldMoreFilled' || key === 'VerticalSplitOutlined')
       )
       .sort()
       .map(iconKey => {
@@ -187,12 +187,12 @@ export const IconsDemo: React.FC = () => {
   const allCustomIcons = useMemo(() => 
     Object.keys(Icons)
       .filter(key => 
-        key === 'InsightsOutlinedIcon' || key === 'CodeBranchBoldIcon' ||
-        key === 'CompassIcon' || key === 'GenaiIcon' || key === 'GroundingIcon' ||
-        key === 'IncognitoOffIcon' || key === 'LookupsIcon' || key === 'MarketplaceAltIcon' ||
-        key === 'MarketplaceIcon' || key === 'MergeIcon' || key === 'RestApiIcon' ||
-        key === 'SplitIcon' || key === 'WorkgroupIcon' || key === 'ResizeIcon' ||
-        key === 'FolderSelectedIconSolidIcon'
+        key === 'InsightsOutlined' || key === 'CodeBranchBold' ||
+        key === 'Compass' || key === 'Genai' || key === 'Grounding' ||
+        key === 'IncognitoOff' || key === 'Lookups' || key === 'MarketplaceAlt' ||
+        key === 'Marketplace' || key === 'Merge' || key === 'RestApi' ||
+        key === 'Split' || key === 'Workgroup' || key === 'Resize' ||
+        key === 'FolderSelectedSolid'
       )
       .sort()
       .map(iconKey => {

@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface CheckFilledIconProps {
+interface CheckFilledProps {
   className?: string;
   size?: number;
   color?: string;
 }
 
-export const CheckFilledIcon: React.FC<CheckFilledIconProps> = ({ 
+export const CheckFilled: React.FC<CheckFilledProps> = ({ 
   className = '', 
   size = 24, 
   color = 'currentColor' 
@@ -28,4 +28,4 @@ export const CheckFilledIcon: React.FC<CheckFilledIconProps> = ({
   );
 };
 
-export default CheckFilledIcon; 
+export default CheckFilled; 
