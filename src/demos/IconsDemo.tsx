@@ -8,7 +8,7 @@ import './IconsDemo.css';
 // Import all Flaticon icons
 import * as Icons from '../components/icons';
 // Import Material UI icons specifically
-import { ContentCopyFilledIcon, CheckFilledIcon } from '../components/icons';
+import { ContentCopyFilledIcon, CheckFilledIcon, SearchFilled } from '../components/icons';
 // Import search icon
 import { FiRrSearch } from '../components/icons';
 
@@ -137,6 +137,12 @@ export const IconsDemo: React.FC = () => {
         component: CheckFilledIcon,
         label: 'check-filled',
         key: 'CheckFilled'
+      },
+      {
+        name: 'Search Filled',
+        component: SearchFilled,
+        label: 'search-filled',
+        key: 'SearchFilled'
       }
     ];
 

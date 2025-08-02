@@ -390,6 +390,7 @@ export { default as FiRrScreen } from './FiRrScreen';
 export { default as FiRrSearch } from './FiRrSearch';
 export { default as FiRrSearchAlt } from './FiRrSearchAlt';
 export { default as FiRrSearchHeart } from './FiRrSearchHeart';
+export { default as SearchFilled } from './SearchFilled';
 export { default as FiRrSettings } from './FiRrSettings';
 export { default as FiRrSettingsSliders } from './FiRrSettingsSliders';
 export { default as FiRrShare } from './FiRrShare';
