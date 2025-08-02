@@ -34,6 +34,7 @@ export { default as FiRrArrowDown } from './FiRrArrowDown';
 export { default as FiRrArrowFromBottom } from './FiRrArrowFromBottom';
 export { default as FiRrArrowLeft } from './FiRrArrowLeft';
 export { default as FiRrArrowRight } from './FiRrArrowRight';
+export { default as FiRrArrowRightToBracket } from './FiRrArrowRightToBracket';
 export { default as FiRrArrowSmallDown } from './FiRrArrowSmallDown';
 export { default as FiRrArrowSmallLeft } from './FiRrArrowSmallLeft';
 export { default as FiRrArrowSmallRight } from './FiRrArrowSmallRight';

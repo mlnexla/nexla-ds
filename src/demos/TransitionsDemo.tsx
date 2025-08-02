@@ -139,7 +139,7 @@ const TransitionsDemo: React.FC = () => {
           padding: 'var(--spacing-lg)', 
           marginBottom: 'var(--spacing-xl)' 
         }}>
-          <Typography variant="body-default-500" as="h3" style={{ marginBottom: 'var(--spacing-sm)' }}>
+          <Typography variant="body-default-500" as="h3">
             Animation Duration Note
           </Typography>
           <Typography variant="body-default-400">
