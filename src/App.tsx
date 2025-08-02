@@ -17,7 +17,7 @@ import BadgeDemo from './demos/BadgeDemo';
 import TooltipsDemo from './demos/TooltipsDemo';
 import TransitionsDemo from './demos/TransitionsDemo';
 
-import './styles/global.css';
+import './styles/demo-app.css';
 
 function AppContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

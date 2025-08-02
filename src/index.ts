@@ -2,4 +2,4 @@
 export * from './components';
 
 // Export global styles
-import './styles/global.css'; 
+import './styles/nexla-ds-global.css'; 

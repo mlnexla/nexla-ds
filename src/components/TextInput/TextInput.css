@@ -1,5 +1,5 @@
 /* Import global styles */
-@import '../../styles/global.css';
+@import '../../styles/nexla-ds-global.css';
 
 /* Component-specific tokens using design system spacing */
 .text-input-container {
