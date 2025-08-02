@@ -499,13 +499,4 @@
   outline-offset: 2px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .basic-action-button--medium {
-    min-height: 36px;
-  }
-  
-  .basic-action-button--large {
-    min-height: 44px;
-  }
-} 
+ 
