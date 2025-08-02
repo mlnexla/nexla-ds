@@ -529,7 +529,6 @@ export { default as PeopleAltRoundedIcon } from './Peoplealtrounded';
 export { default as UnfoldLessFilledIcon } from './Unfoldlessfilled';
 export { default as UnfoldMoreFilledIcon } from './Unfoldmorefilled';
 export { default as VerticalSplitOutlinedIcon } from './Verticalsplitoutlined';
-export { default as FiRrArrowRightToBracketIcon } from './FiRrArrowRightToBracket';
 export { default as FiRrDiagramSubtaskIcon } from './FiRrDiagramSubtask';
 export { default as FiRrExitIcon } from './FiRrExit';
 export { default as FiRrFunctionSquareIcon } from './FiRrFunctionSquare';
