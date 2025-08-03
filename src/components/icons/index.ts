@@ -536,6 +536,7 @@ export { default as FiRrExit } from './FiRrExit';
 export { default as FiRrFunctionSquare } from './FiRrFunctionSquare';
 export { default as FiRrPlug } from './FiRrPlug';
 export { default as FiRrSortAlt } from './FiRrSortAlt';
+export { default as FiSrCrossCircle } from './FiSrCrossCircle';
 export { default as FiSrExpandArrowsAlt } from './FiSrExpandArrowsAlt';
 export { default as FiSrPulse } from './FiSrPulse';
 export { default as FiSrPuzzleAlt } from './FiSrPuzzleAlt';
