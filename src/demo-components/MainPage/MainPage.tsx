@@ -20,11 +20,13 @@ const MainPage: React.FC = () => {
 {`src/
 ├── components/           # Design system components only (included in build)
 │   ├── Button/          # Unified Button component with multiple variants
+│   ├── Card/            # Versatile container component for content display
 │   ├── CopyToClipboardButton/  # Copy-to-clipboard functionality
+│   ├── InformationalTooltip/  # Informational tooltip component
+│   ├── PrimaryActionButton/    # Primary action button (legacy)
 │   ├── TextInput/       # TextInput component with multiple states
+│   ├── Tooltip/         # Base tooltip component
 │   ├── Typography/      # Typography component system
-│   ├── Tooltip/         # Tooltip components
-│   ├── InformationalTooltip/  # Informational tooltip
 │   ├── icons/           # Extensive icon library
 │   ├── README.md        # Components documentation
 │   └── index.ts         # Design system exports only
@@ -85,6 +87,7 @@ const MainPage: React.FC = () => {
 
             <h3 className="text-h3">Recent Updates</h3>
             <ul>
+              <li><strong>✅ Card Component</strong> - Added versatile Card component for consistent content containers across applications</li>
               <li><strong>✅ Typography System Enhancement</strong> - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency</li>
               <li><strong>✅ Design Token Improvements</strong> - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth</li>
               <li><strong>✅ Component Architecture</strong> - Enhanced Typography component with overline support and updated all documentation to match actual implementation</li>

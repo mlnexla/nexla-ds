@@ -6,19 +6,26 @@ A collection of reusable UI components with consistent styling and behavior.
 
 ```
 src/
-├── components/           # All React components
+├── components/           # Design system components only (included in build)
 │   ├── Button/          # Unified Button component with multiple variants
+│   ├── Card/            # Versatile container component for content display
 │   ├── CopyToClipboardButton/  # Copy-to-clipboard functionality
-│   ├── JumpMenu/        # Navigation jump menu
-│   ├── MainPage/        # Main documentation page component
+│   ├── InformationalTooltip/  # Informational tooltip component
 │   ├── PrimaryActionButton/    # Primary action button (legacy)
-│   ├── Sidebar/         # Navigation sidebar
 │   ├── TextInput/       # TextInput component with multiple states
+│   ├── Tooltip/         # Base tooltip component
 │   ├── Typography/      # Typography component system
 │   ├── icons/           # Extensive icon library
-│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
 │   ├── README.md        # Components documentation
-│   └── index.ts         # Component exports
+│   └── index.ts         # Design system exports only
+├── demo-components/      # Demo-specific components (not in design system build)
+│   ├── DemoSidebar/     # Navigation sidebar for demo site
+│   ├── MainPage/        # Main documentation page component
+│   ├── ProductPrinciples/  # Product principles page
+│   ├── JumpMenu/        # Navigation jump menu
+│   ├── ScrollToTop/     # Scroll to top utility
+│   ├── SyntaxHighlighter.tsx   # Code syntax highlighting
+│   └── index.ts         # Demo component exports
 ├── demos/               # Component demonstrations
 │   ├── ButtonsDemo.tsx/.css    # Button variants demo
 │   ├── ColorsDemo.tsx/.css     # Color palette demo
@@ -124,8 +131,43 @@ Or open `index.html` directly in a browser for a simple preview.
 4. Create a demo in `src/demos/`
 5. Import and use: `import { ComponentName } from './components'`
 
+## Card Component
+
+The Card component is a versatile, reusable container that provides consistent styling and behavior across applications.
+
+### Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `children` | React.ReactNode | - | Content to display inside the card |
+| `className` | string | "" | Additional CSS classes |
+| `onClick` | () => void | - | Optional click handler for interactive cards |
+| `maxWidth` | string | - | Optional maximum width for the card |
+| `variant` | 'default' \| 'compact' \| 'wide' | 'default' | Visual variant of the card |
+
+### Usage
+
+```tsx
+import { Card } from './components';
+
+// Basic usage
+<Card>
+  <div className="card__visual">Icon or image</div>
+  <div className="card__info">
+    <h3>Title</h3>
+    <p>Description</p>
+  </div>
+</Card>
+
+// Interactive card
+<Card onClick={handleClick} variant="compact">
+  Content here
+</Card>
+```
+
 ## Recent Updates
 
+- ✅ **Card Component** - Added versatile Card component for consistent content containers across applications
 - ✅ **Typography System Enhancement** - Added overline variant (--typography-overline-400) with uppercase styling and standardized all header weights to 400 for consistency
 - ✅ **Design Token Improvements** - Removed CSS overrides across demo pages to ensure proper design token usage as single source of truth
 - ✅ **Component Architecture** - Enhanced Typography component with overline support and updated all documentation to match actual implementation

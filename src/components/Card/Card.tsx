@@ -10,10 +10,11 @@ export interface CardProps {
 }
 
 /**
- * Card - A reusable card component for design system demonstrations
+ * Card - A versatile, reusable container component
  * 
- * This component provides a consistent container for demo items across all demo pages.
- * It standardizes the visual appearance while allowing flexible content composition.
+ * This component provides a consistent visual foundation for displaying content 
+ * across any application built with the Nexla Design System. Perfect for product 
+ * cards, dashboard widgets, content previews, and more.
  */
 export const Card: React.FC<CardProps> = ({
   children,
