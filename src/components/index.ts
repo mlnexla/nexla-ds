@@ -1,6 +1,7 @@
 // Design System Components Only
 export { Button } from './Button';
 export { CopyToClipboardButton } from './CopyToClipboardButton';
+export { Card } from './Card';
 export { TextInput } from './TextInput';
 export { Typography } from './Typography';
 export { LabelTooltip } from './Tooltip';

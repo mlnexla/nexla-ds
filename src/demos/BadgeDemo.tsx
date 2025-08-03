@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './BadgeDemo.css';
 
@@ -131,36 +132,36 @@ const BadgeDemo: React.FC = () => {
           <div className="mockup-group">
             <h3 className="text-h3">Notification Badges</h3>
             <div className="mockup-examples">
-              <div className="mockup-item">
+              <Card variant="compact">
                 <div className="mockup-base">Button</div>
                 <div className="mockup-badge mockup-badge--count">5</div>
-              </div>
-              <div className="mockup-item">
+              </Card>
+              <Card variant="compact">
                 <div className="mockup-base">Messages</div>
                 <div className="mockup-badge mockup-badge--count">12</div>
-              </div>
-              <div className="mockup-item">
+              </Card>
+              <Card variant="compact">
                 <div className="mockup-base">Inbox</div>
                 <div className="mockup-badge mockup-badge--count">99+</div>
-              </div>
+              </Card>
             </div>
           </div>
           
           <div className="mockup-group">
             <h3 className="text-h3">Status Badges</h3>
             <div className="mockup-examples">
-              <div className="mockup-item">
+              <Card variant="compact">
                 <div className="mockup-base mockup-avatar">👤</div>
                 <div className="mockup-badge mockup-badge--dot mockup-badge--success"></div>
-              </div>
-              <div className="mockup-item">
+              </Card>
+              <Card variant="compact">
                 <div className="mockup-base mockup-avatar">👤</div>
                 <div className="mockup-badge mockup-badge--dot mockup-badge--warning"></div>
-              </div>
-              <div className="mockup-item">
+              </Card>
+              <Card variant="compact">
                 <div className="mockup-base mockup-avatar">👤</div>
                 <div className="mockup-badge mockup-badge--dot mockup-badge--danger"></div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

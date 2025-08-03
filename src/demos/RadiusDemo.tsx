@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './RadiusDemo.css';
 
@@ -31,19 +32,21 @@ const RadiusDemo: React.FC = () => {
         
         <div className="radius-grid">
           {radiusTokens.map((token) => (
-            <div key={token.variable} className="radius-item">
-              <div className="radius-visual">
+            <Card key={token.variable}>
+              <div className="card__visual">
                 <div 
                   className="radius-box"
                   style={{ borderRadius: `var(${token.variable})` }}
                 />
               </div>
-              <div className="token-info">
-                <Typography variant="body-default-500" as="h3">{token.name}</Typography>
-                <code className="token-variable">{token.variable}</code>
-                <span className="token-value">{token.value}</span>
+              <div className="card__info">
+                <Typography variant="body-default-500" as="h3" className="card__title">{token.name}</Typography>
+                <div className="card__token">
+                  <code className="card__token-variable">{token.variable}</code>
+                  <span className="card__token-value">{token.value}</span>
+                </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </section>

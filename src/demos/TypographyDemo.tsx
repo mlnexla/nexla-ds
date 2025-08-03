@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './TypographyDemo.css';
 
@@ -168,30 +169,36 @@ const TypographyDemo: React.FC = () => {
             </div>
 
             <div className="variant-specs">
-              <div className="spec-item">
-                <Typography variant="body-small-400" className="spec-label">
-                  Font Size:
-                </Typography>
-                <Typography variant="body-small-500" className="spec-value">
-                  {item.variant.includes('large') ? '16px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '12px' : '14px'}
-                </Typography>
-              </div>
-              <div className="spec-item">
-                <Typography variant="body-small-400" className="spec-label">
-                  Line Height:
-                </Typography>
-                <Typography variant="body-small-500" className="spec-value">
-                  {item.variant.includes('large') ? '24px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '16px' : '20px'}
-                </Typography>
-              </div>
-              <div className="spec-item">
-                <Typography variant="body-small-400" className="spec-label">
-                  Font Weight:
-                </Typography>
-                <Typography variant="body-small-500" className="spec-value">
-                  {item.variant.includes('500') ? '500' : '400'}
-                </Typography>
-              </div>
+              <Card variant="compact">
+                <div className="card__info">
+                  <Typography variant="body-small-400" className="spec-label">
+                    Font Size:
+                  </Typography>
+                  <Typography variant="body-small-500" className="spec-value">
+                    {item.variant.includes('large') ? '16px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '12px' : '14px'}
+                  </Typography>
+                </div>
+              </Card>
+              <Card variant="compact">
+                <div className="card__info">
+                  <Typography variant="body-small-400" className="spec-label">
+                    Line Height:
+                  </Typography>
+                  <Typography variant="body-small-500" className="spec-value">
+                    {item.variant.includes('large') ? '24px' : (item.variant.includes('small') || item.variant.includes('overline')) ? '16px' : '20px'}
+                  </Typography>
+                </div>
+              </Card>
+              <Card variant="compact">
+                <div className="card__info">
+                  <Typography variant="body-small-400" className="spec-label">
+                    Font Weight:
+                  </Typography>
+                  <Typography variant="body-small-500" className="spec-value">
+                    {item.variant.includes('500') ? '500' : '400'}
+                  </Typography>
+                </div>
+              </Card>
             </div>
 
             <div className="variant-code">

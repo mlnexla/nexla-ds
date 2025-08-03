@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './ShadowsDemo.css';
 
@@ -51,18 +52,22 @@ const ShadowsDemo: React.FC = () => {
         
         <div className="shadows-grid">
           {shadowTokens.map((token) => (
-            <div key={token.variable} className="shadow-item">
-              <div 
-                className="shadow-preview"
-                style={{ boxShadow: `var(${token.variable})` }}
-              />
-              <div className="token-info">
-                <Typography variant="body-default-500" as="h3">{token.name}</Typography>
-                <code className="token-variable">{token.variable}</code>
-                <span className="token-value">{token.value}</span>
-                <p className="token-description">{token.description}</p>
+            <Card key={token.variable} variant="wide">
+              <div className="card__visual">
+                <div 
+                  className="shadow-preview"
+                  style={{ boxShadow: `var(${token.variable})` }}
+                />
               </div>
-            </div>
+              <div className="card__info">
+                <Typography variant="body-default-500" as="h3" className="card__title">{token.name}</Typography>
+                <div className="card__token">
+                  <code className="card__token-variable">{token.variable}</code>
+                  <span className="card__token-value">{token.value}</span>
+                </div>
+                <p className="card__description">{token.description}</p>
+              </div>
+            </Card>
           ))}
         </div>
       </section>

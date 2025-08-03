@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '../components/Button';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 // import { Typography } from '../components/Typography';
 import './ButtonsDemo.css';
@@ -625,30 +626,30 @@ const handleCopyFallback = (text: string) => {
         <div className="code-example">
           <h3 className="text-h3">When to Use Each Button Variant</h3>
           <div className="usage-guide">
-            <div className="usage-item">
+            <Card variant="compact">
               <strong>Default:</strong> Neutral actions that don't require emphasis. 
               Best for tertiary actions like "View", "Edit", or "Learn More".
-            </div>
-            <div className="usage-item">
+            </Card>
+            <Card variant="compact">
               <strong>Primary:</strong> Main call-to-action buttons that should draw attention. 
               Use for form submissions, confirmations, or primary navigation actions.
-            </div>
-            <div className="usage-item">
+            </Card>
+            <Card variant="compact">
               <strong>Primary Bold:</strong> High-emphasis primary actions that require extra attention. 
               Use sparingly for critical actions like "Delete Account", "Confirm Payment", or "Publish".
-            </div>
-            <div className="usage-item">
+            </Card>
+            <Card variant="compact">
               <strong>Secondary:</strong> Supporting actions that are important but not primary. 
               Perfect for "Cancel", "Skip", or alternative pathways.
-            </div>
-            <div className="usage-item">
+            </Card>
+            <Card variant="compact">
               <strong>Danger:</strong> Destructive or irreversible actions that require caution. 
               Use for "Delete", "Remove", or "Permanently disable" actions.
-            </div>
-            <div className="usage-item">
+            </Card>
+            <Card variant="compact">
               <strong>Copy to Clipboard Button:</strong> Specialized component for copy operations with 
               built-in visual feedback and proper clipboard API integration.
-            </div>
+            </Card>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TextInput } from '../components/TextInput';
 // import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import SyntaxHighlighter from '../demo-components/SyntaxHighlighter';
 
 import './TextInputDemo.css';
@@ -96,17 +97,17 @@ const TextInputDemo: React.FC = () => {
 
       <div className="demo-grid">
         {/* Default State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Default State</h3>
           <TextInput
             value={defaultValue}
             onChange={setDefaultValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Hover State (simulated) */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Hover State</h3>
           <TextInput
             variant="hover"
@@ -114,10 +115,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setHoverValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Active State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Active State (Focused)</h3>
           <TextInput
             variant="active"
@@ -125,10 +126,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setActiveValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Typing State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Typing State</h3>
           <TextInput
             variant="typing"
@@ -136,10 +137,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setTypingValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Typed State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Typed State</h3>
           <TextInput
             variant="typed"
@@ -147,10 +148,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setTypedValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Error State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Error State</h3>
           <TextInput
             variant="error"
@@ -159,10 +160,10 @@ const TextInputDemo: React.FC = () => {
             error="Error message is displayed here"
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Disabled State */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Disabled State</h3>
           <TextInput
             disabled
@@ -170,10 +171,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setDisabledValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Code Variant */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Code Variant (with Copy)</h3>
           <TextInput
             variant="code"
@@ -182,10 +183,10 @@ const TextInputDemo: React.FC = () => {
             onCopy={handleCopy}
             placeholder="Enter code..."
           />
-        </div>
+        </Card>
 
         {/* Chip Empty */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Chip Input (Empty)</h3>
           <TextInput
             variant="chip-empty"
@@ -193,10 +194,10 @@ const TextInputDemo: React.FC = () => {
             onChange={setChipValue}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Chip Selected */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Chip Input (With Chips)</h3>
           <TextInput
             variant="chip-selected"
@@ -204,25 +205,25 @@ const TextInputDemo: React.FC = () => {
             onChipRemove={handleChipRemove}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Without Help Icon */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Without Help Icon</h3>
           <TextInput
             showHelpIcon={false}
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
 
         {/* Custom Help Text */}
-        <div className="demo-item">
+        <Card variant="wide">
           <h3 className="text-h3">Custom Help Text</h3>
           <TextInput
             helpText="This is custom help text for the input field"
             placeholder="Placeholder text"
           />
-        </div>
+        </Card>
       </div>
 
       <div className="demo-section">

@@ -34,19 +34,9 @@
   margin-bottom: 2rem;
 }
 
-.demo-item {
-  background: var(--color-white);
-  padding: 1.5rem;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-}
+/* demo-item styles removed - now using Card component */
 
-.demo-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
+/* demo-item hover styles removed - now using Card component */
 
 .demo-item h3 {
   margin-bottom: 1rem;

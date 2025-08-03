@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography } from '../components/Typography';
+import { Card } from '../components/Card';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
 import './TransitionsDemo.css';
 
@@ -48,8 +49,8 @@ const TransitionsDemo: React.FC = () => {
         
         <div className="transitions-grid">
           {transitionTokens.map((token) => (
-            <div key={token.variable} className="transition-item">
-              <div className="transition-visual">
+            <Card key={token.variable}>
+              <div className="card__visual">
                 <div 
                   className={`transition-box transition-${token.name.toLowerCase()}`}
                 />
@@ -57,13 +58,15 @@ const TransitionsDemo: React.FC = () => {
                   Hover to see {token.duration} transition
                 </Typography>
               </div>
-              <div className="token-info">
-                <Typography variant="body-default-500" as="h3">{token.name}</Typography>
-                <code className="token-variable">{token.variable}</code>
-                <span className="token-value">{token.value}</span>
-                <p className="token-description">{token.description}</p>
+              <div className="card__info">
+                <Typography variant="body-default-500" as="h3" className="card__title">{token.name}</Typography>
+                <div className="card__token">
+                  <code className="card__token-variable">{token.variable}</code>
+                  <span className="card__token-value">{token.value}</span>
+                </div>
+                <p className="card__description">{token.description}</p>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </section>
@@ -149,35 +152,41 @@ const TransitionsDemo: React.FC = () => {
         </div>
         
         <div className="guidelines-grid">
-          <div className="guideline-item">
-            <Typography variant="body-default-500" as="h3">Fast (100ms)</Typography>
-            <ul>
-              <li>Opacity changes</li>
-              <li>Color transitions</li>
-              <li>Toggle states</li>
-              <li>Quick visual feedback</li>
-            </ul>
-          </div>
+          <Card variant="compact">
+            <div className="card__info">
+              <Typography variant="body-default-500" as="h3" className="card__title">Fast (100ms)</Typography>
+              <ul>
+                <li>Opacity changes</li>
+                <li>Color transitions</li>
+                <li>Toggle states</li>
+                <li>Quick visual feedback</li>
+              </ul>
+            </div>
+          </Card>
           
-          <div className="guideline-item">
-            <Typography variant="body-default-500" as="h3">Base (200ms)</Typography>
-            <ul>
-              <li>Button hover effects</li>
-              <li>Link interactions</li>
-              <li>Form field focus</li>
-              <li>General UI transitions</li>
-            </ul>
-          </div>
+          <Card variant="compact">
+            <div className="card__info">
+              <Typography variant="body-default-500" as="h3" className="card__title">Base (200ms)</Typography>
+              <ul>
+                <li>Button hover effects</li>
+                <li>Link interactions</li>
+                <li>Form field focus</li>
+                <li>General UI transitions</li>
+              </ul>
+            </div>
+          </Card>
           
-          <div className="guideline-item">
-            <Typography variant="body-default-500" as="h3">Slow (300ms)</Typography>
-            <ul>
-              <li>Modal animations</li>
-              <li>Sidebar transitions</li>
-              <li>Large element movements</li>
-              <li>Complex state changes</li>
-            </ul>
-          </div>
+          <Card variant="compact">
+            <div className="card__info">
+              <Typography variant="body-default-500" as="h3" className="card__title">Slow (300ms)</Typography>
+              <ul>
+                <li>Modal animations</li>
+                <li>Sidebar transitions</li>
+                <li>Large element movements</li>
+                <li>Complex state changes</li>
+              </ul>
+            </div>
+          </Card>
         </div>
       </section>
     </div>

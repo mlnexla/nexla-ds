@@ -1,0 +1,134 @@
+/**
+ * Card - Reusable card component for design system demonstrations
+ */
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-outline);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-greyscale-200);
+}
+
+.card--clickable {
+  cursor: pointer;
+}
+
+.card--clickable:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary-300);
+  transform: translateY(-3px);
+}
+
+.card--compact {
+  padding: var(--spacing-lg);
+  gap: var(--spacing-sm);
+}
+
+.card--wide {
+  padding: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+/* Visual Content Area */
+.card__visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Content Info Area */
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.card__title {
+  font: var(--typography-body-default-500);
+  color: var(--color-greyscale-800);
+  margin: 0;
+  text-align: center;
+}
+
+.card__subtitle {
+  font: var(--typography-body-small-400);
+  color: var(--color-greyscale-600);
+  margin: 0;
+  text-align: center;
+}
+
+.card__description {
+  font: var(--typography-body-small-400);
+  color: var(--color-greyscale-600);
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Token Information */
+.card__token {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--typography-body-small-400);
+}
+
+.card__token-variable {
+  font-family: var(--font-family-mono);
+  background: var(--color-greyscale-50);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-greyscale-200);
+  color: var(--color-primary-600);
+  font-size: 12px;
+}
+
+.card__token-value {
+  color: var(--color-greyscale-700);
+  font-family: var(--font-family-mono);
+  font-size: 12px;
+}
+
+/* Actions Area */
+.card__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-sm);
+  }
+  
+  .card--compact {
+    padding: var(--spacing-md);
+  }
+  
+  .card--wide {
+    padding: var(--spacing-xl);
+  }
+}

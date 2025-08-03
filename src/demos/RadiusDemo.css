@@ -38,20 +38,7 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.radius-item {
-  background: var(--color-white);
-  border: 1px solid var(--color-greyscale-200);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-}
-
-.radius-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
+/* radius-item styles removed - now using Card component */
 
 .radius-visual {
   display: flex;

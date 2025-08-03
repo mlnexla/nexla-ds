@@ -42,25 +42,7 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.icons-grid .icon-item {
-  max-width: 300px;
-}
-
-.icon-item {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-  padding: var(--spacing-lg);
-  text-align: center;
-  position: relative;
-}
-
-.icon-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
+/* icon-item styles removed - now using Card component with maxWidth="300px" */
 
 .icon-preview {
   display: flex;

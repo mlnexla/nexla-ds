@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { renderToString } from 'react-dom/server';
 import { CopyToClipboardButton } from '../components/CopyToClipboardButton';
+import { Card } from '../components/Card';
 import { TextInput } from '../components/TextInput';
 // import { Typography } from '../components/Typography';
 import './IconsDemo.css';
@@ -314,24 +315,22 @@ export const IconsDemo: React.FC = () => {
               const IconComponent = icon.component;
               
               return (
-                <div key={icon.key} className="icon-item">
-                  <div className="icon-preview">
+                <Card key={icon.key} maxWidth="300px">
+                  <div className="card__visual">
                     <IconComponent size={24} />
                   </div>
-                  <div className="icon-info">
-                    <h3 className="icon-name">{icon.name}</h3>
-                    <div className="icon-values">
-                      <span className="icon-label">{icon.label}</span>
-                    </div>
+                  <div className="card__info">
+                    <h3 className="card__title">{icon.name}</h3>
+                    <span className="card__subtitle">{icon.label}</span>
                   </div>
-                  <div className="icon-actions">
+                  <div className="card__actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard(extractSvgContent(IconComponent, 24, 'currentColor', icon.label), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
-                </div>
+                </Card>
               );
             })}
           </div>
@@ -350,24 +349,22 @@ export const IconsDemo: React.FC = () => {
               const IconComponent = icon.component;
               
               return (
-                <div key={icon.key} className="icon-item">
-                  <div className="icon-preview">
+                <Card key={icon.key} maxWidth="300px">
+                  <div className="card__visual">
                     <IconComponent size={24} />
                   </div>
-                  <div className="icon-info">
-                    <h3 className="icon-name">{icon.name}</h3>
-                    <div className="icon-values">
-                      <span className="icon-label">{icon.label}</span>
-                    </div>
+                  <div className="card__info">
+                    <h3 className="card__title">{icon.name}</h3>
+                    <span className="card__subtitle">{icon.label}</span>
                   </div>
-                  <div className="icon-actions">
+                  <div className="card__actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard(extractSvgContent(IconComponent, 24, 'currentColor', icon.label), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
-                </div>
+                </Card>
               );
             })}
           </div>
@@ -386,24 +383,22 @@ export const IconsDemo: React.FC = () => {
               const IconComponent = icon.component;
               
               return (
-                <div key={icon.key} className="icon-item">
-                  <div className="icon-preview">
+                <Card key={icon.key} maxWidth="300px">
+                  <div className="card__visual">
                     <IconComponent size={24} />
                   </div>
-                  <div className="icon-info">
-                    <h3 className="icon-name">{icon.name}</h3>
-                    <div className="icon-values">
-                      <span className="icon-label">{icon.label}</span>
-                    </div>
+                  <div className="card__info">
+                    <h3 className="card__title">{icon.name}</h3>
+                    <span className="card__subtitle">{icon.label}</span>
                   </div>
-                  <div className="icon-actions">
+                  <div className="card__actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard(extractSvgContent(IconComponent, 24, 'currentColor', icon.label), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
-                </div>
+                </Card>
               );
             })}
           </div>
@@ -422,24 +417,22 @@ export const IconsDemo: React.FC = () => {
               const IconComponent = icon.component;
               
               return (
-                <div key={icon.key} className="icon-item">
-                  <div className="icon-preview">
+                <Card key={icon.key} maxWidth="300px">
+                  <div className="card__visual">
                     <IconComponent size={24} />
                   </div>
-                  <div className="icon-info">
-                    <h3 className="icon-name">{icon.name}</h3>
-                    <div className="icon-values">
-                      <span className="icon-label">{icon.label}</span>
-                    </div>
+                  <div className="card__info">
+                    <h3 className="card__title">{icon.name}</h3>
+                    <span className="card__subtitle">{icon.label}</span>
                   </div>
-                  <div className="icon-actions">
+                  <div className="card__actions">
                     <CopyToClipboardButton
                       state={copiedIcon === icon.label ? 'copied' : 'default'}
                       onClick={() => copyToClipboard(extractSvgContent(IconComponent, 24, 'currentColor', icon.label), icon.label)}
                       label="Copy SVG"
                     />
                   </div>
-                </div>
+                </Card>
               );
             })}
           </div>

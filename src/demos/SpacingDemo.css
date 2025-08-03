@@ -38,20 +38,7 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.spacing-item {
-  background: var(--color-white);
-  border: 1px solid var(--color-greyscale-200);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-}
-
-.spacing-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
+/* spacing-item styles removed - now using Card component */
 
 .spacing-visual {
   display: flex;
@@ -79,7 +66,7 @@
   transition: all var(--transition-base);
 }
 
-.spacing-item:hover .spacing-bar {
+.card:hover .spacing-bar {
   background: var(--color-primary-600);
   transform: scaleY(1.1);
 }
