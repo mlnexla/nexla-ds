@@ -1,0 +1,134 @@
+.card-demo {
+  width: 100%;
+  padding: var(--spacing-2xl);
+  background: var(--color-special-galactic-sand-bg);
+  font-family: var(--font-family-default);
+}
+
+.demo-header {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.demo-header h1 {
+  color: var(--color-greyscale-800);
+  margin-bottom: var(--spacing-lg);
+}
+
+.demo-header .demo-description {
+  font: var(--typography-body-large-400);
+  color: var(--color-greyscale-600);
+  max-width: 800px;
+}
+
+.demo-section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-title {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-greyscale-800);
+}
+
+.section-description {
+  font: var(--typography-body-default-400);
+  color: var(--color-greyscale-600);
+  margin-bottom: var(--spacing-xl);
+}
+
+.card-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.card-demo-grid--large {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card-demo-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+  align-items: flex-start;
+}
+
+/* Demo-specific visual elements */
+.color-swatch {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.mockup-image {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(135deg, var(--color-greyscale-50) 0%, var(--color-greyscale-100) 100%);
+  border-radius: var(--radius-md);
+}
+
+.metric-display {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-lg) 0;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-primary-500);
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: var(--typography-body-300-size);
+  color: var(--color-greyscale-600);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-chart {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, 
+    var(--color-primary-100) 0%, 
+    var(--color-primary-300) 50%, 
+    var(--color-primary-500) 100%);
+  border-radius: var(--radius-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* Card content styling for demos */
+.card__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Usage examples styling */
+.usage-examples {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.usage-example h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-greyscale-800);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-demo-grid--large {
+    grid-template-columns: 1fr;
+  }
+}

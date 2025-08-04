@@ -5,6 +5,7 @@ import { MainPage } from './demo-components/MainPage';
 import { ProductPrinciples } from './demo-components/ProductPrinciples';
 import { ScrollToTop } from './demo-components/ScrollToTop';
 import { ButtonsDemo } from './demos/ButtonsDemo';
+import CardDemo from './demos/CardDemo';
 import TextInputDemo from './demos/TextInputDemo';
 import { IconsDemo } from './demos/IconsDemo';
 import { ColorsDemo } from './demos/ColorsDemo';
@@ -89,6 +90,11 @@ function AppContent() {
           path: '/buttons'
         },
         {
+          value: '/card',
+          label: 'Card',
+          path: '/card'
+        },
+        {
           value: '/icons',
           label: 'Icon',
           path: '/icons'
@@ -150,6 +156,7 @@ function AppContent() {
           <Route path="/product-principles" element={<ProductPrinciples />} />
           <Route path="/typography" element={<TypographyDemo />} />
           <Route path="/buttons" element={<ButtonsDemo />} />
+          <Route path="/card" element={<CardDemo />} />
           <Route path="/inputs" element={<TextInputDemo />} />
           <Route path="/colors" element={<ColorsDemo />} />
           <Route path="/icons" element={<IconsDemo />} />
