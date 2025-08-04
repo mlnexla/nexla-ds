@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card } from '../components';
 import { FiRrBell, FiRrHeart, FiRrStar, FiRrUser } from '../components/icons';
 import { SyntaxHighlighter } from '../demo-components/SyntaxHighlighter';
